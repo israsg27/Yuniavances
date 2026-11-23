@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f6f1">
+    <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+    <link rel="preload" href="recap-media/sora.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="recap.css">
+    <link rel="stylesheet" href="meses.css">
+    <script defer src="recap-nav.js"></script>
+    <title>Marzo · Un Yunipet por piezas · Yunipets!</title>
+    <meta name="description" content="En el primer personalizador, una boca podía ser un dibujo pegado al hocico. La forma del cuerpo cambiaba sobre la misma base y el color del pelaje se elegía por zonas.">
+    <script defer src="recap-data.js"></script>
+    <script defer src="recap-archivo.js"></script>
+    <script defer src="visor.js"></script>
+    <script defer src="colecciones-datos.js"></script>
+    <script defer src="colecciones.js"></script>
+    <script defer src="mes.js"></script>
+  </head>
+  <body class="journal-month" data-month="marzo" style="--month-wash:#d4f4e9;--month-ink:#269c91">
+    <a class="skip" href="#contenido">Saltar al avance</a>
+    <header class="journal-header">
+      <div class="journal-bar">
+        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
+          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
+        </a>
+        <details class="journal-menu">
+          <summary aria-label="Menú del recap">
+            <i aria-hidden="true"></i>
+          </summary>
+          <nav aria-label="Navegación del recap">
+            <a href="recap.html">Todos los meses</a>
+            <a href="recap.html#sistemas">Avances por sistema</a>
+            <a href="creador.html">Creador de Yunipets</a>
+            <a href="archivo.html#galeria">Galería de arte</a>
+            <a href="archivo.html#historias">Evolución del juego</a>
+            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
+            <a href="archivo.html#proximos">Qué sigue</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main class="journal-wrap" id="contenido">
+      <div class="issue-line">
+        <a class="back-index" href="recap.html#marzo">← Todos los meses</a>
+        <nav class="issue-links" aria-label="Meses cercanos">
+          <a rel="prev" href="febrero.html" aria-label="Mes anterior, Febrero">← Febrero</a>
+          <a rel="next" href="abril.html" aria-label="Mes siguiente, Abril">Abril →</a>
+        </nav>
+      </div>
+      <article>
+        <header class="issue-cover">
+          <div class="issue-copy">
+            <p class="folio-label">Marzo · 2026</p>
+            <h1>Un Yunipet por piezas</h1>
+            <p class="issue-lede">En el primer personalizador, una boca podía ser un dibujo pegado al hocico. La forma del cuerpo cambiaba sobre la misma base y el color del pelaje se elegía por zonas.</p>
+            <a class="in-page exhibit-link" href="#componentes">Explorar las piezas ↓</a>
+            <a class="in-page" href="#prueba">Ver la prueba del mes <b aria-hidden="true">↓</b>
+            </a>
+            <a class="open-creator month-creator" href="creador.html">Probar el creador 3D ↗</a>
+            </div>
+          <figure class="issue-plate">
+            <button class="cover-photo zoom-photo" type="button" data-piece="mar-doc" aria-label="Ampliar variantes sobre la base">
+              <img src="recap-media/mar-doc.webp" alt="Variantes sobre la base" fetchpriority="high">
+              <span class="zoom-mark" aria-hidden="true">⤢</span>
+            </button>
+            <figcaption>Pruebas de forma sobre el modelo base</figcaption>
+          </figure>
+        </header>
+        <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="cabeza primeros">
+          <header class="collection-heading"><p class="folio-label">Colección de marzo</p><h2 id="collection-title">Las formas de la cabeza</h2></header>
+          
+          <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="cabeza" aria-pressed="true">Cabezas <span>12</span></button><button type="button" data-family="primeros" aria-pressed="false">Primeros diseños <span>5</span></button></div>
+          <div class="collection-paper">
+            <figure class="collection-plate">
+              <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar pieza"><img data-portrait src="recap-media/colecciones/cabeza/01.webp" width="540" height="540" loading="lazy" decoding="async" alt="Clásica"><span aria-hidden="true">⤢</span></button>
+              <figcaption><strong data-name>Clásica</strong><span data-credit>Blender · render para el recap</span></figcaption>
+            </figure>
+            <div class="collection-editor">
+              <h3 data-title>Una base, doce formas</h3><p data-copy>Fíjate en la mandíbula y en el ancho de las mejillas. Estas formas de la biblioteca actual permiten recorrer la idea modular que empezó en marzo.</p>
+              <div class="collection-grid" role="group" aria-label="Elegir pieza" data-thumbs></div>
+              <div class="collection-controls" hidden><button type="button" data-cycle aria-pressed="false">▶ Reproducir</button><span data-count>01 / 12</span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
+              <button type="button" class="collection-proof" data-evidence data-piece="mar-modular">El personaje por piezas ↗</button>
+            </div>
+          </div>
+          <dialog class="collection-zoom" aria-labelledby="zoom-name">
+            <div class="collection-zoom-inner">
+              <button type="button" data-close aria-label="Cerrar vista ampliada">×</button>
+              <img alt="" width="540" height="540">
+              <div class="zoom-bottom"><strong id="zoom-name" data-zoom-name></strong><span data-zoom-count></span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
+            </div>
+          </dialog>
+        </section>
+        <section class="notes-section" aria-label="Avances de marzo">
+          <h2>Qué podía elegir el jugador</h2>
+          <div class="notes-grid">
+            <article class="field-note">
+              <button class="note-photo zoom-photo" type="button" data-piece="mar-ux" aria-label="Ampliar el primer personalizador">
+                <img src="recap-media/archivo/mar-ux.webp" alt="El primer personalizador" loading="lazy">
+                <span class="zoom-mark" aria-hidden="true">⤢</span>
+              </button>
+              <h3>Elegir los rasgos</h3>
+              <p>El primer sistema modular combinaba cambios de forma con elementos dibujados. El equipo diseñó el recorrido para elegir rasgos y abrió un inventario de las piezas que habría que producir.</p>
+            </article>
+            <article class="field-note">
+              <button class="note-photo zoom-photo" type="button" data-piece="mar-mapas" aria-label="Ampliar color por regiones">
+                <img src="recap-media/archivo/mar-mapas.webp" alt="Color por regiones" loading="lazy">
+                <span class="zoom-mark" aria-hidden="true">⤢</span>
+              </button>
+              <h3>Cambiar el pelaje por zonas</h3>
+              <p>Las pruebas RGB asignaron zonas de color dentro de una textura. Eso permitía ensayar variantes sobre la misma geometría.</p>
+            </article>
+            <article class="field-note">
+              <button class="note-photo zoom-photo" type="button" data-piece="mar-escala" aria-label="Ampliar la escala del cuarto">
+                <img src="recap-media/archivo/mar-escala.webp" alt="La escala del cuarto" loading="lazy">
+                <span class="zoom-mark" aria-hidden="true">⤢</span>
+              </button>
+              <h3>La escala de una habitación</h3>
+              <p>Se hicieron primeras pruebas de orejas articuladas y bocetos de ropa. En paralelo, una cuadrícula ayudó a dimensionar el espacio que ocuparía la mascota en un cuarto.</p>
+            </article>
+          </div>
+        </section>
+        <section class="month-demo" id="prueba" data-demo="secuencia">
+          <div class="demo-copy">
+            <p class="folio-label">Secuencia de imágenes</p>
+            <h2>Cómo se armaba el personaje</h2>
+            <p>El boceto, el modelo y los controles muestran tres vistas de la misma idea.</p>
+            <button class="film-play" type="button" aria-pressed="false" data-play>
+              <span data-glyph aria-hidden="true">▶</span>
+              <span data-play-label>Reproducir secuencia</span>
+            </button>
+          </div>
+          <div class="demo-exhibit">
+            <div class="film-screen">
+              <figure class="film-frame is-current" aria-hidden="false">
+                <img src="recap-media/archivo/mar-modular.webp" alt="Boceto" loading="lazy">
+              </figure>
+              <figure class="film-frame" aria-hidden="true">
+                <img src="recap-media/mar-doc.webp" alt="Modelo" loading="lazy">
+              </figure>
+              <figure class="film-frame" aria-hidden="true">
+                <img src="recap-media/archivo/mar-ux.webp" alt="Controles" loading="lazy">
+              </figure>
+            </div>
+            <div class="film-tabs" role="group" aria-label="Imágenes de la secuencia">
+              <button type="button" data-step="0" aria-pressed="true">Boceto</button>
+              <button type="button" data-step="1" aria-pressed="false">Modelo</button>
+              <button type="button" data-step="2" aria-pressed="false">Controles</button>
+            </div>
+          </div>
+        </section>
+        <section class="contact-section">
+          <h2>Más imágenes de marzo</h2>
+          <div class="contact-grid">
+            <figure>
+              <button class="contact-photo zoom-photo" type="button" data-piece="mar-yunicoin" aria-label="Ampliar Yunicoin, la primera moneda"><img src="recap-media/archivo/mar-yunicoin.webp" alt="Yunicoin, la primera moneda" loading="lazy"><span class="zoom-mark" aria-hidden="true">⤢</span></button><figcaption>Yunicoin, la primera moneda</figcaption>
+            </figure>
+            <figure>
+              <button class="contact-photo zoom-photo" type="button" data-piece="mar-modular" aria-label="Ampliar el personaje por piezas">
+                <img src="recap-media/archivo/mar-modular.webp" alt="El personaje por piezas" loading="lazy">
+                <span class="zoom-mark" aria-hidden="true">⤢</span>
+              </button>
+              <figcaption>El personaje por piezas</figcaption>
+            </figure>
+            <figure>
+              <button class="contact-photo zoom-photo" type="button" data-piece="mar-orejas" aria-label="Ampliar una oreja articulada">
+                <img src="recap-media/archivo/mar-orejas.webp" alt="Una oreja articulada" loading="lazy">
+                <span class="zoom-mark" aria-hidden="true">⤢</span>
+              </button>
+              <figcaption>Una oreja articulada</figcaption>
+            </figure>
+            <figure>
+              <button class="contact-photo zoom-photo" type="button" data-piece="mar-ropa" aria-label="Ampliar una primera prenda">
+                <img src="recap-media/archivo/mar-ropa.webp" alt="Una primera prenda" loading="lazy">
+                <span class="zoom-mark" aria-hidden="true">⤢</span>
+              </button>
+              <figcaption>Una primera prenda</figcaption>
+            </figure>
+          </div>
+        </section>
+      </article>
+      <nav class="neighbours" aria-label="Navegar por los meses">
+        <a class="neighbour" rel="prev" href="febrero.html">
+          <span>Mes anterior</span>
+          <strong>← Febrero</strong>
+        </a>
+        <a class="neighbour" rel="next" href="abril.html">
+          <span>Mes siguiente</span>
+          <strong>Abril →</strong>
+        </a>
+      </nav>
+    </main>
+    <footer class="journal-footer">
+      <img src="recap-media/simbolo.svg" alt="" width="19" height="21">
+      <span>Yunipets! · Recap de desarrollo 2026</span>
+      <a href="archivo.html#galeria">Galería de arte <span aria-hidden="true">↗</span>
+      </a>
+    </footer>
+    <dialog id="visor" aria-labelledby="piece-title">
+      <div class="viewer-shell">
+        <div class="viewer-bar">
+          <span id="piece-type"></span>
+          <button class="close" type="button" aria-label="Cerrar imagen">×</button>
+        </div>
+        <img id="piece-image" alt="">
+        <div class="viewer-caption">
+          <div>
+            <p id="piece-origin"></p>
+            <h2 id="piece-title"></h2>
+            <p id="piece-caption"></p>
+          </div>
+          <div class="viewer-nav">
+            <button class="round" id="prev-piece" type="button" aria-label="Pieza anterior">←</button>
+            <span id="piece-counter"></span>
+            <button class="round" id="next-piece" type="button" aria-label="Pieza siguiente">→</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

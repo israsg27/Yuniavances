@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta name="description" content="Explora el modelado de los muebles y objetos de Yunipets. Recorre las colecciones, amplía las piezas y gíralas en 3D.">
+  <title>Mobiliario · Yunipets!</title>
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css">
+  <link rel="stylesheet" href="meses.css">
+  <link rel="stylesheet" href="mobiliario.css">
+  <script defer src="recap-nav.js"></script>
+  <script defer src="recap-media/mobiliario/catalogo.js"></script>
+  <script defer src="mobiliario.js"></script>
+</head>
+<body class="journal-month furniture-page">
+  <a class="skip" href="#catalogo">Saltar a las piezas</a>
+  <header class="journal-header">
+    <div class="journal-bar">
+      <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses"><img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125"></a>
+      <details class="journal-menu">
+        <summary aria-label="Menú del recap"><i aria-hidden="true"></i></summary>
+        <nav aria-label="Navegación del recap">
+          <a href="recap.html">Todos los meses</a>
+          <a href="recap.html#sistemas">Avances por sistema</a>
+          <a href="creador.html">Creador de Yunipets</a>
+          <a href="archivo.html#galeria">Galería de arte</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+  <main class="journal-wrap">
+    <a class="f-back" href="recap.html#sistemas">← Avances por sistema</a>
+    <header class="f-cover">
+      <div class="f-intro">
+        <p class="folio-label">Modelado de escenarios</p>
+        <h1>Muebles de Yunipets</h1>
+        <p>Desde un buró hasta una silla con respaldo de trébol. Explora 229 muebles y objetos en acabado mate y gira cada pieza para ver cómo está modelada.</p>
+        <a href="#catalogo" class="f-action">Explorar las piezas <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="f-edition">
+        <img src="recap-media/mobiliario/jardin.webp" alt="Las dos camas, la silla y el banco de hongo del Jardín de hadas en un mismo escenario" width="1176" height="700" fetchpriority="high">
+        <figcaption><a href="mobiliario.html?coleccion=jardin#catalogo">Jardín de hadas <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>
+    </header>
+    <section id="catalogo" class="f-catalog" aria-labelledby="f-heading">
+      <div class="f-heading"><h2 id="f-heading">Catálogo de piezas</h2><p id="f-count" role="status" aria-live="polite" aria-atomic="true">229 piezas</p></div>
+      <div class="f-tools">
+        <label>Buscar una pieza<input type="search" id="f-search" autocomplete="off" placeholder="Nombre o código"></label>
+        <label>Colección<select id="f-filter"><option value="">Todas las colecciones</option></select></label>
+      </div>
+      <div id="f-grid" class="f-grid"></div>
+      <div id="f-empty" hidden><p>No encontramos piezas con esa búsqueda.</p><button type="button" class="f-plain" id="f-reset">Mostrar todo el mobiliario</button></div>
+      <button type="button" id="f-more" class="f-more" hidden>Mostrar más piezas ↓</button>
+      <noscript><p>Activa JavaScript para buscar y girar las piezas. <a href="recap-media/mobiliario/jardin.webp">Ampliar los muebles del Jardín de hadas</a>.</p></noscript>
+    </section>
+  </main>
+  <dialog id="f-dialog" aria-labelledby="f-piece">
+    <div class="f-detail">
+      <header><div><p id="f-family"></p><h2 id="f-piece"></h2></div><button class="f-icon f-close" type="button" aria-label="Cerrar pieza">×</button></header>
+      <div id="f-stage" class="f-stage"><img id="f-image" alt="" width="600" height="600"><div id="f-model" hidden></div></div>
+      <div class="f-inspect"><button type="button" id="f-orbit" class="f-plain" aria-pressed="false">Girar en 3D</button><div id="f-turn" hidden><button type="button" class="f-icon" id="f-left" aria-label="Girar a la izquierda">↶</button><button type="button" class="f-icon" id="f-right" aria-label="Girar a la derecha">↷</button></div><span id="f-help" role="status"></span></div>
+      <footer><span id="f-position"></span><div><button type="button" class="f-icon" id="f-prev" aria-label="Pieza anterior">←</button><button type="button" class="f-icon" id="f-next" aria-label="Pieza siguiente">→</button></div></footer>
+    </div>
+  </dialog>
+  <footer class="journal-footer"><a href="recap.html">← Volver a los avances por mes</a><img src="recap-media/yunipets.svg" width="106" height="21" alt="Yunipets!"></footer>
+</body>
+</html>

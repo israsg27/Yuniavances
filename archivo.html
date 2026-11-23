@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f6f1">
+    <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+    <link rel="preload" href="recap-media/sora.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="recap.css">
+    <link rel="stylesheet" href="meses.css">
+    <script defer src="recap-nav.js"></script>
+    <title>Archivo de desarrollo · Yunipets! 2026</title>
+    <meta name="description" content="Recorridos por el diseño de la mascota, la tienda y los cuartos, con el archivo de arte de Yunipets.">
+    <script defer src="recap-data.js"></script>
+    <script defer src="recap-archivo.js"></script>
+    <script defer src="visor.js"></script>
+    <script defer src="recap.js"></script>
+  </head>
+  <body class="journal-archive">
+    <a class="skip" href="#historias">Saltar al contenido</a>
+    <header class="journal-header">
+      <div class="journal-bar">
+        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
+          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
+        </a>
+        <details class="journal-menu">
+          <summary aria-label="Menú del recap">
+            <i aria-hidden="true"></i>
+          </summary>
+          <nav aria-label="Navegación del recap">
+            <a href="recap.html">Todos los meses</a>
+            <a href="recap.html#sistemas">Avances por sistema</a>
+            <a href="creador.html">Creador de Yunipets</a>
+            <a href="archivo.html#galeria">Galería de arte</a>
+            <a href="archivo.html#historias">Evolución del juego</a>
+            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
+            <a href="archivo.html#proximos">Qué sigue</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main class="wrap">
+      <div class="archive-heading">
+        <a class="back-index" href="recap.html">← Todos los meses</a>
+        <h1>Archivo de desarrollo</h1>
+      </div>
+      <section class="section" id="historias" aria-labelledby="story-title">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Evolución del juego</p>
+            <h2 id="story-title">Del boceto a la escena</h2>
+          </div>
+          <p>Sigue una parte del juego a través de sus pruebas, modelos y versiones.</p>
+        </div>
+        <div class="story-tools">
+          <div class="story-tabs" id="story-tabs" role="group" aria-label="Elegir historia de desarrollo"></div>
+          <button class="story-play" id="play-story" type="button" aria-pressed="false">▶ Reproducir recorrido</button>
+        </div>
+        <div class="story-stage" id="story-stage"></div>
+      </section>
+      <section class="section" id="laboratorio" aria-labelledby="lab-title">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Material de producción</p>
+            <h2 id="lab-title">Mesa de pruebas</h2>
+          </div>
+          <p>Dos decisiones de arte que puedes explorar con los archivos originales.</p>
+        </div>
+        <div class="lab-grid">
+          <article class="lab-card faces">
+            <div class="lab-copy">
+              <span class="type-tag">Personaje</span>
+              <h3>Una cara, 25 miradas</h3>
+              <p>Recorre las celdas del atlas de ojos y observa cuánto cambia la expresión del mismo Yunipet.</p>
+            </div>
+            <div class="face-stage">
+              <div class="eye-portrait" id="eye-portrait" role="img" aria-label="Expresión 1 de 25"></div>
+              <div id="face-grid" class="face-grid" role="group" aria-label="Elegir una de las 25 expresiones"></div>
+            </div>
+            <div class="face-controls">
+              <button class="play" id="play-eyes" type="button" aria-pressed="false">▶ Reproducir</button>
+              <span id="face-count">01 / 25</span>
+              <button type="button" data-eye="-1" class="round" aria-label="Expresión anterior">←</button>
+              <button type="button" data-eye="1" class="round" aria-label="Expresión siguiente">→</button>
+            </div>
+          </article>
+          <article class="lab-card compare">
+            <div class="lab-copy">
+              <span class="type-tag">Habitaciones</span>
+              <h3>Un cuarto, dos acabados</h3>
+              <p>Desliza el control para comparar dos pruebas de octubre y ver el efecto del material en los muebles.</p>
+            </div>
+            <div class="compare-images" id="compare-images">
+              <img src="recap-media/oct-doc.webp" alt="Habitación con mobiliario de distintos colores y pared estampada" loading="lazy">
+              <img class="before" src="recap-media/archivo/oct-color.webp" alt="La prueba con acabados neutros" loading="lazy">
+              <i aria-hidden="true">
+                <b>↔</b>
+              </i>
+              <input id="compare-range" type="range" min="0" max="100" value="50" aria-label="Porción visible del acabado neutro">
+            </div>
+            <div class="compare-labels">
+              <span>Acabados neutros</span>
+              <span>Mezcla de estilos</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section gallery-section" id="galeria" aria-labelledby="gallery-title">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Archivo visual</p>
+            <h2 id="gallery-title">Galería de arte</h2>
+          </div>
+          <p>Modelos, conceptos, pantallas y pruebas técnicas. Abre una pieza para verla con su contexto.</p>
+        </div>
+        <div class="gallery-controls">
+          <div id="gallery-filters" role="group" aria-label="Filtrar la galería por tema"></div>
+          <label class="search">
+            <span class="sr">Buscar una pieza del archivo</span>
+            <input id="buscar" type="search" placeholder="Buscar una pieza…">
+          </label>
+        </div>
+        <p class="gallery-count" id="gallery-count" aria-live="polite"></p>
+        <div class="gallery-grid" id="galeria-piezas"></div>
+        <button type="button" id="more-pieces" class="button outline">Ver más piezas ↓</button>
+      </section>
+      <section class="road" id="proximos" aria-labelledby="road-title">
+        <div class="road-intro">
+          <p class="eyebrow">Después de octubre · Planeación</p>
+          <h2 id="road-title">Qué sigue</h2>
+          <p>La siguiente etapa propone llevar más contenido de arte a pruebas con los sistemas del juego.</p>
+        </div>
+        <div class="road-items">
+          <article>
+            <h3>Estabilizar la entrega de arte</h3>
+            <p>La planeación de noviembre propone acordar nombres, orígenes y puntos de unión de muebles, ropa y mascotas para que desarrollo pueda importarlos de manera consistente.</p>
+          </article>
+          <article>
+            <h3>Probar la primera isla</h3>
+            <p>El plan de exploración describe una primera isla con ocho tipos de nodo, una ruta de cinco vueltas y movimiento con dado. La propuesta empieza con un tablero de prueba para validar sus medidas.</p>
+          </article>
+          <article>
+            <h3>Ampliar el arcade</h3>
+            <p>Globos y escalada ya figuraban en la demo. El plan propone cerrar el catálogo de la primera versión y elegir un primer lote de tres o cuatro minijuegos para producir su arte.</p>
+          </article>
+          <article>
+            <h3>Probar el vestuario en el personaje</h3>
+            <p>Entregar un lote de prendas por tipo y validar el ajuste de gorros y gorras antes de ampliar las colecciones.</p>
+          </article>
+          <article>
+            <h3>Cerrar el kit de habitaciones</h3>
+            <p>Confirmar con desarrollo los tamaños elegibles y preparar estilos de piso y pared para el kit modular.</p>
+          </article>
+          <article>
+            <h3>Definir el contenido de pesca</h3>
+            <p>Acordar la lista de islas y peces de la primera versión y producir los recursos de cada entorno.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="journal-footer">
+      <img src="recap-media/simbolo.svg" alt="" width="19" height="21">
+      <span>Yunipets! · Recap de desarrollo 2026</span>
+      <a href="archivo.html#galeria">Galería de arte <span aria-hidden="true">↗</span>
+      </a>
+    </footer>
+    <dialog id="visor" aria-labelledby="piece-title">
+      <div class="viewer-shell">
+        <div class="viewer-bar">
+          <span id="piece-type"></span>
+          <button class="close" type="button" aria-label="Cerrar imagen">×</button>
+        </div>
+        <img id="piece-image" alt="">
+        <div class="viewer-caption">
+          <div>
+            <p id="piece-origin"></p>
+            <h2 id="piece-title"></h2>
+            <p id="piece-caption"></p>
+          </div>
+          <div class="viewer-nav">
+            <button class="round" id="prev-piece" type="button" aria-label="Pieza anterior">←</button>
+            <span id="piece-counter"></span>
+            <button class="round" id="next-piece" type="button" aria-label="Pieza siguiente">→</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

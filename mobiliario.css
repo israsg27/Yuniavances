@@ -1,0 +1,85 @@
+.furniture-page {--display:var(--head);background:#f8f7f2;color:#23342f}
+.furniture-page::before {display:none}
+.furniture-page .journal-wrap,.furniture-page .journal-bar,.furniture-page .journal-footer {width:min(1152px,calc(100% - 64px))}
+.f-back {display:inline-flex;align-items:center;min-height:44px;margin:8px 0;color:#40574b;font:650 .8rem var(--body);text-decoration:none}
+.f-cover {display:grid;grid-template-columns:.9fr 1.32fr;overflow:hidden;border-radius:26px;background:#e1eade}
+.f-intro {align-self:center;padding:clamp(26px,3.1vw,42px)}
+.f-intro .folio-label {margin:0 0 13px;color:#395644}
+.f-intro h1 {margin:0;font:750 clamp(40px,4.35vw,62px)/1.01 var(--display);letter-spacing:-.067em;text-wrap:balance}
+.f-intro>p:not(.folio-label) {max-width:36ch;margin:18px 0 24px;color:#374e41;font:450 clamp(14px,1.18vw,17px)/1.55 var(--body)}
+.f-action {display:inline-flex;gap:16px;align-items:center;padding:13px 19px;border-radius:100px;background:#264b3c;color:#fff;text-decoration:none;font:650 .84rem var(--body)}
+.f-action:hover,.f-action:focus-visible {background:#18392c}
+.f-edition {position:relative;margin:0;min-height:100%;background:#abafa6}
+.f-edition img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.f-edition figcaption {position:absolute;bottom:13px;right:15px}
+.f-edition a {display:inline-flex;align-items:center;gap:12px;padding:7px 13px;background:#f8f8f0ee;border:1px solid #ffffff82;border-radius:16px;color:#294336;font:650 .77rem var(--body);text-decoration:none}
+.f-catalog {padding:clamp(34px,5vw,66px) 0 64px;scroll-margin-top:14px}
+.f-heading {display:flex;align-items:baseline;justify-content:space-between;gap:15px}
+.f-heading h2 {margin:0;font:720 clamp(28px,3.15vw,45px)/1.08 var(--display);letter-spacing:-.062em}
+.f-heading p,.f-detail footer>span {margin:0;font:550 .85rem var(--body);color:#4c5c51}
+.f-tools {display:flex;flex-wrap:wrap;gap:12px;margin:23px 0}
+.f-tools label {flex:1;min-width:180px;color:#4c5c51;font:600 .79rem var(--body)}
+.f-tools input,.f-tools select {display:block;width:100%;height:47px;margin-top:6px;border:1px solid #aab5aa;border-radius:12px;background:#fffefa;color:#243b2c;padding:0 13px;font:480 .95rem var(--body)}
+.f-tools select {cursor:pointer}
+.f-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:23px 16px}
+.f-card {display:block;width:100%;min-width:0;padding:0;border:0;background:none;color:inherit;text-align:left;cursor:pointer}
+.f-card .f-card-image {display:block;overflow:hidden;position:relative;border-radius:17px;background:#c5c7bf;aspect-ratio:1}
+.f-card img {display:block;width:100%;height:100%;object-fit:contain;transition:transform .28s ease}
+.f-card .f-name {display:block;margin:9px 0 3px;font:670 clamp(14px,1.3vw,18px)/1.24 var(--display);letter-spacing:-.035em}
+.f-card .f-collection {display:block;color:#506256;font:450 .79rem/1.35 var(--body)}
+.f-card:is(:hover,:focus-visible) img {transform:scale(1.04)}
+.f-card:is(:hover,:focus-visible) .f-name {text-decoration:underline;text-underline-offset:3px}
+.furniture-page :focus-visible {outline:3px solid #257457;outline-offset:3px}
+.f-more,.f-plain,.f-icon {border:1px solid #adbaae;border-radius:100px;background:#fffef9;color:#244635;cursor:pointer;font:620 .86rem var(--body)}
+.f-more {display:block;margin:30px auto 0;padding:13px 24px}
+.f-plain {padding:10px 16px}
+.f-icon {min-width:40px;min-height:40px;display:grid;place-items:center;padding:0 8px;font-size:1.15rem}
+.f-more:hover,.f-icon:hover,.f-plain:hover {background:#e4ecdf}
+.furniture-page [hidden] {display:none!important}
+#f-empty {padding:30px 0}
+#f-dialog {padding:0;border:0;border-radius:20px;width:min(560px,calc(100vw - 24px));max-height:94vh;max-height:94dvh;overflow:auto;background:#faf9f5;color:#23342f;box-shadow:0 30px 100px #15251e45}
+#f-dialog::backdrop {background:#16251ed1}
+.f-detail {padding:16px 20px}
+.f-detail header,.f-detail footer,.f-inspect,.f-detail footer>div,#f-turn {display:flex;align-items:center;gap:8px}
+.f-detail header,.f-detail footer {justify-content:space-between}
+.f-detail header {padding-bottom:12px}
+.f-detail header p {margin:0 0 3px;color:#4d6455;font:560 .79rem var(--body)}
+.f-detail h2 {margin:0;font:700 clamp(19px,3.2vw,29px)/1.15 var(--display);letter-spacing:-.04em}
+.f-close {flex:0 0 auto;font-size:1.5rem}
+.f-stage {display:grid;place-items:center;position:relative;overflow:hidden;background:#bcc0b6;border-radius:13px}
+.f-stage img {width:100%;height:min(51dvh,500px);object-fit:contain;background:#c5c7bf}
+#f-model {width:100%;height:min(51dvh,500px);touch-action:none;cursor:grab}
+#f-model:active {cursor:grabbing}
+#f-model canvas {display:block;width:100%;height:100%}
+.f-inspect {padding:12px 0;min-height:61px;flex-wrap:wrap}
+.f-inspect #f-help {flex:1;min-width:100px;color:#475c50;font:450 .78rem/1.35 var(--body)}
+.f-inspect .f-plain[aria-pressed=true] {background:#294b3a;color:white}
+.f-detail footer {padding-top:10px;border-top:1px solid #d5dbd0}
+.furniture-page:has(#f-dialog[open]) {overflow:hidden}
+@media(max-width:800px){
+  .furniture-page .journal-wrap,.furniture-page .journal-bar,.furniture-page .journal-footer {width:calc(100% - 36px)}
+  .f-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 12px}
+  .f-intro {padding:25px}
+  .f-cover {grid-template-columns:1fr 1fr}
+  .f-intro h1 {font-size:clamp(36px,6vw,48px)}
+}
+@media(max-width:600px){
+  .f-cover {grid-template-columns:1fr;border-radius:20px}
+  .f-intro {padding:22px 23px}
+  .f-intro h1 {max-width:none}
+  .f-intro>p:not(.folio-label) {margin:10px 0 0;max-width:46ch}
+  .f-intro .folio-label {margin-bottom:8px}
+  .f-intro .f-action {margin-top:14px;padding:9px 15px}
+  .f-edition {aspect-ratio:1.95}
+  .f-tools {margin:16px 0;gap:8px}
+  .f-tools label {min-width:130px}
+  .f-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}
+  .f-card .f-card-image {border-radius:12px}
+  .f-detail {padding:13px}
+}
+@media(max-width:360px){
+  .furniture-page .journal-wrap,.furniture-page .journal-bar,.furniture-page .journal-footer {width:calc(100% - 24px)}
+  .f-tools {display:grid;grid-template-columns:1fr}
+  .f-heading {align-items:end}
+}
+@media(prefers-reduced-motion:reduce){.f-card img {transition:none}}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f2">
+  <meta name="description" content="Combina las piezas originales del personaje de Yunipets, gira tu mascota y guarda su retrato.">
+  <title>Crea tu Yunipet · Yunipets!</title>
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="meses.css"><link rel="stylesheet" href="creador.css">
+  <script defer src="recap-nav.js"></script>
+  <script defer src="recap-media/creador/three.min.js"></script>
+  <script defer src="recap-media/creador/piezas.js"></script>
+  <script defer src="recap-media/creador/poses.js"></script>
+  <script defer src="telas.js"></script><script defer src="visor-yunipet.js"></script><script defer src="creador.js"></script>
+</head>
+<body class="journal-month creator-page">
+  <a class="skip" href="#estudio">Saltar al creador</a>
+  <header class="journal-header">
+      <div class="journal-bar">
+        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
+          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
+        </a>
+        <details class="journal-menu">
+          <summary aria-label="Menú del recap">
+            <i aria-hidden="true"></i>
+          </summary>
+          <nav aria-label="Navegación del recap">
+            <a href="recap.html">Todos los meses</a>
+            <a href="recap.html#sistemas">Avances por sistema</a>
+            <a href="creador.html" aria-current="page">Creador de Yunipets</a>
+            <a href="archivo.html#galeria">Galería de arte</a>
+            <a href="archivo.html#historias">Evolución del juego</a>
+            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
+            <a href="archivo.html#proximos">Qué sigue</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+  <main class="creator-shell" id="estudio">
+    <div class="studio">
+      <header class="studio-heading">
+        <a class="studio-back" href="recap.html" aria-label="Volver a los meses" title="Volver a los meses"></a>
+        <h1>Crea tu Yunipet</h1>
+        <button class="light-button" type="button" id="shuffle">Al azar <span aria-hidden="true">⤨</span></button>
+      </header>
+      <div class="workbench">
+        <nav class="feature-nav" id="features" aria-label="Personalizar personaje">
+          <div class="feature-rail" id="feature-rail" tabindex="0" aria-label="Categorías de rasgos"></div>
+          <button type="button" class="more-features" id="more-features" aria-label="Ver más categorías">Más rasgos ↓</button>
+        </nav>
+        <section class="look" aria-label="Vista de tu Yunipet">
+          <div class="turntable" id="turntable">
+            <canvas id="pet" aria-label="Tu Yunipet en 3D. Arrastra para girarlo o usa las flechas del teclado." tabindex="0"></canvas>
+          </div>
+          <div class="view-tools" aria-label="Controles de vista">
+            <button type="button" data-turn="-1" aria-label="Girar a la izquierda">↶</button>
+            <button type="button" id="front" title="Volver a la vista frontal">Frente</button>
+            <button type="button" data-turn="1" aria-label="Girar a la derecha">↷</button>
+            <button type="button" id="portrait-view" aria-pressed="false">Acercar</button>
+          </div>
+        </section>
+        <section class="inspector" aria-labelledby="category-title">
+          <p class="context-label" id="section-name">Color del pelaje</p>
+          <h2 id="category-title">Pelaje</h2>
+          <div id="color-editor">
+            <div class="zone-list" id="zones" role="group" aria-label="Zona del pelaje"></div>
+            <p class="zone-note" id="zone-note" hidden></p>
+            <button type="button" class="text-button" id="choose-pattern">Cambiar patrón <span aria-hidden="true">→</span></button>
+          </div>
+          <div id="piece-editor" hidden>
+            <div id="subgroups" class="subgroups" role="group" aria-label="Tipo de pieza"></div>
+            <div id="ear-editor" hidden>
+              <div class="ear-shortcuts"><button type="button" data-go="pelaje">Patrón</button><button type="button" data-go="hocico">Hocico</button></div>
+              <div id="ear-diagram" class="ear-diagram" aria-label="Visibilidad de las orejas">
+                <button type="button" data-ear="0"></button><button type="button" data-ear="1"></button>
+              </div>
+            </div>
+            <div id="fabric-editor" hidden>
+              <h3>Muestras de tela</h3><div id="fabric-list" class="fabric-list" role="group" aria-label="Tela de la pieza"></div>
+              <div class="import-map">
+                <label class="map-button">Cargar textura<input type="file" id="fabric-file" accept="image/png,image/jpeg,image/webp"></label>
+                <label id="mask-label" hidden><input type="checkbox" id="rgb-mask"> Máscara RGB</label>
+              </div>
+              <p id="fabric-file-name" aria-live="polite"></p>
+            </div>
+            <div class="eye-collections subgroups" id="eye-collections" role="group" aria-label="Colecciones de ojos" hidden>
+              <button type="button" data-atlas="7">Miradas I</button><button type="button" data-atlas="8">Miradas II</button><button type="button" data-atlas="9">Gestos</button>
+            </div>
+            <button type="button" id="edit-colors" class="text-button" hidden>Editar colores <span aria-hidden="true">→</span></button>
+          </div>
+        </section>
+      </div>
+      <section class="tray" aria-label="Opciones de personalización">
+        <div id="color-tray">
+          <div class="tray-title"><h3 id="color-title">Color principal</h3>
+            <button type="button" class="text-button" id="restore-colors">Colores del patrón</button></div>
+          <div class="swatches" id="palette" role="group" aria-labelledby="color-title">
+            <label class="custom-color" title="Elegir cualquier color"><input type="color" id="custom-color" aria-label="Color a medida"><span aria-hidden="true">+</span></label>
+          </div>
+        </div>
+        <div id="piece-tray" hidden>
+          <div class="tray-title"><h3 id="tray-category"></h3>
+            <div class="paging"><button type="button" id="prev-page" aria-label="Opciones anteriores">‹</button><span id="choice-count" aria-live="polite"></span><button type="button" id="next-page" aria-label="Opciones siguientes">›</button></div>
+          </div>
+          <div class="parts-list" role="group" aria-labelledby="tray-category" id="parts-list"></div>
+        </div>
+      </section>
+    </div>
+    <div class="portrait-tools">
+      <label for="pet-name">Nombre de tu Yunipet<input id="pet-name" type="text" maxlength="28" placeholder="Mi Yunipet" autocomplete="off"></label>
+      <button type="button" id="wave" aria-pressed="false">Saludar</button>
+      <button type="button" id="save-portrait" disabled>Guardar retrato <span aria-hidden="true">↓</span></button>
+    </div>
+    <p role="status" class="studio-status" id="status"></p>
+    <noscript>Activa JavaScript para combinar las piezas y girar el personaje.</noscript>
+  </main>
+</body>
+</html>
