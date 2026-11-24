@@ -3,29 +3,29 @@
 const colecciones = {
   "primeras": {
     "tab": "Siluetas",
-    "title": "Las primeras diez vistas",
-    "copy": "Compara el contorno de las mejillas, el perfil y las orejas en las pruebas que precedieron al primer cuerpo.",
+    "title": "La silueta antes del rostro",
+    "copy": "Las primeras diez vistas de Yunit muestran cómo cambiaban el hocico, las mejillas y las orejas.",
     "proof": "feb-doc",
     "credit": "Lámina original · febrero",
     "names": [
-      "Estudio 01",
-      "Estudio 02",
-      "Estudio 03",
-      "Estudio 04",
-      "Estudio 05",
-      "Estudio 06",
-      "Estudio 07",
-      "Estudio 08",
-      "Estudio 09",
-      "Estudio 10"
+      "Orejas cortas de perfil",
+      "Orejas caídas de frente",
+      "Hocico en tres cuartos",
+      "Volumen sin orejas",
+      "Perfil de punta corta",
+      "Oreja larga de perfil",
+      "Orejas altas en tres cuartos",
+      "Orejas abiertas",
+      "Mejillas estrechas",
+      "Base ancha de frente"
     ]
   },
   "cabeza": {
     "tab": "Cabezas",
-    "title": "Una base, doce formas",
-    "copy": "Fíjate en la mandíbula y en el ancho de las mejillas. Estas formas de la biblioteca actual permiten recorrer la idea modular que empezó en marzo.",
+    "title": "Una base, once formas",
+    "copy": "Compara la curva de las mejillas y el ancho de la mandíbula.",
     "proof": "mar-modular",
-    "credit": "Blender · render para el recap",
+    "credit": "Unity · captura del componente",
     "names": [
       "Clásica",
       "Redonda I",
@@ -37,8 +37,7 @@ const colecciones = {
       "Hexagonal II",
       "Hexagonal III",
       "Rectangular",
-      "Corazón",
-      "Yunipet"
+      "Corazón"
     ]
   },
   "orejas": {
@@ -46,7 +45,7 @@ const colecciones = {
     "title": "Veintiséis pares de orejas",
     "copy": "De las caídas a las erguidas, la unión se conserva y cambia la silueta. Compara los pares sobre la misma cabeza.",
     "proof": "abr-orejas",
-    "credit": "Blender · render para el recap",
+    "credit": "Unity · captura del componente",
     "names": [
       "Caídas 01",
       "Caídas 02",
@@ -74,14 +73,20 @@ const colecciones = {
       "Dobladas 24",
       "Erguidas 24",
       "Dobladas 25"
-    ]
+    ],
+    "archiveIndices": [
+      24,
+      25,
+      26
+    ],
+    "archiveCredit": "Blender · render para el recap"
   },
   "hocico": {
     "tab": "Hocicos",
     "title": "El rostro, visto de tres cuartos",
     "copy": "El perfil deja ver qué hocicos se proyectan hacia delante y cuáles se pegan a la cara.",
     "proof": "abr-hocicos",
-    "credit": "Blender · render para el recap",
+    "credit": "Unity · captura del componente",
     "names": [
       "Felino 1",
       "Felino 2",
@@ -100,14 +105,22 @@ const colecciones = {
       "Shiba inu",
       "Chato",
       "Whippet"
-    ]
+    ],
+    "archiveIndices": [
+      4,
+      7,
+      8,
+      12,
+      16
+    ],
+    "archiveCredit": "Blender · render para el recap"
   },
   "nariz": {
     "tab": "Narices",
     "title": "El detalle de la trufa",
     "copy": "La cámara se acerca al extremo del hocico para comparar el ancho, la punta y el volumen de cada nariz.",
     "proof": "abr-hocicos",
-    "credit": "Blender · render para el recap",
+    "credit": "Unity · captura del componente",
     "names": [
       "Trufa 01",
       "Trufa 02",
@@ -120,14 +133,20 @@ const colecciones = {
       "Trufa 09",
       "Trufa 10",
       "Trufa 11"
-    ]
+    ],
+    "archiveIndices": [
+      9,
+      10,
+      11
+    ],
+    "archiveCredit": "Blender · render para el recap"
   },
   "cola": {
     "tab": "Colas",
-    "title": "Once maneras de terminar la silueta",
-    "copy": "La vista de espaldas deja a la vista el punto de unión y la curva de cada cola.",
+    "title": "Once formas de cola",
+    "copy": "Compara la curva, el largo y el volumen de cada cola por separado.",
     "proof": "abr-colas",
-    "credit": "Blender · render para el recap",
+    "credit": "Unity · captura del componente",
     "names": [
       "Rizada 01",
       "Rizada 02",
@@ -213,7 +232,7 @@ const colecciones = {
     "title": "Rasgos que se leen a tamaño de icono",
     "copy": "En julio se prepararon renders para los iconos del juego. Aquí puedes comparar las piezas de la frente sobre el rostro antes de ver la plancha de producción.",
     "proof": "jul-iconos",
-    "credit": "Blender · render para el recap",
+    "credit": "Unity · captura del componente",
     "names": [
       "Adorno 10",
       "Cejas 08",
@@ -226,14 +245,18 @@ const colecciones = {
       "Mechón 05",
       "Mechón 06",
       "Mechón 07"
-    ]
+    ],
+    "archiveIndices": [
+      4
+    ],
+    "archiveCredit": "Blender · render para el recap"
   },
   "ojos7": {
     "tab": "Atlas 7",
     "title": "Una cara, 25 miradas",
     "copy": "Cambia de celda para comparar la pupila, el párpado y el brillo sobre el mismo personaje.",
     "proof": "ago-ojos",
-    "credit": "Atlas original · agosto",
+    "credit": "Unity · atlas 7",
     "names": [
       "De reojo",
       "Con picardía",
@@ -267,7 +290,7 @@ const colecciones = {
     "title": "Otras 25 expresiones",
     "copy": "Cambia de celda para comparar la pupila, el párpado y el brillo sobre el mismo personaje.",
     "proof": "ago-ojos",
-    "credit": "Atlas original · agosto",
+    "credit": "Unity · atlas 8",
     "names": [
       "Párpado rosa",
       "Ámbar pequeña",
@@ -442,7 +465,7 @@ const colecciones = {
     "title": "Veinticinco patrones, los mismos tres tonos",
     "copy": "Cada patrón usa el mapa de zonas del archivo de personaje. Mantenemos la paleta fija para que puedas seguir dónde cambian las rayas, las manchas o las rosetas.",
     "proof": "oct-pelaje",
-    "credit": "Blender · render para el recap",
+    "credit": "Unity · captura del componente",
     "names": [
       "Manchas 01",
       "Rayas 02",
@@ -476,13 +499,17 @@ const colecciones = {
     "title": "Cuatro perfiles de gato",
     "copy": "El registro de octubre retoma el hocico felino. Esta selección de la biblioteca permite ver de cerca las cuatro formas.",
     "proof": "oct-hocico",
-    "credit": "Blender · render para el recap",
+    "credit": "Unity · captura del componente",
     "names": [
       "Felino 1",
       "Felino 2",
       "Felino 3",
       "Felino 4"
-    ]
+    ],
+    "archiveIndices": [
+      4
+    ],
+    "archiveCredit": "Blender · render para el recap"
   },
   "dibujos": {
     "tab": "Yunit",
@@ -538,6 +565,22 @@ const colecciones = {
       "Cómo se recorría la tienda"
     ]
   },
+  "peces": {
+    "tab": "Peces",
+    "initialIndex": 12,
+    "title": "Los peces del álbum",
+    "copy": "Elige una ilustración para ver sus colores y su expresión. Toca el pez para ampliarlo.",
+    "credit": "Ilustraciones originales · Yunipets",
+    "proof": "ago-pesca",
+    "names": [
+      "Verde de rayas", "Con cuernos", "Con armadura", "Concha en espiral", "Esqueleto",
+      "Concha de náutilo", "Gris perlado", "De roca oscura", "Entre burbujas", "Con orejas",
+      "Con bigotes", "Medusa verde", "De franjas naranjas", "En su concha", "Con corona de espinas",
+      "Globo de lunares", "Azul plateado", "Dorado", "Verde de aletas largas",
+      "De piedra", "Con corona", "De escamas azules", "En pareja", "Con pinzas",
+      "De cola puntiaguda", "Con cuerno", "De tentáculos", "Medusa rosada", "Cangrejo rosa", "Camarón"
+    ]
+  },
   "pesca": {
     "tab": "Pesca",
     "title": "De la isla al álbum",
@@ -549,18 +592,6 @@ const colecciones = {
       "El álbum de pesca",
       "El color de los peces",
       "Colecciones por entorno"
-    ]
-  },
-  "petcare": {
-    "tab": "PetCare",
-    "title": "Cuidar al Yunipet",
-    "copy": "La pantalla de octubre reúne las acciones de cuidado. El icono y el estudio de baño muestran cómo se representa uno de esos gestos.",
-    "credit": "Interfaz de octubre y archivo de PetCare",
-    "proof": "oct-petcare",
-    "names": [
-      "La pantalla de PetCare",
-      "El icono de la toalla",
-      "Una acción de baño"
     ]
   }
 };

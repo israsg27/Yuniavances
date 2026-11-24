@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tienda · Desarrollo · Yunipets!</title>
+  <meta name="description" content="Así funcionaba la primera tienda de Yunipets. La reharemos desde cero para que explorar el catálogo y elegir un artículo sea más fácil y dinámico.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <link rel="stylesheet" href="desarrollo.css">
+  <link rel="stylesheet" href="tienda.css">
+  <script defer src="tienda.js"></script>
+  <script defer src="elegir-mes.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main mechanic-detail" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <article class="mechanic-page" id="tienda">
+      <header><p class="edition-label">Próximo rediseño</p><h1>Tienda</h1><p>Empezaremos a rehacer la tienda desde cero. Queremos que sea más fácil encontrar lo que buscas y que puedas pasar con fluidez de explorar el catálogo a ver de cerca un artículo y seguir descubriendo otros.</p></header>
+      <section aria-labelledby="recorrido-tienda" class="shop-history">
+        <h2 id="recorrido-tienda">Del mapa a la ficha de un mueble</h2>
+        <p>Estas capturas de Unity muestran la versión anterior de la tienda. Al igual que en el resto del juego, la interfaz sigue en desarrollo. Toca una imagen para ampliarla.</p>
+        <ol class="shop-walkthrough">
+          <li><figure><a href="recap-media/tienda/mapa.webp" aria-label="Ampliar captura: Elegir la tienda en el mapa"><img src="recap-media/tienda/mapa.webp" srcset="recap-media/tienda/mapa-840.webp 840w, recap-media/tienda/mapa.webp 1920w" sizes="(max-width: 700px) 94vw, (max-width: 1160px) 52vw, 660px" alt="Mapa del distrito comercial con el edificio de yuniHOME a la derecha" width="1920" height="1080" loading="lazy"></a><figcaption><h3>Elegir la tienda en el mapa</h3><p>Desde el mapa podías tocar el edificio de la tienda de muebles.</p></figcaption></figure></li>
+          <li><figure><a href="recap-media/tienda/visita.webp" aria-label="Ampliar captura: Entrar a yuniHOME"><img src="recap-media/tienda/visita.webp" srcset="recap-media/tienda/visita-840.webp 840w, recap-media/tienda/visita.webp 1920w" sizes="(max-width: 700px) 94vw, (max-width: 1160px) 52vw, 660px" alt="Ficha de yuniHOME sobre el mapa, con una alfombra en la vista previa y el botón Visit" width="1920" height="1080" loading="lazy"></a><figcaption><h3>Entrar a yuniHOME</h3><p>Antes de entrar se abría una ficha con el nombre de la tienda y una muestra de sus productos. El botón «Visit» te llevaba al local.</p></figcaption></figure></li>
+          <li><figure><a href="recap-media/tienda/interior.webp" aria-label="Ampliar captura: Tocar un expositor"><img src="recap-media/tienda/interior.webp" srcset="recap-media/tienda/interior-840.webp 840w, recap-media/tienda/interior.webp 1920w" sizes="(max-width: 700px) 94vw, (max-width: 1160px) 52vw, 660px" alt="Interior de la tienda con tres expositores de muebles delineados en turquesa" width="1920" height="1080" loading="lazy"></a><figcaption><h3>Tocar un expositor</h3><p>Dentro del local había tres grupos de muebles con el borde iluminado. Al tocar uno se abría el catálogo.</p></figcaption></figure></li>
+          <li><figure><a href="recap-media/tienda/catalogo.webp" aria-label="Ampliar captura: Explorar el catálogo"><img src="recap-media/tienda/catalogo.webp" srcset="recap-media/tienda/catalogo-840.webp 840w, recap-media/tienda/catalogo.webp 1920w" sizes="(max-width: 700px) 94vw, (max-width: 1160px) 52vw, 660px" alt="Catálogo con la colección Pack Old West, los filtros y una fila de productos con precios" width="1920" height="1080" loading="lazy"></a><figcaption><h3>Explorar el catálogo</h3><p>La colección destacada aparecía arriba. Debajo estaban los filtros por tipo de mueble y los artículos con su precio en Yunicoins.</p></figcaption></figure></li>
+          <li><figure><a href="recap-media/tienda/ficha.webp" aria-label="Ampliar captura: Ver un artículo de cerca"><img src="recap-media/tienda/ficha.webp" srcset="recap-media/tienda/ficha-840.webp 840w, recap-media/tienda/ficha.webp 1920w" sizes="(max-width: 700px) 94vw, (max-width: 1160px) 52vw, 660px" alt="Alfombra Pet Rug seleccionada en el catálogo, con imagen, precio y botón de compra en el panel derecho" width="1920" height="1080" loading="lazy"></a><figcaption><h3>Ver un artículo de cerca</h3><p>Al elegir Pet Rug, su tarjeta quedaba resaltada. En el panel derecho aparecían la alfombra, su descripción y el precio de 1,000 Yunicoins junto al botón «Comprar».</p></figcaption></figure></li>
+        </ol>
+      </section>
+      <footer class="room-links"><a href="junio.html#tienda-prototipo">Ver el prototipo de junio →</a><a href="julio.html#tienda-unity">Ver el avance de julio →</a></footer>
+    </article>
+    <dialog class="shop-zoom" aria-labelledby="shop-zoom-title">
+      <div><h2 id="shop-zoom-title"></h2><form method="dialog"><button autofocus>Cerrar</button></form></div>
+      <img alt="">
+    </dialog>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a></footer>
+  </main>
+</body>
+</html>

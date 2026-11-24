@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PetCare · Desarrollo · Yunipets!</title>
+  <meta name="description" content="El baño, la comida y el juego tienen gestos distintos. Elige una actividad para ver qué hace el jugador, qué objeto usa y cómo responde su Yunipet.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <link rel="stylesheet" href="galeria.css"><link rel="stylesheet" href="petcare-bano.css?v=faac85e0">
+  <script defer src="petcare-bano.js?v=550c70f1"></script><script defer src="guia-petcare.js?v=f69db729"></script><script defer src="mecanica-petcare.js?v=94f195db"></script>
+  <link rel="stylesheet" href="desarrollo.css">
+  <link rel="stylesheet" href="petcare.css">
+  <script defer src="gameplay-momentos.js"></script>
+  <script defer src="elegir-mes.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main mechanic-detail" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <article class="mechanic-page" id="petcare">
+      <header class="care-cover">
+        <div><p class="edition-label">Cuidado de la mascota</p><h1>PetCare</h1><p>Moja el pelaje con la manguera, sirve agua en el plato o lanza una pelota. En PetCare eliges cómo cuidar a tu Yunipet y ves cómo responde a cada gesto.</p>
+          <nav aria-label="Explorar PetCare"><a href="#gameplay">Ver gameplay ↓</a><a href="#actividades">Explorar actividades</a></nav>
+        </div>
+        <figure><img src="recap-media/petcare/juguetes-cuarto.webp" width="1440" height="708" alt="El Yunipet en el cuarto con la bandeja de juguetes abierta"><figcaption>Cuarto de juego · Arte no final</figcaption></figure>
+      </header>
+      <figure class="fishing-film" id="gameplay">
+        <video controls playsinline preload="metadata" width="1440" height="708" poster="recap-media/petcare/portada-gameplay.webp" aria-label="Gameplay de PetCare" aria-describedby="care-film-nota">
+          <source src="recap-media/petcare/gameplay.mp4" type="video/mp4">
+          <a href="recap-media/petcare/gameplay.mp4">Abrir la grabación de PetCare</a>
+        </video>
+        <figcaption id="care-film-nota"><strong>PetCare en juego</strong><span>3 min 56 s · Prototipo · Arte no final</span></figcaption>
+      </figure>
+      <nav class="gameplay-moments" data-gameplay-chapters aria-label="Ir a un momento del gameplay">
+        <a href="recap-media/petcare/gameplay.mp4#t=4" data-seconds="4"><time datetime="PT4S">0:04</time> Mojar el pelaje</a>
+        <a href="recap-media/petcare/gameplay.mp4#t=12" data-seconds="12"><time datetime="PT12S">0:12</time> Frotar el jabón</a>
+        <a href="recap-media/petcare/gameplay.mp4#t=40" data-seconds="40"><time datetime="PT40S">0:40</time> Servir comida y agua</a>
+        <a href="recap-media/petcare/gameplay.mp4#t=50" data-seconds="50"><time datetime="PT50S">0:50</time> Abrir un premio</a>
+        <a href="recap-media/petcare/gameplay.mp4#t=82" data-seconds="82"><time datetime="PT1M22S">1:22</time> Lanzar la pelota</a>
+        <a href="recap-media/petcare/gameplay.mp4#t=139" data-seconds="139"><time datetime="PT2M19S">2:19</time> Saltar la cuerda</a>
+        <a href="recap-media/petcare/gameplay.mp4#t=185" data-seconds="185"><time datetime="PT3M5S">3:05</time> Jugar con burbujas</a>
+      </nav>
+      <section class="care-activities" id="actividades" aria-labelledby="actividades-titulo">
+        <h2 id="actividades-titulo">Las rutinas de cuidado</h2>
+        <div class="room-care"><a href="galeria.html?ficha=petcare">Abrir el desglose de PetCare</a></div>
+      </section>
+      <template id="comida-en-juego">
+        <div class="care-observed">
+          <h3>La hora de comer en el prototipo</h3>
+          <div class="care-examples">
+            <figure><img src="recap-media/petcare/platos.webp" alt="El Yunipet frente a dos platos, uno con comida y otro con agua" loading="lazy"><figcaption><strong>Dos platos</strong>La bolsa sirve las croquetas y la botella llena el agua. Puedes ver qué le has servido antes de ofrecerle un premio.<small class="care-art-note">Arte no final</small></figcaption></figure>
+            <figure><img src="recap-media/petcare/premio.webp" alt="Paquete de premio con la esquina abierta y una indicación para deslizar" loading="lazy"><figcaption><strong>Un premio aparte</strong>En la tienda se comparan los premios. De vuelta con la mascota, deslizas el dedo para abrir el paquete elegido.<small class="care-art-note">Arte no final</small></figcaption></figure>
+          </div>
+        </div>
+      </template>
+    </article>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a></footer>
+  </main>
+</body>
+</html>

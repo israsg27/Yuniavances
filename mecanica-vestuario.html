@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vestuario · Desarrollo · Yunipets!</title>
+  <meta name="description" content="Un conjunto se construye sobre el mismo cuerpo que usa el editor de personajes. Cada prenda tiene un punto de anclaje para que pueda acompañar el movimiento.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <link rel="stylesheet" href="desarrollo.css"><link rel="stylesheet" href="crear-cuarto.css">
+  <script defer src="gameplay-momentos.js"></script>
+  <link rel="stylesheet" href="creador.css?v=c2e0c29c">
+  <script defer src="cargar-visor.js"></script>
+  <script defer src="elegir-mes.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main mechanic-detail" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <article class="mechanic-page" id="vestuario">
+      <header><p class="edition-label">Prendas y conjuntos</p><h1>Vestuario</h1><p>Un conjunto se construye sobre el mismo cuerpo que usa el editor de personajes. Cada prenda tiene un punto de anclaje para que pueda acompañar el movimiento.</p></header>
+      <section class="creator-shell" id="componentes" aria-labelledby="vestuario-titulo">
+        <header class="catalog-heading"><h2 id="vestuario-titulo">Prueba la ropa en Koda</h2><p>Las prendas se muestran en colores lisos. Aún falta incorporar sus texturas. Puedes probar una prenda o un conjunto y cambiar el color de cada pieza.</p></header>
+        <div class="studio" id="estudio" data-catalogo="vestuario"></div>
+        <p role="status" class="studio-status" id="status"></p>
+        <noscript>Activa JavaScript para ver las prendas sobre el modelo.</noscript>
+      </section>
+      <figure class="build-film" id="gameplay">
+        <video controls playsinline preload="metadata" width="1440" height="666" poster="recap-media/vestuario-portada.webp" aria-label="Equipar prendas y accesorios en el juego" aria-describedby="estado-vestuario">
+          <source src="recap-media/vestuario-gameplay.mp4" type="video/mp4">
+          <a href="recap-media/vestuario-gameplay.mp4">Abrir la grabación</a>
+        </video>
+        <figcaption id="estado-vestuario"><strong>Vestirse en el juego</strong><span>15 s · Pantallas provisionales</span></figcaption>
+      </figure>
+      <nav class="build-chapters" data-gameplay-chapters aria-label="Momentos del vestuario">
+        <a href="recap-media/vestuario-gameplay.mp4#t=4" data-seconds="4"><time datetime="PT4S">0:04</time> Gorra</a>
+        <a href="recap-media/vestuario-gameplay.mp4#t=8" data-seconds="8"><time datetime="PT8S">0:08</time> Camiseta</a>
+        <a href="recap-media/vestuario-gameplay.mp4#t=11" data-seconds="11"><time datetime="PT11S">0:11</time> Gafas y calzado</a>
+      </nav>
+      <div class="mechanic-story"><img src="recap-media/meses/sep-dinosaurio.webp" alt="Conjunto de dinosaurio sobre el personaje" loading="lazy"><div><h3>Vestir al Yunipet</h3><p>Se elige una prenda de cuerpo o un accesorio para cabeza, espalda, manos o pies. Los pesos del modelo permiten que la prenda acompañe la postura del personaje.</p><a href="septiembre.html?coleccion=conjuntos#componentes">Comparar los ocho conjuntos →</a></div></div>
+      <section class="mechanic-guide" aria-label="Funcionamiento"><h2>Cómo funciona</h2>
+        <ol><li><h3>Cabeza y rostro</h3><p>Sombreros, gorras y pelucas se sujetan a la cabeza. Los lentes y parches usan el anclaje de los ojos.</p></li>
+          <li><h3>Cuerpo y extremidades</h3><p>Los vestidos y playeras siguen el torso. Los guantes pueden ocupar una sola mano o ambas, y el calzado se ajusta a los pies.</p></li>
+          <li><h3>Espalda y conjuntos</h3><p>Una mochila o una cola de disfraz se sujeta por detrás. El conjunto Dinosaurio combina piezas de varias zonas para vestir al mismo personaje.</p></li></ol>
+      </section>
+
+    </article>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a></footer>
+  </main>
+</body>
+</html>

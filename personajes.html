@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <title>Colecciones de componentes · Yunipets!</title>
+  <script>
+    const routes = {
+      Head:['marzo','cabeza'], Ear:['abril','orejas'], Snout:['abril','hocico'], Nose:['abril','nariz'],
+      Tail:['abril','cola'], Forehead:['julio','frente'], EyeShape:['agosto','ojos7'], EyeGlare:['agosto','ojos8'],
+      Pattern:['octubre','pelaje'], Spot:['octubre','pelaje']
+    };
+    const group = new URLSearchParams(location.search).get('grupo');
+    const [month, family] = Object.hasOwn(routes,group) ? routes[group] : routes.Head;
+    location.replace(month+'.html?coleccion='+family+'#componentes');
+  </script>
+  <noscript><meta http-equiv="refresh" content="0;url=marzo.html#componentes"></noscript>
+</head>
+<body><a href="marzo.html#componentes">Ver las formas de la cabeza</a></body>
+</html>

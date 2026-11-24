@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Arcade · Desarrollo · Yunipets!</title>
+  <meta name="description" content="La máquina recreativa forma parte del cuarto. Desde ella se presentan dos experiencias con reglas y pantallas propias, globos y escalada.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <link rel="stylesheet" href="desarrollo.css">
+  <link rel="stylesheet" href="arcade.css"><script defer src="arcade.js"></script>
+  <script defer src="elegir-mes.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main mechanic-detail" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <article class="mechanic-page" id="arcade">
+      <header><p class="edition-label">Minijuegos</p><h1>Arcade</h1><p>Desde la máquina del cuarto puedes correr hacia la cima o poner a prueba tu puntería con los globos. Elige una partida para ver cómo se juega.</p></header>
+      <div class="arcade-films">
+          <figure class="arcade-film" id="escalada">
+            <video controls playsinline preload="none" poster="recap-media/arcade-escalada.webp" width="1920" height="1080" aria-label="Partida de Escalada"><source src="recap-media/arcade-escalada.mp4?v=sonido" type="video/mp4"><a href="recap-media/arcade-escalada.mp4">Abrir la partida de Escalada</a></video>
+            <figcaption><div><strong>Escalada</strong><span>32 s</span></div><p>Pulsa el color del siguiente agarre para subir. En esta carrera, el Yunipet alcanza la cima por delante de sus dos rivales en 21.57 segundos.</p></figcaption>
+          </figure>
+          <figure class="arcade-film" id="globos">
+            <video controls playsinline preload="none" poster="recap-media/arcade-globos.webp" width="1920" height="1080" aria-label="Partida de Globos"><source src="recap-media/arcade-globos.mp4?v=sonido" type="video/mp4"><a href="recap-media/arcade-globos.mp4">Abrir la partida de Globos</a></video>
+            <figcaption><div><strong>Globos</strong><span>48 s</span></div><p>Revienta el globo del color que encabeza la lista antes de que se escape. La partida termina con los diez aciertos y una recompensa de 14 Yunicoins.</p></figcaption>
+          </figure>
+        </div>
+      <footer class="room-links"><a href="julio.html#arcade">Ver el avance de julio →</a></footer>
+    </article>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a></footer>
+  </main>
+</body>
+</html>

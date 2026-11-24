@@ -10,28 +10,20 @@
   <link rel="stylesheet" href="recap.css">
   <link rel="stylesheet" href="meses.css">
   <link rel="stylesheet" href="mobiliario.css">
-  <script defer src="recap-nav.js"></script>
+  <link rel="stylesheet" href="areas.css">
   <script defer src="recap-media/mobiliario/catalogo.js"></script>
   <script defer src="mobiliario.js"></script>
+  <script defer src="elegir-mes.js"></script>
 </head>
 <body class="journal-month furniture-page">
   <a class="skip" href="#catalogo">Saltar a las piezas</a>
-  <header class="journal-header">
-    <div class="journal-bar">
-      <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses"><img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125"></a>
-      <details class="journal-menu">
-        <summary aria-label="Menú del recap"><i aria-hidden="true"></i></summary>
-        <nav aria-label="Navegación del recap">
-          <a href="recap.html">Todos los meses</a>
-          <a href="recap.html#sistemas">Avances por sistema</a>
-          <a href="creador.html">Creador de Yunipets</a>
-          <a href="archivo.html#galeria">Galería de arte</a>
-        </nav>
-      </details>
-    </div>
-  </header>
+  <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="desarrollo.html">Desarrollo</a><span aria-hidden="true">/</span><span aria-current="page">Mobiliario en 3D</span></nav>
   <main class="journal-wrap">
-    <a class="f-back" href="recap.html#sistemas">← Avances por sistema</a>
+
     <header class="f-cover">
       <div class="f-intro">
         <p class="folio-label">Modelado de escenarios</p>
@@ -64,6 +56,6 @@
       <footer><span id="f-position"></span><div><button type="button" class="f-icon" id="f-prev" aria-label="Pieza anterior">←</button><button type="button" class="f-icon" id="f-next" aria-label="Pieza siguiente">→</button></div></footer>
     </div>
   </dialog>
-  <footer class="journal-footer"><a href="recap.html">← Volver a los avances por mes</a><img src="recap-media/yunipets.svg" width="106" height="21" alt="Yunipets!"></footer>
+  <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Evolución del diseño · Yunipets!</title>
+    <meta name="description" content="Evolución del diseño">
+    <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="meses.css"><link rel="stylesheet" href="areas.css">
+    <link rel="stylesheet" href="founders.css">
+    <script defer src="founders-motion.js"></script>
+    <script defer src="recap-data.js"></script>
+    <script defer src="recap-archivo.js"></script>
+    <script defer src="visor.js"></script>
+    <script defer src="recap.js"></script>
+    <script defer src="elegir-mes.js"></script>
+</head>
+  <body class="journal-archive">
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="desarrollo.html">Desarrollo</a><span aria-hidden="true">/</span><span aria-current="page">Evolución del diseño</span></nav>
+    <main id="contenido" class="area-main"><section class="section" id="historias" aria-labelledby="story-title">
+        <div class="section-intro">
+          <div>
+            <h1 id="story-title">Evolución <em>del diseño.</em></h1>
+          </div>
+          <p>Sigue una parte del juego a través de sus pruebas, modelos y versiones.</p>
+        </div>
+        <div class="story-tools">
+          <div class="story-tabs" id="story-tabs" role="group" aria-label="Elegir historia de desarrollo"></div>
+          <button class="story-play" id="play-story" type="button" aria-pressed="false">▶ Reproducir recorrido</button>
+        </div>
+        <div class="story-stage" id="story-stage"></div>
+      </section></main>
+    <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
+    <dialog id="visor" aria-labelledby="piece-title">
+      <div class="viewer-shell">
+        <div class="viewer-bar">
+          <span id="piece-type"></span>
+          <button class="close" type="button" aria-label="Cerrar imagen">×</button>
+        </div>
+        <img id="piece-image" alt="">
+        <div class="viewer-caption">
+          <div>
+            <p id="piece-origin"></p>
+            <h2 id="piece-title"></h2>
+            <p id="piece-caption"></p>
+          </div>
+          <div class="viewer-nav">
+            <button class="round" id="prev-piece" type="button" aria-label="Pieza anterior">←</button>
+            <span id="piece-counter"></span>
+            <button class="round" id="next-piece" type="button" aria-label="Pieza siguiente">→</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

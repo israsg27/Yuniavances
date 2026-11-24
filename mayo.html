@@ -5,45 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f8f6f1">
     <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
-    <link rel="preload" href="recap-media/sora.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="recap-media/sora.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="recap.css">
     <link rel="stylesheet" href="meses.css">
-    <script defer src="recap-nav.js"></script>
+    <link rel="stylesheet" href="areas.css">
+    <link rel="stylesheet" href="founders.css">
+    <script defer src="founders-motion.js"></script>
     <title>Mayo · El primer cuarto sobre una cuadrícula · Yunipets!</title>
     <meta name="description" content="Para que un mueble cayera en la casilla correcta, hacía falta definir su punto de apoyo. En mayo se montó un cuarto de prueba y se prepararon cerca de 60 muebles básicos.">
     <script defer src="recap-data.js"></script>
     <script defer src="recap-archivo.js"></script>
     <script defer src="visor.js"></script>
     <script defer src="colecciones-datos.js"></script>
+    <link rel="stylesheet" href="estudios-mes.css">
     <script defer src="colecciones.js"></script>
+    <script defer src="estudios-mes.js"></script>
     <script defer src="mes.js"></script>
-  </head>
+    <script defer src="elegir-mes.js"></script>
+</head>
   <body class="journal-month" data-month="mayo" style="--month-wash:#e4eaff;--month-ink:#7481d5">
     <a class="skip" href="#contenido">Saltar al avance</a>
-    <header class="journal-header">
-      <div class="journal-bar">
-        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
-          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
-        </a>
-        <details class="journal-menu">
-          <summary aria-label="Menú del recap">
-            <i aria-hidden="true"></i>
-          </summary>
-          <nav aria-label="Navegación del recap">
-            <a href="recap.html">Todos los meses</a>
-            <a href="recap.html#sistemas">Avances por sistema</a>
-            <a href="creador.html">Creador de Yunipets</a>
-            <a href="archivo.html#galeria">Galería de arte</a>
-            <a href="archivo.html#historias">Evolución del juego</a>
-            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
-            <a href="archivo.html#proximos">Qué sigue</a>
-          </nav>
-        </details>
-      </div>
-    </header>
+    <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html">Desarrollo</a><a href="administracion.html" aria-current="location">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="administracion.html">Administración</a><span aria-hidden="true">/</span><a href="meses.html">Reportes mensuales</a><span aria-hidden="true">/</span><span aria-current="page">Mayo</span></nav>
     <main class="journal-wrap" id="contenido">
       <div class="issue-line">
-        <a class="back-index" href="recap.html#mayo">← Todos los meses</a>
+
         <nav class="issue-links" aria-label="Meses cercanos">
           <a rel="prev" href="abril.html" aria-label="Mes anterior, Abril">← Abril</a>
           <a rel="next" href="junio.html" aria-label="Mes siguiente, Junio">Junio →</a>
@@ -60,29 +49,65 @@
             </a>
           </div>
           <figure class="issue-plate">
-            <button class="cover-photo zoom-photo" type="button" data-piece="may-doc" aria-label="Ampliar el primer cuarto modular">
+            <a class="cover-photo zoom-photo" href="#cuarto" aria-label="Colocar y editar una colección de muebles">
               <img src="recap-media/may-doc.webp" alt="El primer cuarto modular" fetchpriority="high">
-              <span class="zoom-mark" aria-hidden="true">⤢</span>
-            </button>
+              <span class="zoom-mark" aria-hidden="true">↓</span>
+            </a>
             <figcaption>Montaje de prueba con piso, paredes y mobiliario</figcaption>
           </figure>
         </header>
+        <nav class="chapter-index" aria-label="Secciones del reporte"><a href="#notas">Avances por sistema</a><a href="#componentes">Colección</a><a href="#prueba">Prueba</a></nav>
+        <section class="monthly-studies" id="notas" aria-labelledby="studies-title">
+          <span id="imagenes" aria-hidden="true"></span>
+          <header><div><p class="folio-label">Mayo · 2026</p><h2 id="studies-title">Avances por sistema</h2></div>
+          </header>
+          <details class="month-study" id="cuarto" open>
+            <summary><img src="recap-media/may-doc.webp" alt="" loading="lazy"><span><small>Habitaciones</small><strong>Colocar y editar una colección de muebles</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se armó el primer cuarto por módulos y se catalogaron unos 60 muebles básicos con coordenadas de textura y punto de origen. El catálogo distinguía piezas de suelo, pared y tapetes, además de propuestas especiales y colecciones.</p>
+                <h3>Cómo funciona</h3><p>El origen determina dónde se coloca cada pieza. En el diseño del editor, el jugador puede girarla, cambiar su estilo, repararla o quitarla. Las láminas conectan el boceto del mueble con su posición en el cuarto.</p>
+                <div class="study-links"><a href="?coleccion=muebles#componentes">Mobiliario · 3</a><a href="?coleccion=kit#componentes">Kit modular · 4</a></div>
+              </div>
+              <figure class="study-figure" data-studies="may-doc may-editor may-coleccion may-muebles">
+                <a href="recap-media/may-doc.webp" aria-label="Ampliar El primer cuarto modular"><img src="recap-media/may-doc.webp" loading="lazy" alt="El primer cuarto modular"></a>
+                <select aria-label="Elegir lámina de Colocar y editar una colección de muebles"><option value="may-doc">El primer cuarto modular</option><option value="may-editor">Editar una habitación</option><option value="may-coleccion">La primera colección de muebles</option><option value="may-muebles">Un mueble desde el boceto</option></select><figcaption data-study-caption>El primer montaje pone a prueba el piso, las paredes y la colocación de mobiliario sobre una cuadrícula.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="cuerpo">
+            <summary><img src="recap-media/archivo/may-cabeza.webp" alt="" loading="lazy"><span><small>Personaje y pelaje</small><strong>Una malla que se mueve y admite varios pelajes</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se terminó la topología de cabeza y cuerpo, se ajustaron los cortes para la deformación y se asignaron huesos y pesos. El equipo produjo aproximadamente diez texturas RGB y revisó los patrones de las orejas.</p>
+                <h3>Cómo funciona</h3><p>Los pesos determinan qué zona sigue a cada hueso al moverse. En la superficie, distintas máscaras distribuyen una paleta de tres o cuatro colores. Así cambia la mancha sin reconstruir la anatomía.</p>
+                
+              </div>
+              <figure class="study-figure" data-studies="may-cabeza may-pesos may-texturas may-patron">
+                <a href="recap-media/archivo/may-cabeza.webp" aria-label="Ampliar La base del cuerpo"><img src="recap-media/archivo/may-cabeza.webp" loading="lazy" alt="La base del cuerpo"></a>
+                <select aria-label="Elegir lámina de Una malla que se mueve y admite varios pelajes"><option value="may-cabeza">La base del cuerpo</option><option value="may-pesos">La malla del personaje</option><option value="may-texturas">Patrones RGB del pelaje</option><option value="may-patron">Patrones en las orejas</option></select><figcaption data-study-caption>El volumen de cuerpo y cabeza sirve de base para la topología destinada al rig y las texturas.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+        </section>
         <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="muebles kit">
           <header class="collection-heading"><p class="folio-label">Colección de mayo</p><h2 id="collection-title">Las piezas del primer cuarto</h2></header>
-          
+
           <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="muebles" aria-pressed="true">Mobiliario <span>3</span></button><button type="button" data-family="kit" aria-pressed="false">Kit modular <span>4</span></button></div>
           <div class="collection-paper">
             <figure class="collection-plate">
               <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar pieza"><img data-portrait src="recap-media/colecciones/muebles/01.webp" width="540" height="540" loading="lazy" decoding="async" alt="Cama"><span aria-hidden="true">⤢</span></button>
-              <figcaption><strong data-name>Cama</strong><span data-credit>Blender · render para el recap</span></figcaption>
+              <figcaption><strong data-name>Cama</strong></figcaption>
             </figure>
             <div class="collection-editor">
               <h3 data-title>Objetos a escala del Yunipet</h3><p data-copy>La cama, la silla y el refrigerador proceden de la escena de Blender para probar interacciones. La colección de mayo fue más amplia y reunió unos 60 muebles básicos.</p>
               <div class="collection-grid" role="group" aria-label="Elegir pieza" data-thumbs></div>
               <div class="collection-controls" hidden><button type="button" data-cycle aria-pressed="false">▶ Reproducir</button><span data-count>01 / 03</span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
-              <button type="button" class="collection-proof" data-evidence data-piece="may-coleccion">La primera colección de muebles ↗</button>
             </div>
           </div>
+          <footer class="collection-source"><span data-credit>Blender · render para el recap</span><button type="button" class="collection-proof" data-evidence data-piece="may-coleccion">La primera colección de muebles ↗</button></footer>
           <dialog class="collection-zoom" aria-labelledby="zoom-name">
             <div class="collection-zoom-inner">
               <button type="button" data-close aria-label="Cerrar vista ampliada">×</button>
@@ -92,35 +117,8 @@
           </dialog>
           <a class="furniture-reference" href="mobiliario.html?coleccion=recamara-1#catalogo"><img src="recap-media/mobiliario/mini/recamara-1-01.webp" alt="" width="100" height="100" loading="lazy"><span><small>Catálogo de mobiliario</small><strong>La recámara, pieza por pieza</strong><span>Abre la cama, el buró o el escritorio y gira el modelo para ver cómo está construido.</span></span><b aria-hidden="true">↗</b></a>
         </section>
-        <section class="notes-section" aria-label="Avances de mayo">
-          <h2>El cuarto y sus herramientas</h2>
-          <div class="notes-grid">
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="may-muebles" aria-label="Ampliar un mueble desde el boceto">
-                <img src="recap-media/archivo/may-muebles.webp" alt="Un mueble desde el boceto" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Dónde se coloca cada objeto</h3>
-              <p>El primer cuarto de prueba reunió módulos de piso, pared y muebles. Cada objeto necesitaba un origen consistente para colocarse en la cuadrícula.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="may-editor" aria-label="Ampliar editar una habitación">
-                <img src="recap-media/archivo/may-editor.webp" alt="Editar una habitación" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Rotar, reparar y cambiar de estilo</h3>
-              <p>El flujo visual del editor contempló rotar, cambiar el estilo, eliminar y reparar un objeto. El equipo preparó alrededor de 60 muebles básicos con UV y origen definido.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="may-pesos" aria-label="Ampliar la malla del personaje">
-                <img src="recap-media/archivo/may-pesos.webp" alt="La malla del personaje" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Una malla lista para moverse</h3>
-              <p>Cuerpo y cabeza llegaron a su topología final para rig y texturas. Se ajustaron cortes para deformar las articulaciones y se prepararon unas diez texturas RGB.</p>
-            </article>
-          </div>
-        </section>
+        <details class="report-trial">
+          <summary>Ver cómo se editaba un mueble</summary>
         <section class="month-demo" id="prueba" data-demo="secuencia">
           <div class="demo-copy">
             <p class="folio-label">Secuencia de imágenes</p>
@@ -154,35 +152,7 @@
             </div>
           </div>
         </section>
-        <section class="contact-section">
-          <h2>Más imágenes de mayo</h2>
-          <div class="contact-grid">
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="may-coleccion" aria-label="Ampliar La primera colección de muebles"><img src="recap-media/archivo/may-coleccion.webp" alt="La primera colección de muebles" loading="lazy"><span class="zoom-mark" aria-hidden="true">⤢</span></button><figcaption>La primera colección de muebles</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="may-cabeza" aria-label="Ampliar la base del cuerpo">
-                <img src="recap-media/archivo/may-cabeza.webp" alt="La base del cuerpo" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>La base del cuerpo</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="may-texturas" aria-label="Ampliar patrones rgb del pelaje">
-                <img src="recap-media/archivo/may-texturas.webp" alt="Patrones RGB del pelaje" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Patrones RGB del pelaje</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="may-patron" aria-label="Ampliar patrones en las orejas">
-                <img src="recap-media/archivo/may-patron.webp" alt="Patrones en las orejas" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Patrones en las orejas</figcaption>
-            </figure>
-          </div>
-        </section>
+        </details>
       </article>
       <nav class="neighbours" aria-label="Navegar por los meses">
         <a class="neighbour" rel="prev" href="abril.html">
@@ -195,12 +165,7 @@
         </a>
       </nav>
     </main>
-    <footer class="journal-footer">
-      <img src="recap-media/simbolo.svg" alt="" width="19" height="21">
-      <span>Yunipets! · Recap de desarrollo 2026</span>
-      <a href="archivo.html#galeria">Galería de arte <span aria-hidden="true">↗</span>
-      </a>
-    </footer>
+    <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
     <dialog id="visor" aria-labelledby="piece-title">
       <div class="viewer-shell">
         <div class="viewer-bar">

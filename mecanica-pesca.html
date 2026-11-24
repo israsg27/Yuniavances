@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pesca · Desarrollo · Yunipets!</title>
+  <meta name="description" content="El destino determina qué especies se pueden encontrar. El álbum reúne las capturas de todos los lagos y conserva los datos de cada ejemplar.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <link rel="stylesheet" href="desarrollo.css">
+  <link rel="stylesheet" href="pesca.css">
+  <script defer src="colecciones-datos.js"></script>
+  <script defer src="pesca.js"></script>
+  <script defer src="elegir-mes.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main mechanic-detail" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <article class="mechanic-page" id="pesca">
+      <header><p class="edition-label">Lagos y colección</p><h1>Pesca</h1><p>Desde el cuarto, tu Yunipet puede elegir una isla, lanzar la caña y descubrir qué pez picó. Cada captura tiene su propia ficha en la colección.</p></header>
+      <nav class="fishing-index" aria-label="Explorar Pesca"><a href="#gameplay">Ver gameplay</a><a href="#islas">Explorar islas</a><a href="#peces">Ver tipos de peces</a></nav>
+      <figure class="fishing-film" id="gameplay">
+        <video controls playsinline preload="metadata" width="1600" height="740" poster="recap-media/pesca-gameplay-portada.webp" aria-label="Gameplay de Pesca" aria-describedby="pesca-video-nota">
+          <source src="recap-media/pesca-gameplay.mp4?v=2" type="video/mp4">
+          <a href="recap-media/pesca-gameplay.mp4">Abrir el gameplay de Pesca</a>
+        </video>
+        <figcaption id="pesca-video-nota"><strong>Pesca en juego</strong><span>1 min 32 s · Prototipo · Arte no final</span></figcaption>
+      </figure>
+      <section class="fishing-atlas" id="islas" aria-labelledby="islas-titulo">
+        <h2 id="islas-titulo">Las islas de pesca</h2>
+        <p>El diseño contempla 123 especies repartidas entre ocho destinos. Elige una isla para ver qué ambiente tiene y cuántas especies de cada rareza podrás descubrir.</p>
+        <div class="island-spread">
+          <figure class="island-art"><img id="isla-arte" src="recap-media/islas/molino.webp" width="590" height="590" alt="Isla de El Molino" loading="lazy"><figcaption>Arte no final</figcaption></figure>
+          <div class="island-file">
+            <label for="isla-elegida">Destino</label>
+            <select id="isla-elegida"><option value="molino">El Molino</option><option value="alamos">Los Álamos</option><option value="garzas">Las Garzas</option><option value="muelle">El Muelle</option><option value="robledal">El Robledal</option><option value="bruma">La Bruma</option><option value="grietas">Las Grietas</option><option value="jurasico">El Jurásico</option></select>
+            <div aria-live="polite" aria-atomic="true">
+              <p id="isla-entorno">La primera lección de pesca transcurre junto a un viejo molino. Entre los juncos y el agua tranquila de la tarde, es más fácil encontrar peces comunes.</p>
+              <h3 id="isla-total">15 especies previstas</h3>
+              <dl class="island-rarities"><div><dt>Comunes</dt><dd>9</dd></div><div><dt>Raras</dt><dd>4</dd></div><div><dt>Míticas</dt><dd>2</dd></div><div><dt>Legendarias</dt><dd>0</dd></div></dl>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fishing-atlas" id="peces" aria-labelledby="peces-titulo">
+        <h2 id="peces-titulo">Los peces del álbum</h2>
+        <p>Cada isla lleva su propia lista de descubrimientos. Una silueta ocupa el lugar de cada especie pendiente. Al capturarla, puedes reconocerla por su ilustración y consultar su rareza y su rango de peso.</p>
+        <div class="fish-spread">
+          <figure class="fish-portrait"><img id="pez-arte" src="recap-media/colecciones/peces/13.webp" alt="Pez de franjas naranjas" width="800" height="800" loading="lazy"><figcaption aria-live="polite"><strong id="pez-nombre">De franjas naranjas</strong><span id="pez-posicion">13 / 30</span></figcaption></figure>
+          <div class="fish-picker"><h3>30 estudios de peces</h3><p>Estos peces muestran el estilo visual del álbum. Sus diseños y nombres son provisionales. Elige una miniatura para verla en detalle.</p><div class="fish-options" id="pez-opciones" role="group" aria-label="Diseños de peces"></div>
+          <a href="agosto.html?coleccion=peces#componentes">Ver el avance de agosto →</a></div>
+        </div>
+        <div class="fish-eyes" id="ojos">
+          <div><h3>Los ojos de los Yunipets</h3><p>Los peces comparten el estilo de ojos de los Yunipets. En el primer ejemplo, el párpado inclinado deja la mirada entrecerrada. En el segundo, la pupila vertical destaca sobre el iris dorado.</p></div>
+          <div class="eye-samples">
+            <figure><img src="recap-media/pesca-ojo-entrecerrado.png" width="512" height="512" alt="Párpado dorado inclinado sobre una pupila redonda" loading="lazy"><figcaption>Ojo entrecerrado</figcaption></figure>
+            <figure><img src="recap-media/pesca-ojo-vertical.png" width="1024" height="1024" alt="Pupila alargada con un reflejo blanco sobre el iris dorado" loading="lazy"><figcaption>Pupila vertical</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      <section class="mechanic-guide" aria-label="Funcionamiento"><h2>Cómo funciona</h2>
+        <ol><li><h3>Escoger un lago</h3><p>El Molino introduce la pesca con nueve especies comunes y sin legendarios. Las tablas de especies cambian en destinos como Los Álamos y Las Garzas.</p></li>
+          <li><h3>Lanzar y recoger</h3><p>Con el flotador en el agua, el indicador circular marca el momento de recoger el sedal. En el video se ven dos capturas y las recompensas que se revelan después de cada una.</p></li>
+          <li><h3>Examinar una captura</h3><p>Al elegir un pez en la colección aparecen su ilustración, rareza, descripción, longitud y peso. La ficha del pez acorazado también muestra cuánto se recibiría al vender ese ejemplar.</p></li></ol>
+        <p>El diseño del álbum contempla consultar las capturas por lago o rareza y marcar ejemplares favoritos.</p>
+      </section>
+    </article>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a></footer>
+  </main>
+</body>
+</html>

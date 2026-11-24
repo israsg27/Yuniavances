@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Creador de personajes · Desarrollo · Yunipets!</title>
+  <meta name="description" content="Elige una especie y una base, ajusta el pelaje y los rasgos de la cara y dale un nombre a tu Yunipet.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <link rel="stylesheet" href="desarrollo.css">
+  <link rel="stylesheet" href="creador.css?v=c2e0c29c">
+  <script>if (new URLSearchParams(location.search).get('categoria') === 'vestuario') location.replace('mecanica-vestuario.html#componentes');</script>
+  <script defer src="cargar-visor.js"></script>
+  <script defer src="gameplay-momentos.js"></script>
+  <script defer src="elegir-mes.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main mechanic-detail" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <article class="mechanic-page" id="personaje">
+      <header><p class="edition-label">Personalización</p><h1>Creador de personajes</h1><p>Elige una especie y una base, ajusta el pelaje y los rasgos de la cara y dale un nombre a tu Yunipet.</p></header>
+      <figure class="fishing-film" id="gameplay">
+        <video controls playsinline preload="metadata" width="1440" height="664" poster="recap-media/personaje/portada.webp" aria-label="Creación de un Yunipet dentro del juego" aria-describedby="estado-pantallas">
+          <source src="recap-media/personaje/creacion.mp4" type="video/mp4">
+          <a href="recap-media/personaje/creacion.mp4">Abrir gameplay del creador</a>
+        </video>
+        <figcaption id="estado-pantallas"><strong>Creación de Maki en el juego</strong><span>1 min 38 s · Pantallas provisionales</span></figcaption>
+      </figure>
+      <nav class="gameplay-moments" data-gameplay-chapters aria-label="Momentos del creador">
+        <a data-seconds="0" href="recap-media/personaje/creacion.mp4#t=0"><time datetime="PT0S">0:00</time> Especie</a>
+        <a data-seconds="8" href="recap-media/personaje/creacion.mp4#t=8"><time datetime="PT8S">0:08</time> Base del personaje</a>
+        <a data-seconds="24" href="recap-media/personaje/creacion.mp4#t=24"><time datetime="PT24S">0:24</time> Pelaje y colores</a>
+        <a data-seconds="51" href="recap-media/personaje/creacion.mp4#t=51"><time datetime="PT51S">0:51</time> Rasgos de la cara</a>
+        <a data-seconds="91" href="recap-media/personaje/creacion.mp4#t=91"><time datetime="PT1M31S">1:31</time> Nombre y ficha</a>
+      </nav>
+      <section class="mechanic-guide"><h2>Del modelo base a Maki</h2>
+        <ol><li><h3>Elegir un punto de partida</h3><p>Después de elegir perro o gato, aparecen los modelos base. En la grabación se prueba un dálmata con el pelaje manchado.</p></li>
+          <li><h3>Definir su aspecto</h3><p>El patrón y sus colores cambian sobre el cuerpo. Al ajustar orejas, hocico, nariz y ojos puedes girar la mascota para revisar el perfil.</p></li>
+          <li><h3>Nombrar al Yunipet</h3><p>El recorrido termina en la ficha de Maki, donde se ven su nombre y sus rasgos de personalidad.</p></li></ol>
+      </section>
+      <section class="creator-shell" id="componentes" aria-labelledby="componentes-titulo">
+        <header class="catalog-heading"><h2 id="componentes-titulo">Componentes actuales</h2><p>Elige una familia y selecciona una variante para verla sobre el modelo. Arrastra para girarlo.</p></header>
+        <div class="studio" id="estudio" data-catalogo="rasgos"></div>
+        <p role="status" class="studio-status" id="status"></p>
+        <noscript>Activa JavaScript para combinar las piezas y girar el personaje.</noscript>
+      </section>
+    </article>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a></footer>
+  </main>
+</body>
+</html>

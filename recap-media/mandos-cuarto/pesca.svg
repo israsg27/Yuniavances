@@ -1,0 +1,25 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="87.1667" height="87.1667" viewBox="0 0 87.1667 87.1667" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Pesca">
+<circle id="Ellipse 228" cx="43.5834" cy="43.5834" r="43.0834" fill="white" fill-opacity="0.27" stroke="url(#paint0_linear_0_51)"/>
+<g id="Union" filter="url(#filter0_d_0_51)">
+<path d="M60.5853 47.4234C60.7255 49.4338 60.4281 53.0556 59.6263 54.8805C58.9193 54.6693 58.1245 54.2643 57.4388 53.9635C47.8899 49.7865 36.488 50.0936 27.5609 55.9371C26.0402 52.7919 25.5319 48.4888 25.89 45.0406C26.7485 36.7758 31.62 32.2943 37.682 27.3639C36.3337 26.1229 35.4627 25.2338 34.2689 23.8414C33.3587 22.7239 32.5531 21.526 31.8607 20.2633C31.2856 19.202 29.9413 16.423 30.4252 15.5035C32.2711 11.9956 40.9627 15.9197 43.0707 16.6461C46.235 15.4493 50.0921 13.8906 53.5433 14.1725C54.919 14.285 56.3901 15.132 55.9867 16.7086C55.0136 20.5126 51.5682 25.0775 48.3861 27.3394C54.8239 32.9818 59.9495 38.5803 60.5853 47.4234ZM58.514 58.0475C58.1518 61.3917 53.5066 66.6097 50.974 68.6744C49.0209 70.2659 45.2539 73.1181 42.6576 72.7564C38.7515 72.2133 35.17 67.9566 32.7806 65.1012C31.5408 63.5275 29.4438 60.5792 28.8197 58.7047C28.9885 58.5609 29.1652 58.4253 29.348 58.3004C35.7604 53.9223 44.522 53.1547 51.8939 55.0855C53.3858 55.4772 57.7096 56.8897 58.514 58.0475Z" fill="white"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_0_51" x="21.7801" y="11.066" width="42.8385" height="66.7218" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_51"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_51" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_0_51" x1="87.1667" y1="43.5834" x2="1.90507e-06" y2="43.5834" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="0.634615" stop-color="#59B9F2"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

@@ -5,44 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f8f6f1">
     <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
-    <link rel="preload" href="recap-media/sora.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="recap-media/sora.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="recap.css">
     <link rel="stylesheet" href="meses.css">
-    <script defer src="recap-nav.js"></script>
+    <link rel="stylesheet" href="areas.css">
+    <link rel="stylesheet" href="founders.css">
+    <script defer src="founders-motion.js"></script>
     <title>Febrero · El primer Yunipet en 3D · Yunipets!</title>
     <meta name="description" content="El 22 de febrero, Yunit ya tenía una cabeza de bordes suaves y los brazos en cruz. En las hojas de dibujo, el equipo probaba qué expresión darle con un par de ojos y una boca.">
     <script defer src="recap-data.js"></script>
     <script defer src="recap-archivo.js"></script>
     <script defer src="visor.js"></script>
     <script defer src="colecciones-datos.js"></script>
+    <link rel="stylesheet" href="estudios-mes.css">
     <script defer src="colecciones.js"></script>
-  </head>
+    <script defer src="estudios-mes.js"></script>
+    <script defer src="elegir-mes.js"></script>
+</head>
   <body class="journal-month" data-month="febrero" style="--month-wash:#d8f2fa;--month-ink:#177fb7">
     <a class="skip" href="#contenido">Saltar al avance</a>
-    <header class="journal-header">
-      <div class="journal-bar">
-        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
-          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
-        </a>
-        <details class="journal-menu">
-          <summary aria-label="Menú del recap">
-            <i aria-hidden="true"></i>
-          </summary>
-          <nav aria-label="Navegación del recap">
-            <a href="recap.html">Todos los meses</a>
-            <a href="recap.html#sistemas">Avances por sistema</a>
-            <a href="creador.html">Creador de Yunipets</a>
-            <a href="archivo.html#galeria">Galería de arte</a>
-            <a href="archivo.html#historias">Evolución del juego</a>
-            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
-            <a href="archivo.html#proximos">Qué sigue</a>
-          </nav>
-        </details>
-      </div>
-    </header>
+    <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html">Desarrollo</a><a href="administracion.html" aria-current="location">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="administracion.html">Administración</a><span aria-hidden="true">/</span><a href="meses.html">Reportes mensuales</a><span aria-hidden="true">/</span><span aria-current="page">Febrero</span></nav>
     <main class="journal-wrap" id="contenido">
       <div class="issue-line">
-        <a class="back-index" href="recap.html#febrero">← Todos los meses</a>
+
         <nav class="issue-links" aria-label="Meses cercanos">
           <a rel="next" href="marzo.html" aria-label="Mes siguiente, Marzo">Marzo →</a>
         </nav>
@@ -56,30 +45,72 @@
             <a class="in-page" href="#componentes">Explorar las diez vistas ↓</a>
           </div>
           <figure class="issue-plate">
-            <button class="cover-photo zoom-photo" type="button" data-piece="feb-yunit" aria-label="Ampliar yunit en febrero">
+            <a class="cover-photo zoom-photo" href="#modelado" aria-label="Del boceto al primer cuerpo">
               <img src="recap-media/archivo/feb-yunit.webp" alt="Yunit en febrero" fetchpriority="high">
-              <span class="zoom-mark" aria-hidden="true">⤢</span>
-            </button>
+              <span class="zoom-mark" aria-hidden="true">↓</span>
+            </a>
             <figcaption>Yunit · versión del 22 de febrero</figcaption>
           </figure>
         </header>
+        <nav class="chapter-index" aria-label="Secciones del reporte"><a href="#notas">Avances por sistema</a><a href="#componentes">Colección</a></nav>
+        <section class="monthly-studies" id="notas" aria-labelledby="studies-title">
+          <span id="imagenes" aria-hidden="true"></span>
+          <header><div><p class="folio-label">Febrero · 2026</p><h2 id="studies-title">Avances por sistema</h2></div>
+          </header>
+          <details class="month-study" id="modelado" open>
+            <summary><img src="recap-media/archivo/feb-yunit.webp" alt="" loading="lazy"><span><small>Personaje</small><strong>Del boceto al primer cuerpo</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>El equipo dibujó a Yunit de cuerpo entero, probó volúmenes de cabeza en 3D y construyó el primer cuerpo. La lámina fecha la versión con los brazos extendidos el 22 de febrero.</p>
+                <h3>Cómo funciona</h3><p>Las vistas de frente y de perfil sirven para comparar cuánto sobresale la cara y cuánto espacio ocupa la cabeza respecto al cuerpo. En esta etapa se elegía la silueta completa.</p>
+                <div class="study-links"><a href="?coleccion=primeras#componentes">Siluetas · 10</a></div>
+              </div>
+              <figure class="study-figure" data-studies="feb-yunit feb-cuerpo feb-doc feb-proporciones">
+                <a href="recap-media/archivo/feb-yunit.webp" aria-label="Ampliar Yunit en febrero"><img src="recap-media/archivo/feb-yunit.webp" loading="lazy" alt="Yunit en febrero"></a>
+                <select aria-label="Elegir lámina de Del boceto al primer cuerpo"><option value="feb-yunit">Yunit en febrero</option><option value="feb-cuerpo">El primer cuerpo</option><option value="feb-doc">Las primeras cabezas</option><option value="feb-proporciones">Una escala para la familia</option></select><figcaption data-study-caption>Una de las primeras versiones de Yunit conserva el cuerpo sencillo y la cabeza de bordes suaves.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="rostro">
+            <summary><img src="recap-media/archivo/feb-ojos.webp" alt="" loading="lazy"><span><small>Expresión</small><strong>Un rostro dibujado sobre el volumen</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Las hojas de concepto reúnen ojos, bocas y marcas faciales. La referencia eran los juguetes que llevan parte de la expresión impresa como un adhesivo.</p>
+                <h3>Cómo funciona</h3><p>Al cambiar el dibujo de los ojos o de la boca sobre la misma base, el equipo podía comparar expresiones antes de modelar piezas intercambiables.</p>
+                <div class="study-links"><a href="?coleccion=dibujos#componentes">Yunit · 5</a></div>
+              </div>
+              <figure class="study-figure" data-studies="feb-ojos feb-expresiones">
+                <a href="recap-media/archivo/feb-ojos.webp" aria-label="Ampliar Un rostro en pocas líneas"><img src="recap-media/archivo/feb-ojos.webp" loading="lazy" alt="Un rostro en pocas líneas"></a>
+                <select aria-label="Elegir lámina de Un rostro dibujado sobre el volumen"><option value="feb-ojos">Un rostro en pocas líneas</option><option value="feb-expresiones">Marcas de expresión</option></select><figcaption data-study-caption>Las pruebas dibujadas exploran qué cambia en la expresión al variar párpado, pupila y dirección de la mirada.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+        </section>
         <span id="prueba" aria-hidden="true"></span>
         <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="primeras dibujos">
+          <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs>
+            <filter id="silueta-sin-papel" color-interpolation-filters="sRGB">
+              <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -6 -6 -6 1 17"/>
+              <feComposite in2="SourceGraphic" operator="in"/>
+            </filter>
+          </defs></svg>
           <header class="collection-heading"><p class="folio-label">Colección de febrero</p><h2 id="collection-title">El primer estudio de siluetas</h2></header>
-          
+
           <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="primeras" aria-pressed="true">Siluetas <span>10</span></button><button type="button" data-family="dibujos" aria-pressed="false">Yunit <span>5</span></button></div>
           <div class="collection-paper">
             <figure class="collection-plate">
-              <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar pieza"><img data-portrait src="recap-media/colecciones/primeras/01.webp" width="540" height="540" loading="lazy" decoding="async" alt="Estudio 01"><span aria-hidden="true">⤢</span></button>
-              <figcaption><strong data-name>Estudio 01</strong><span data-credit>Lámina original · febrero</span></figcaption>
+              <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar pieza"><img data-portrait src="recap-media/colecciones/primeras/01.webp" width="540" height="540" loading="lazy" decoding="async" alt="Orejas cortas de perfil"><span aria-hidden="true">⤢</span></button>
+              <figcaption><strong data-name>Orejas cortas de perfil</strong></figcaption>
             </figure>
             <div class="collection-editor">
-              <h3 data-title>Las primeras diez vistas</h3><p data-copy>Compara el contorno de las mejillas, el perfil y las orejas en las pruebas que precedieron al primer cuerpo.</p>
+              <h3 data-title>La silueta antes del rostro</h3><p data-copy>Las primeras diez vistas de Yunit muestran cómo cambiaban el hocico, las mejillas y las orejas.</p>
               <div class="collection-grid" role="group" aria-label="Elegir pieza" data-thumbs></div>
               <div class="collection-controls" hidden><button type="button" data-cycle aria-pressed="false">▶ Reproducir</button><span data-count>01 / 10</span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
-              <button type="button" class="collection-proof" data-evidence data-piece="feb-doc">Las primeras cabezas ↗</button>
             </div>
           </div>
+          <footer class="collection-source"><span data-credit>Lámina original · febrero</span><button type="button" class="collection-proof" data-evidence data-piece="feb-doc">Las primeras cabezas ↗</button></footer>
           <dialog class="collection-zoom" aria-labelledby="zoom-name">
             <div class="collection-zoom-inner">
               <button type="button" data-close aria-label="Cerrar vista ampliada">×</button>
@@ -88,57 +119,9 @@
             </div>
           </dialog>
         </section>
-        <section class="notes-section" aria-label="Avances de febrero">
-          <h2>Los primeros estudios de Yunit</h2>
-          <div class="notes-grid">
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="feb-doc" aria-label="Ampliar las primeras cabezas">
-                <img src="recap-media/feb-doc.webp" alt="Las primeras cabezas" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Una cabeza que se reconoce de perfil</h3>
-              <p>Las cabezas se probaron desde varios ángulos antes de cerrar una silueta. El primer cuerpo sirvió para comparar el tamaño de la cabeza y las extremidades.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="feb-ojos" aria-label="Ampliar un rostro en pocas líneas">
-                <img src="recap-media/archivo/feb-ojos.webp" alt="Un rostro en pocas líneas" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Ojos y bocas como adhesivos</h3>
-              <p>El equipo dibujó ojos, bocas y marcas de expresión pensando en una mascota con el acabado de un juguete. Una misma base podía comunicar emociones distintas.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="feb-proporciones" aria-label="Ampliar una escala para la familia">
-                <img src="recap-media/archivo/feb-proporciones.webp" alt="Una escala para la familia" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Cuánto mide un Yunipet</h3>
-              <p>Las guías de escala y las primeras versiones de Yunit pusieron una referencia común a las pruebas de volumen.</p>
-            </article>
-          </div>
-        </section>
-        <section class="contact-section">
-          <h2>Más imágenes de febrero</h2>
-          <div class="contact-grid">
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="feb-cuerpo" aria-label="Ampliar el primer cuerpo">
-                <img src="recap-media/archivo/feb-cuerpo.webp" alt="El primer cuerpo" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>El primer cuerpo</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="feb-expresiones" aria-label="Ampliar marcas de expresión">
-                <img src="recap-media/archivo/feb-expresiones.webp" alt="Marcas de expresión" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Marcas de expresión</figcaption>
-            </figure>
-          </div>
-        </section>
       </article>
       <nav class="neighbours" aria-label="Navegar por los meses">
-        <a class="neighbour" href="recap.html">
+        <a class="neighbour" href="meses.html">
           <span>Recap 2026</span>
           <strong>Todos los meses</strong>
         </a>
@@ -148,12 +131,7 @@
         </a>
       </nav>
     </main>
-    <footer class="journal-footer">
-      <img src="recap-media/simbolo.svg" alt="" width="19" height="21">
-      <span>Yunipets! · Recap de desarrollo 2026</span>
-      <a href="archivo.html#galeria">Galería de arte <span aria-hidden="true">↗</span>
-      </a>
-    </footer>
+    <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
     <dialog id="visor" aria-labelledby="piece-title">
       <div class="viewer-shell">
         <div class="viewer-bar">

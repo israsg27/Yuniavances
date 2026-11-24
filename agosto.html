@@ -5,45 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f8f6f1">
     <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
-    <link rel="preload" href="recap-media/sora.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="recap-media/sora.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="recap.css">
     <link rel="stylesheet" href="meses.css">
-    <script defer src="recap-nav.js"></script>
+    <link rel="stylesheet" href="areas.css">
+    <link rel="stylesheet" href="founders.css">
+    <script defer src="founders-motion.js"></script>
     <title>Agosto · El álbum de pesca y los ojos del Yunipet · Yunipets!</title>
     <meta name="description" content="Los peces heredaron los ojos de los Yunipets. Cada especie empezó a tener su propia ficha en el álbum, al tiempo que el equipo probaba el parpadeo sobre la cara de la mascota.">
     <script defer src="recap-data.js"></script>
     <script defer src="recap-archivo.js"></script>
     <script defer src="visor.js"></script>
     <script defer src="colecciones-datos.js"></script>
+    <link rel="stylesheet" href="estudios-mes.css">
     <script defer src="colecciones.js"></script>
+    <script defer src="estudios-mes.js"></script>
     <script defer src="mes.js"></script>
-  </head>
+    <script defer src="elegir-mes.js"></script>
+</head>
   <body class="journal-month" data-month="agosto" style="--month-wash:#e4e9ff;--month-ink:#515fc9">
     <a class="skip" href="#contenido">Saltar al avance</a>
-    <header class="journal-header">
-      <div class="journal-bar">
-        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
-          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
-        </a>
-        <details class="journal-menu">
-          <summary aria-label="Menú del recap">
-            <i aria-hidden="true"></i>
-          </summary>
-          <nav aria-label="Navegación del recap">
-            <a href="recap.html">Todos los meses</a>
-            <a href="recap.html#sistemas">Avances por sistema</a>
-            <a href="creador.html">Creador de Yunipets</a>
-            <a href="archivo.html#galeria">Galería de arte</a>
-            <a href="archivo.html#historias">Evolución del juego</a>
-            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
-            <a href="archivo.html#proximos">Qué sigue</a>
-          </nav>
-        </details>
-      </div>
-    </header>
+    <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html">Desarrollo</a><a href="administracion.html" aria-current="location">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="administracion.html">Administración</a><span aria-hidden="true">/</span><a href="meses.html">Reportes mensuales</a><span aria-hidden="true">/</span><span aria-current="page">Agosto</span></nav>
     <main class="journal-wrap" id="contenido">
       <div class="issue-line">
-        <a class="back-index" href="recap.html#agosto">← Todos los meses</a>
+
         <nav class="issue-links" aria-label="Meses cercanos">
           <a rel="prev" href="julio.html" aria-label="Mes anterior, Julio">← Julio</a>
           <a rel="next" href="septiembre.html" aria-label="Mes siguiente, Septiembre">Septiembre →</a>
@@ -55,33 +44,99 @@
             <p class="folio-label">Agosto · 2026</p>
             <h1>El álbum de pesca y los ojos del Yunipet</h1>
             <p class="issue-lede">Los peces heredaron los ojos de los Yunipets. Cada especie empezó a tener su propia ficha en el álbum, al tiempo que el equipo probaba el parpadeo sobre la cara de la mascota.</p>
-            <a class="in-page exhibit-link" href="#componentes">Explorar las piezas ↓</a>
+            <a class="in-page exhibit-link" href="agosto.html?coleccion=peces#componentes">Abrir el álbum de peces ↓</a>
             <a class="in-page" href="#prueba">Ver el parpadeo <b aria-hidden="true">↓</b>
             </a>
           </div>
           <figure class="issue-plate">
-            <button class="cover-photo zoom-photo" type="button" data-piece="ago-pesca" aria-label="Ampliar el álbum de pesca">
+            <a class="cover-photo zoom-photo" href="#pesca" aria-label="De las islas al álbum de especies">
               <img src="recap-media/ago-pesca.webp" alt="El álbum de pesca" fetchpriority="high">
-              <span class="zoom-mark" aria-hidden="true">⤢</span>
-            </button>
+              <span class="zoom-mark" aria-hidden="true">↓</span>
+            </a>
             <figcaption>Primera interfaz del álbum de pesca</figcaption>
           </figure>
         </header>
-        <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="ojos7 ojos8 entorno pesca">
-          <header class="collection-heading"><p class="folio-label">Colección de agosto</p><h2 id="collection-title">Los ojos y el entorno</h2></header>
-          <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="ojos7" aria-pressed="true">Atlas 7 <span>25</span></button><button type="button" data-family="ojos8" aria-pressed="false">Atlas 8 <span>25</span></button><button type="button" data-family="entorno" aria-pressed="false">Entorno <span>7</span></button><button type="button" data-family="pesca" aria-pressed="false">Pesca <span>4</span></button></div>
+        <nav class="chapter-index" aria-label="Secciones del reporte"><a href="#notas">Avances por sistema</a><a href="#componentes">Colección</a><a href="#prueba">Prueba</a></nav>
+        <section class="monthly-studies" id="notas" aria-labelledby="studies-title">
+          <span id="imagenes" aria-hidden="true"></span>
+          <header><div><p class="folio-label">Agosto · 2026</p><h2 id="studies-title">Avances por sistema</h2></div>
+          </header>
+          <details class="month-study" id="pesca" open>
+            <summary><img src="recap-media/ago-pesca.webp" alt="" loading="lazy"><span><small>Pesca</small><strong>De las islas al álbum de especies</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se definió el aspecto de los peces tomando como referencia los ojos finales del Yunipet. Se exploraron cámaras para la pesca y se diseñó el recorrido de un álbum para guardar las capturas.</p>
+                <h3>Cómo funciona</h3><p>El mapa sitúa los destinos y distingue los que siguen bloqueados. El álbum agrupa los peces y permite reconocer cada especie por su ilustración y nombre. La colección reúne las treinta fichas para compararlas.</p>
+                <div class="study-links"><a href="?coleccion=peces#componentes">Peces · 30</a><a href="?coleccion=pesca#componentes">Pesca · 4</a></div>
+              </div>
+              <figure class="study-figure" data-studies="ago-pesca ago-camara ago-peces ago-pez-panel">
+                <a href="recap-media/ago-pesca.webp" aria-label="Ampliar El álbum de pesca"><img src="recap-media/ago-pesca.webp" loading="lazy" alt="El álbum de pesca"></a>
+                <select aria-label="Elegir lámina de De las islas al álbum de especies"><option value="ago-pesca">El álbum de pesca</option><option value="ago-camara">Las islas en el mapa de pesca</option><option value="ago-peces">El color de los peces</option><option value="ago-pez-panel">Colecciones por entorno</option></select><figcaption data-study-caption>La ficha de Costilla reúne ilustración, rareza y registro de colección en una doble página.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="mirada">
+            <summary><img src="recap-media/archivo/ago-ojos.webp" alt="" loading="lazy"><span><small>Creador y expresión</small><strong>Montar el personaje y darle una mirada</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se creó un complemento de Blender para montar personajes y se probó un material de color para la mascota. El ojo ganó color RGB sobre una malla y unas coordenadas de textura comunes, con un atlas de 25 filas.</p>
+                <h3>Cómo funciona</h3><p>El atlas reúne las expresiones en una imagen. Elegir una fila cambia el dibujo sin reemplazar el ojo. Los dos atlas del visor permiten comparar expresiones y la prueba muestra la secuencia del parpadeo.</p>
+                <div class="study-links"><a href="?coleccion=ojos7#componentes">Atlas 7 · 25</a><a href="?coleccion=ojos8#componentes">Atlas 8 · 25</a><a href="#prueba">Ver el parpadeo ↗</a></div>
+              </div>
+              <figure class="study-figure" data-studies="ago-ojos ago-herramienta">
+                <a href="recap-media/archivo/ago-ojos.webp" aria-label="Ampliar El atlas en producción"><img src="recap-media/archivo/ago-ojos.webp" loading="lazy" alt="El atlas en producción"></a>
+                <select aria-label="Elegir lámina de Montar el personaje y darle una mirada"><option value="ago-ojos">El atlas en producción</option><option value="ago-herramienta">Pruebas de color del personaje</option></select><figcaption data-study-caption>La vista de trabajo documenta el sistema RGB y la organización de los ojos para el personaje.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="ropa">
+            <summary><img src="recap-media/ago-doc.webp" alt="" loading="lazy"><span><small>Vestuario</small><strong>Del plan de colecciones al modelo que se deforma</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se planificó la ropa por colecciones y se produjeron los primeros modelos 3D con geometría y pesos sobre el personaje.</p>
+                <h3>Cómo funciona</h3><p>Los pesos vinculan la prenda con los huesos del Yunipet para que siga su postura. La prueba compara el ajuste de prendas distintas sobre la misma base antes de ampliar los conjuntos en septiembre.</p>
+                <div class="study-links"><a href="septiembre.html#conjuntos">Ver los conjuntos de septiembre ↗</a></div>
+              </div>
+              <figure class="study-figure" data-studies="ago-doc">
+                <a href="recap-media/ago-doc.webp" aria-label="Ampliar Vestir la misma base"><img src="recap-media/ago-doc.webp" loading="lazy" alt="Vestir la misma base"></a>
+                <figcaption data-study-caption>Primeros modelos de prendas con geometría y pesos, mostrados sobre el personaje.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="escenarios">
+            <summary><img src="recap-media/archivo/ago-arcade.webp" alt="" loading="lazy"><span><small>Escenarios</small><strong>Construir el arcade y dar escala a la vegetación</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se montó una escena del arcade reutilizando objetos ya creados. Para los exteriores se exploraron tamaños y tipos de vegetación con conceptos asistidos por IA y primeras plantas.</p>
+                <h3>Cómo funciona</h3><p>La sala muestra cómo muebles existentes pueden formar un escenario nuevo. En exterior, colocar las plantas junto al personaje permite juzgar altura y volumen antes de poblar el entorno.</p>
+                <div class="study-links"><a href="?coleccion=entorno#componentes">Entorno · 7</a></div>
+              </div>
+              <figure class="study-figure" data-studies="ago-arcade ago-plantas">
+                <a href="recap-media/archivo/ago-arcade.webp" aria-label="Ampliar La sala de arcade"><img src="recap-media/archivo/ago-arcade.webp" loading="lazy" alt="La sala de arcade"></a>
+                <select aria-label="Elegir lámina de Construir el arcade y dar escala a la vegetación"><option value="ago-arcade">La sala de arcade</option><option value="ago-plantas">Primeras plantas</option></select><figcaption data-study-caption>La escena se construyó a partir de los conceptos y aprovechó piezas que el equipo ya había producido.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+        </section>
+        <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="peces pesca ojos7 ojos8 entorno" data-active-family="peces">
+          <header class="collection-heading"><p class="folio-label">Colección de agosto</p><h2 id="collection-title">El álbum, las miradas y el entorno</h2></header>
+          <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="peces" aria-pressed="true">Peces <span>30</span></button><button type="button" data-family="pesca" aria-pressed="false">Láminas de pesca <span>4</span></button><button type="button" data-family="ojos7" aria-pressed="false">Atlas 7 <span>25</span></button><button type="button" data-family="ojos8" aria-pressed="false">Atlas 8 <span>25</span></button><button type="button" data-family="entorno" aria-pressed="false">Entorno <span>7</span></button></div>
           <div class="collection-paper">
             <figure class="collection-plate">
-              <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar pieza"><img data-portrait src="recap-media/colecciones/ojos7/01.webp" width="540" height="540" loading="lazy" decoding="async" alt="De reojo"><span aria-hidden="true">⤢</span></button>
-              <figcaption><strong data-name>De reojo</strong><span data-credit>Atlas original · agosto</span></figcaption>
+              <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar De franjas naranjas"><img data-portrait src="recap-media/colecciones/peces/13.webp" width="800" height="800" loading="lazy" decoding="async" alt="De franjas naranjas"><span aria-hidden="true">⤢</span></button>
+              <figcaption><strong data-name>De franjas naranjas</strong></figcaption>
             </figure>
             <div class="collection-editor">
-              <h3 data-title>Una cara, 25 miradas</h3><p data-copy>Cambia de celda para comparar la pupila, el párpado y el brillo sobre el mismo personaje.</p>
+              <h3 data-title>Los peces del álbum</h3><p data-copy>Elige una ilustración para ver sus colores y su expresión. Toca el pez para ampliarlo.</p>
               <div class="collection-grid" role="group" aria-label="Elegir pieza" data-thumbs></div>
-              <div class="collection-controls" hidden><button type="button" data-cycle aria-pressed="false">▶ Reproducir</button><span data-count>01 / 25</span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
-              <button type="button" class="collection-proof" data-evidence data-piece="ago-ojos">El atlas en producción ↗</button>
+              <div class="collection-controls" hidden><button type="button" data-cycle aria-pressed="false">▶ Reproducir</button><span data-count>13 / 30</span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
             </div>
           </div>
+          <footer class="collection-source"><span data-credit>Láminas originales · agosto</span><button type="button" class="collection-proof" data-evidence data-piece="ago-pesca">El álbum de pesca ↗</button></footer>
           <dialog class="collection-zoom" aria-labelledby="zoom-name">
             <div class="collection-zoom-inner">
               <button type="button" data-close aria-label="Cerrar vista ampliada">×</button>
@@ -90,11 +145,13 @@
             </div>
           </dialog>
         </section>
+        <details class="report-trial">
+          <summary>Ver las pruebas de parpadeo</summary>
         <section class="month-demo" id="prueba" data-demo="atlas">
           <div class="demo-copy">
-            <p class="folio-label">Animación original</p>
+            <p class="folio-label">Prueba de agosto</p>
             <h2>Dos pruebas de parpadeo</h2>
-            <p>En cada uno de estos atlas hay 25 expresiones. Elige una expresión y reproduce los dos parpadeos originales de agosto.</p>
+            <p>Elige una de las 25 expresiones y compara los dos atlas sobre el mismo rostro. Las capturas de Unity reproducen el ritmo de la prueba original.</p>
             <button class="film-play" type="button" aria-pressed="false" data-play>
               <span data-glyph aria-hidden="true">▶</span>
               <span data-play-label>Ver parpadeos</span>
@@ -118,67 +175,7 @@
             </label>
           </div>
         </section>
-        <section class="notes-section" aria-label="Avances de agosto">
-          <h2>Pesca, vestuario y arcade</h2>
-          <div class="notes-grid">
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="ago-peces" aria-label="Ampliar el color de los peces">
-                <img src="recap-media/archivo/ago-peces.webp" alt="El color de los peces" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Una ficha para cada pez</h3>
-              <p>Los ojos del Yunipet sirvieron de base para diseñar los peces. La exploración de pesca reunió propuestas de cámara y un álbum para consultar las especies.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="ago-doc" aria-label="Ampliar vestir la misma base">
-                <img src="recap-media/ago-doc.webp" alt="Vestir la misma base" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Las primeras prendas con peso</h3>
-              <p>Las colecciones empezaron a organizarse para producción. Las primeras prendas 3D incorporaron geometría y pesos adecuados al cuerpo de la mascota.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="ago-arcade" aria-label="Ampliar la sala de arcade">
-                <img src="recap-media/archivo/ago-arcade.webp" alt="La sala de arcade" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Del atlas de ojos al escenario</h3>
-              <p>El equipo definió el atlas de ojos y su sistema de color, y creó un complemento de Blender para armar personajes. También reutilizó recursos en la escena de arcade y modeló las primeras plantas.</p>
-            </article>
-          </div>
-        </section>
-        <section class="contact-section">
-          <h2>Más imágenes de agosto</h2>
-          <div class="contact-grid">
-            <figure>
-              <button id="pesca" class="contact-photo zoom-photo" type="button" data-piece="ago-camara" aria-label="Ampliar Las islas en el mapa de pesca"><img src="recap-media/archivo/ago-camara.webp" alt="Las islas en el mapa de pesca" loading="lazy"><span class="zoom-mark" aria-hidden="true">⤢</span></button><figcaption>Las islas en el mapa de pesca</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="ago-herramienta" aria-label="Ampliar Pruebas de color del personaje"><img src="recap-media/archivo/ago-herramienta.webp" alt="Pruebas de color del personaje" loading="lazy"><span class="zoom-mark" aria-hidden="true">⤢</span></button><figcaption>Pruebas de color del personaje</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="ago-pez-panel" aria-label="Ampliar colecciones por entorno">
-                <img src="recap-media/archivo/ago-pez-panel.webp" alt="Colecciones por entorno" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Colecciones por entorno</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="ago-plantas" aria-label="Ampliar primeras plantas">
-                <img src="recap-media/archivo/ago-plantas.webp" alt="Primeras plantas" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Primeras plantas</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="ago-ojos" aria-label="Ampliar el atlas en producción">
-                <img src="recap-media/archivo/ago-ojos.webp" alt="El atlas en producción" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>El atlas en producción</figcaption>
-            </figure>
-          </div>
-        </section>
+        </details>
       </article>
       <nav class="neighbours" aria-label="Navegar por los meses">
         <a class="neighbour" rel="prev" href="julio.html">
@@ -191,12 +188,7 @@
         </a>
       </nav>
     </main>
-    <footer class="journal-footer">
-      <img src="recap-media/simbolo.svg" alt="" width="19" height="21">
-      <span>Yunipets! · Recap de desarrollo 2026</span>
-      <a href="archivo.html#galeria">Galería de arte <span aria-hidden="true">↗</span>
-      </a>
-    </footer>
+    <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
     <dialog id="visor" aria-labelledby="piece-title">
       <div class="viewer-shell">
         <div class="viewer-bar">

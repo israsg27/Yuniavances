@@ -1,0 +1,28 @@
+.build-film { overflow: hidden; margin: 0; border-radius: var(--yp-radius); background: #26374d; color: white; }
+.build-film video { display: block; width: 100%; height: auto; }
+.build-film figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 14px; padding: 12px clamp(16px, 2.5vw, 28px); font: 500 .9rem/1.45 var(--body); }
+.build-film strong { font: 700 1rem var(--head); }
+.build-chapters, .build-choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.build-chapters { margin: 14px 0 0; }
+.build-chapters + .mechanic-story { margin-top: clamp(24px,4vw,45px); }
+.build-chapters a, .build-choices a { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 6px 16px; border-radius: 24px; color: #283747; background: #f1ece0; font: 680 .9rem var(--head); text-decoration: none; }
+.build-chapters time { color: #475e68; font-variant-numeric: tabular-nums; }
+.build-chapters a:hover, .build-choices a:hover { background: #dce7df; }
+.build-choices a[aria-current] { color: white; background: #294652; }
+.build-design { margin-top: clamp(35px, 6vw, 70px); }
+.build-design h2 { margin: 0; font: 770 clamp(29px, 4vw, 48px)/1.08 var(--head); letter-spacing: -.055em; }
+.build-choices { margin: 16px 0; }
+.build-screen { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); margin: 10px 0 0; overflow: hidden; border-radius: var(--yp-radius); background: #f3e9d7; scroll-margin-top: 92px; }
+.build-screen[hidden] { display: none; }
+.build-screen > a { display: grid; place-items: center; background: #d9edf4; }
+.build-screen img { display: block; width: 100%; height: auto; }
+.build-screen > div { align-self: center; padding: clamp(20px, 3.4vw, 44px); }
+.build-screen h3 { margin: 0; font: 750 clamp(23px, 3vw, 34px)/1.08 var(--head); letter-spacing: -.04em; }
+.build-screen p { margin: 9px 0 0; }
+.build-symbols > a { padding: 12px; background: #ffe3bd; }
+.build-symbols img { max-width: 295px; }
+.build-screen div a, #crear-cuarto .mechanic-guide li a { display: inline-block; margin-top: 12px; font: 680 .9rem/1.5 var(--head); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 760px) {
+  .build-screen { grid-template-columns: 1fr; }
+  .build-chapters a, .build-choices a { padding-inline: 12px; }
+}

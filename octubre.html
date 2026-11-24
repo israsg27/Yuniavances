@@ -5,45 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f8f6f1">
     <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
-    <link rel="preload" href="recap-media/sora.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="recap-media/sora.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="recap.css">
     <link rel="stylesheet" href="meses.css">
-    <script defer src="recap-nav.js"></script>
+    <link rel="stylesheet" href="areas.css">
+    <link rel="stylesheet" href="founders.css">
+    <script defer src="founders-motion.js"></script>
     <title>Octubre · Un mismo mueble con seis acabados · Yunipets!</title>
     <meta name="description" content="En octubre, la mayoría de los muebles básicos ya tenía seis estilos. El equipo reunió dos versiones del mismo cuarto para ver qué cambiaba al sustituir colores, texturas y materiales.">
     <script defer src="recap-data.js"></script>
-    <script defer src="recap-archivo.js"></script>
+    <script defer src="recap-archivo.js?v=2a1ee77c"></script>
     <script defer src="visor.js"></script>
     <script defer src="colecciones-datos.js"></script>
+    <link rel="stylesheet" href="estudios-mes.css">
     <script defer src="colecciones.js"></script>
+    <script defer src="estudios-mes.js"></script>
     <script defer src="mes.js"></script>
+    <script defer src="elegir-mes.js"></script>
+  <link rel="stylesheet" href="petcare-bano.css?v=faac85e0">
+    <script defer src="petcare-bano.js?v=550c70f1"></script>
   </head>
   <body class="journal-month" data-month="octubre" style="--month-wash:#e3e8ff;--month-ink:#4b68d1">
     <a class="skip" href="#contenido">Saltar al avance</a>
-    <header class="journal-header">
-      <div class="journal-bar">
-        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
-          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
-        </a>
-        <details class="journal-menu">
-          <summary aria-label="Menú del recap">
-            <i aria-hidden="true"></i>
-          </summary>
-          <nav aria-label="Navegación del recap">
-            <a href="recap.html">Todos los meses</a>
-            <a href="recap.html#sistemas">Avances por sistema</a>
-            <a href="creador.html">Creador de Yunipets</a>
-            <a href="archivo.html#galeria">Galería de arte</a>
-            <a href="archivo.html#historias">Evolución del juego</a>
-            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
-            <a href="archivo.html#proximos">Qué sigue</a>
-          </nav>
-        </details>
-      </div>
-    </header>
+    <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html">Desarrollo</a><a href="administracion.html" aria-current="location">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="administracion.html">Administración</a><span aria-hidden="true">/</span><a href="meses.html">Reportes mensuales</a><span aria-hidden="true">/</span><span aria-current="page">Octubre</span></nav>
     <main class="journal-wrap" id="contenido">
       <div class="issue-line">
-        <a class="back-index" href="recap.html#octubre">← Todos los meses</a>
+
         <nav class="issue-links" aria-label="Meses cercanos">
           <a rel="prev" href="septiembre.html" aria-label="Mes anterior, Septiembre">← Septiembre</a>
         </nav>
@@ -59,28 +50,79 @@
             </a>
           </div>
           <figure class="issue-plate">
-            <button class="cover-photo zoom-photo" type="button" data-piece="oct-doc" aria-label="Ampliar un cuarto, varios acabados">
+            <a class="cover-photo zoom-photo" href="#acabados" aria-label="Cambiar el estilo de un cuarto amueblado">
               <img src="recap-media/oct-doc.webp" alt="Un cuarto, varios acabados" fetchpriority="high">
-              <span class="zoom-mark" aria-hidden="true">⤢</span>
-            </button>
+              <span class="zoom-mark" aria-hidden="true">↓</span>
+            </a>
             <figcaption>Prueba de habitación con acabados combinados</figcaption>
           </figure>
         </header>
-        <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="acabados pelaje felinos petcare">
+        <nav class="chapter-index" aria-label="Secciones del reporte"><a href="#notas">Avances por sistema</a><a href="#componentes">Colección</a><a href="#prueba">Prueba</a><a href="#inventario">Inventario</a></nav>
+        <section class="monthly-studies" id="notas" aria-labelledby="studies-title">
+          <span id="imagenes" aria-hidden="true"></span>
+          <header><div><p class="folio-label">Octubre · 2026</p><h2 id="studies-title">Avances por sistema</h2></div>
+          </header>
+          <details class="month-study" id="acabados" open>
+            <summary><img src="recap-media/oct-doc.webp" alt="" loading="lazy"><span><small>Habitaciones y mobiliario</small><strong>Cambiar el estilo de un cuarto amueblado</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se creó un material maestro para muebles. Las colecciones básicas recibieron, en general, seis estilos por mueble. Se probaron en habitaciones reutilizando texturas de piso y pared. Los muebles nuevos seguían en geometría, con tamaños por ajustar.</p>
+                <h3>Cómo funciona</h3><p>El artista marca en la malla qué partes comparten material, sombra o borde claro. Esas zonas permiten cambiar color, material y textura y comparar combinaciones dentro del mismo cuarto.</p>
+                <div class="study-links"><a href="?coleccion=acabados#componentes">Habitaciones · 5</a><a href="#inventario">Consultar el inventario y sus pendientes ↗</a></div>
+              </div>
+              <figure class="study-figure" data-studies="oct-doc oct-color oct-shader oct-doc2 oct-geometria">
+                <a href="recap-media/oct-doc.webp" aria-label="Ampliar Un cuarto, varios acabados"><img src="recap-media/oct-doc.webp" loading="lazy" alt="Un cuarto, varios acabados"></a>
+                <select aria-label="Elegir lámina de Cambiar el estilo de un cuarto amueblado"><option value="oct-doc">Un cuarto, varios acabados</option><option value="oct-color">La versión de tonos neutros</option><option value="oct-shader">Controles del material maestro</option><option value="oct-doc2">La colección en escena</option><option value="oct-geometria">Nuevo mobiliario en bloque</option></select><figcaption data-study-caption>El montaje combina estilos de mobiliario, paredes y piso para revisar el resultado en una habitación.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="pelajes">
+            <summary><img src="recap-media/archivo/oct-pelaje.webp" alt="" loading="lazy"><span><small>Creador de personajes</small><strong>Combinar marcas de pelaje y hocicos felinos</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Las pruebas de octubre amplían las texturas del personaje y muestran cómo cambia la cara al montar un hocico de gato. El archivo permite recorrer los patrones de pelaje y las variantes felinas.</p>
+                <h3>Cómo funciona</h3><p>El patrón distribuye las manchas sobre la superficie del personaje. El hocico cambia el volumen de la cara. Compararlos por separado permite distinguir un cambio de color de un cambio de forma.</p>
+                <div class="study-links"><a href="?coleccion=pelaje#componentes">Pelajes · 25</a><a href="?coleccion=felinos#componentes">Hocicos felinos · 4</a></div>
+              </div>
+              <figure class="study-figure" data-studies="oct-pelaje oct-hocico">
+                <a href="recap-media/archivo/oct-pelaje.webp" aria-label="Ampliar Nuevas texturas del personaje"><img src="recap-media/archivo/oct-pelaje.webp" loading="lazy" alt="Nuevas texturas del personaje"></a>
+                <select aria-label="Elegir lámina de Combinar marcas de pelaje y hocicos felinos"><option value="oct-pelaje">Nuevas texturas del personaje</option><option value="oct-hocico">El hocico del gato</option></select><figcaption data-study-caption>El render permite observar cómo se leen las marcas y la textura sobre el rostro.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="cuidado">
+            <summary><img src="recap-media/petcare/platos.webp" alt="" loading="lazy"><span><small>PetCare · Arte no final</small><strong>Baño, comida y juego en el cuarto</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>El registro de octubre reúne las tres actividades de cuidado. El diseño de PetCare detalla la secuencia del baño y sus familias de herramientas, la entrega de alimentos y el gesto que corresponde a cada juguete.</p>
+                <h3>Cómo funciona</h3><p>Durante el baño se moja el pelaje, se aplica jabón, se frotan las manchas y se enjuaga. La toalla seca y el cepillo remata el cuidado. La ficha completa muestra las variantes, los indicadores de desgaste y la espera antes de reutilizar una toalla.</p>
+                <div class="study-links"><a href="galeria.html?ficha=petcare">Ver las tres actividades de PetCare ↗</a></div>
+              </div>
+              <figure class="study-figure" data-studies="oct-petcare">
+                <a href="recap-media/petcare/platos.webp" aria-label="Ampliar La pantalla de PetCare"><img src="recap-media/petcare/platos.webp" loading="lazy" alt="La pantalla de PetCare"></a>
+                <figcaption data-study-caption>Arte no final · Captura del prototipo de alimentación. Los dos platos aparecen frente al Yunipet y la bandeja reúne la bolsa de croquetas, el agua y el premio.</figcaption>
+              </figure>
+            </div>
+            <div class="study-kit"><petcare-bano></petcare-bano></div>
+          </details>
+        </section>
+        <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="acabados pelaje felinos">
           <header class="collection-heading"><p class="folio-label">Colección de octubre</p><h2 id="collection-title">Materiales, pelajes y hocicos</h2></header>
-          <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="acabados" aria-pressed="true">Habitaciones <span>5</span></button><button type="button" data-family="pelaje" aria-pressed="false">Pelajes <span>25</span></button><button type="button" data-family="felinos" aria-pressed="false">Hocicos felinos <span>4</span></button><button type="button" data-family="petcare" aria-pressed="false">PetCare <span>3</span></button></div>
+          <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="acabados" aria-pressed="true">Habitaciones <span>5</span></button><button type="button" data-family="pelaje" aria-pressed="false">Pelajes <span>25</span></button><button type="button" data-family="felinos" aria-pressed="false">Hocicos felinos <span>4</span></button><a class="collection-dossier" data-family-link="petcare" href="galeria.html?ficha=petcare">Componentes de PetCare ↗</a></div>
           <div class="collection-paper">
             <figure class="collection-plate">
               <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar pieza"><img data-portrait src="recap-media/colecciones/acabados/01.webp" width="540" height="540" loading="lazy" decoding="async" alt="Un cuarto, varios acabados"><span aria-hidden="true">⤢</span></button>
-              <figcaption><strong data-name>Un cuarto, varios acabados</strong><span data-credit>Capturas de producción · octubre</span></figcaption>
+              <figcaption><strong data-name>Un cuarto, varios acabados</strong></figcaption>
             </figure>
             <div class="collection-editor">
               <h3 data-title>El mismo cuarto cambia de aspecto</h3><p data-copy>Las capturas de octubre enseñan cómo el material maestro cambia el ambiente y cómo se organizan sus controles.</p>
               <div class="collection-grid" role="group" aria-label="Elegir pieza" data-thumbs></div>
               <div class="collection-controls" hidden><button type="button" data-cycle aria-pressed="false">▶ Reproducir</button><span data-count>01 / 05</span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
-              <button type="button" class="collection-proof" data-evidence data-piece="oct-shader">Controles del material maestro ↗</button>
             </div>
           </div>
+          <footer class="collection-source"><span data-credit>Capturas de producción · octubre</span><button type="button" class="collection-proof" data-evidence data-piece="oct-shader">Controles del material maestro ↗</button></footer>
           <dialog class="collection-zoom" aria-labelledby="zoom-name">
             <div class="collection-zoom-inner">
               <button type="button" data-close aria-label="Cerrar vista ampliada">×</button>
@@ -90,6 +132,8 @@
           </dialog>
           <a class="furniture-reference" href="mobiliario.html?coleccion=nuevos#catalogo"><img src="recap-media/mobiliario/mini/nuevos-14.webp" alt="" width="100" height="100" loading="lazy"><span><small>Catálogo de mobiliario</small><strong>El nuevo lote de mobiliario</strong><span>Recorre 29 modelos del archivo de arte, desde el caballete hasta la mesa con sombrilla.</span></span><b aria-hidden="true">↗</b></a>
         </section>
+        <details class="report-trial">
+          <summary>Comparar los acabados del cuarto</summary>
         <section class="month-demo" id="prueba" data-demo="comparacion">
           <div class="demo-copy">
             <p class="folio-label">Prueba interactiva</p>
@@ -115,35 +159,7 @@
             </div>
           </div>
         </section>
-        <section class="notes-section" aria-label="Avances de octubre">
-          <h2>Los cambios en el cuarto</h2>
-          <div class="notes-grid">
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="oct-color" aria-label="Ampliar la versión de tonos neutros">
-                <img src="recap-media/archivo/oct-color.webp" alt="La versión de tonos neutros" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Un material para varios acabados</h3>
-              <p>Los grupos de vértices distinguen material, sombras y bordes. Un material maestro usa esas regiones para variar color y textura. La mayoría de las piezas básicas recibió seis estilos.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="oct-doc2" aria-label="Ampliar la colección en escena">
-                <img src="recap-media/oct-doc2.webp" alt="La colección en escena" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Probar la colección en una habitación</h3>
-              <p>El equipo combinó muebles y texturas de pisos y paredes para probar espacios completos. El nuevo lote de muebles básicos estaba en geometría y pendiente de ajustar tamaños.</p>
-            </article>
-            <article class="field-note">
-              <button id="cuidado" class="note-photo zoom-photo" type="button" data-piece="oct-petcare" aria-label="Ampliar la pantalla de petcare">
-                <img src="recap-media/oct-petcare.webp" alt="La pantalla de PetCare" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>La toalla y el baño en PetCare</h3>
-              <p>Las nuevas texturas y pruebas de hocicos de gato conviven en el recap con la interfaz PetCare. El diseño reúne comida, baño y juego alrededor del personaje.</p>
-            </article>
-          </div>
-        </section>
+        </details>
         <section class="handoff-notes" id="inventario" aria-labelledby="handoff-title">
           <p class="folio-label">Corte de producción · octubre de 2026</p>
           <h2 id="handoff-title">Qué quedaba por cerrar</h2>
@@ -152,47 +168,7 @@
             <div><dt>8 lotes en el sistema de zonas</dt><dd>Las zonas permiten cambiar materiales por partes. El lote 006 figuraba en pausa y seguía pendiente completar estilos en Unity.</dd></div>
             <div><dt>3 tamaños en el kit de habitaciones</dt><dd>El kit contemplaba cuadrículas de 10 × 8, 12 × 8 y 14 × 8 casillas. Faltaba confirmar cuáles podría elegir el jugador.</dd></div>
           </dl>
-          <a href="archivo.html#proximos">Consultar la planeación posterior a octubre →</a>
-        </section>
-        <section class="contact-section">
-          <h2>Más imágenes de octubre</h2>
-          <div class="contact-grid">
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="oct-shader" aria-label="Ampliar controles del material maestro">
-                <img src="recap-media/archivo/oct-shader.webp" alt="Controles del material maestro" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Controles del material maestro</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="oct-geometria" aria-label="Ampliar nuevo mobiliario en bloque">
-                <img src="recap-media/archivo/oct-geometria.webp" alt="Nuevo mobiliario en bloque" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Nuevo mobiliario en bloque</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="oct-pelaje" aria-label="Ampliar nuevas texturas del personaje">
-                <img src="recap-media/archivo/oct-pelaje.webp" alt="Nuevas texturas del personaje" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Nuevas texturas del personaje</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="oct-hocico" aria-label="Ampliar el hocico del gato">
-                <img src="recap-media/archivo/oct-hocico.webp" alt="El hocico del gato" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>El hocico del gato</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="oct-cuidado" aria-label="Ampliar el icono de la toalla">
-                <img src="recap-media/archivo/oct-cuidado.webp" alt="El icono de la toalla" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>El icono de la toalla</figcaption>
-            </figure>
-          </div>
+          <a href="planeacion.html">Consultar la planeación posterior a octubre →</a>
         </section>
       </article>
       <nav class="neighbours" aria-label="Navegar por los meses">
@@ -200,18 +176,13 @@
           <span>Mes anterior</span>
           <strong>← Septiembre</strong>
         </a>
-        <a class="neighbour" href="recap.html">
+        <a class="neighbour" href="meses.html">
           <span>Recap 2026</span>
           <strong>Todos los meses</strong>
         </a>
       </nav>
     </main>
-    <footer class="journal-footer">
-      <img src="recap-media/simbolo.svg" alt="" width="19" height="21">
-      <span>Yunipets! · Recap de desarrollo 2026</span>
-      <a href="archivo.html#galeria">Galería de arte <span aria-hidden="true">↗</span>
-      </a>
-    </footer>
+    <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
     <dialog id="visor" aria-labelledby="piece-title">
       <div class="viewer-shell">
         <div class="viewer-bar">

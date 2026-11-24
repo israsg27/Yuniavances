@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Desarrollo · Mecánicas del cuarto · Yunipets!</title>
+  <meta name="description" content="Explora las mecánicas de Yunipets desde su habitación. Cada acceso lleva a las reglas, pantallas y avances de esa actividad.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <script defer src="desarrollo.js"></script><link rel="stylesheet" href="desarrollo.css">
+  <script defer src="elegir-mes.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="page">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main" id="contenido">
+    <header class="room-heading" id="cuarto"><div><p class="edition-label">Desarrollo</p><h1>El cuarto <em>del Yunipet.</em></h1></div><p>Toca el retrato de tu Yunipet para ver sus indicadores. Desde «Asignar mascota» puedes cambiar de Yunipet y elegir en qué habitación vive.</p></header>
+    <figure class="room-map">
+      <div class="room-stage">
+        <div class="room-scene"><img id="room-picture" src="recap-media/cuarto-anterior.webp" srcset="recap-media/cuarto-anterior-800.webp 800w, recap-media/cuarto-anterior.webp 1800w" sizes="(max-width: 1200px) 100vw, 1120px" alt="Habitación Trofeos con cuatro Yunipets, cama, sofá y mesa sobre el paisaje azul." width="1800" height="828" fetchpriority="high"></div>
+        <div class="room-toolbar">
+          <div class="room-tools">
+            <a class="room-back" href="recap.html"><img src="recap-media/mandos-cuarto/volver.svg" alt="">Volver</a>
+            <button type="button" id="room-eye" aria-label="Ocultar controles" title="Ocultar controles" aria-pressed="false"><img src="recap-media/mandos-cuarto/ver.svg" alt=""><img src="recap-media/mandos-cuarto/ocultar.svg" alt=""></button>
+            <button type="button" id="room-zoom" aria-label="Zoom" title="Zoom" aria-pressed="false"><img src="recap-media/mandos-cuarto/zoom.svg" alt=""></button>
+          </div>
+          <div class="room-switch">
+            <button type="button" class="room-bag" popovertarget="info-materiales" aria-label="Mochila de materiales" title="Materiales"><img src="recap-media/mandos-cuarto/mochila-verde.svg" alt=""></button>
+            <button type="button" data-step="-1" aria-label="Habitación anterior"><img src="recap-media/mandos-cuarto/flecha.svg" alt=""></button>
+            <strong id="room-name" aria-live="polite">Trofeos</strong>
+            <button type="button" data-step="1" aria-label="Habitación siguiente"><img src="recap-media/mandos-cuarto/flecha.svg" alt=""></button>
+          </div>
+          <div class="room-wallet">
+            <button type="button" class="balance" popovertarget="info-monedas" aria-label="110 gemas"><img src="recap-media/mandos-cuarto/gema.webp" alt="">110</button>
+            <button type="button" class="balance" popovertarget="info-monedas" aria-label="123,213 Yunicoins"><img src="recap-media/mandos-cuarto/moneda.webp" alt="">123,213</button>
+            <button type="button" class="room-menu-button" popovertarget="info-menu" aria-label="Menú del cuarto" title="Menú del cuarto"><img src="recap-media/mandos-cuarto/menu.svg" alt=""></button>
+          </div>
+        </div>
+        <section class="pet-status" aria-label="Mascota seleccionada">
+          <details class="pet-status-panel">
+            <summary aria-label="Indicadores de Chai" title="Indicadores de Chai"><span class="pet-portrait"><img src="recap-media/identidad/chai-estado.webp" alt="" width="380" height="550"></span></summary>
+            <div class="pet-meters" role="group" aria-label="Indicadores de Chai">
+              <button class="pet-food" type="button" popovertarget="info-alimentacion" aria-label="Alimentación" title="Alimentación"><i aria-hidden="true"></i></button>
+              <button class="pet-energy" type="button" popovertarget="info-energia" aria-label="Energía" title="Energía"><i aria-hidden="true"></i></button>
+              <button class="pet-happiness" type="button" popovertarget="info-felicidad" aria-label="Felicidad" title="Felicidad"><i aria-hidden="true"></i></button>
+            </div>
+            <button type="button" class="pet-assign" popovertarget="info-asignar" aria-label="Asignar mascota" title="Asignar mascota"><img src="recap-media/mandos-cuarto/asignar.svg" alt=""></button>
+          </details>
+        </section>
+        <nav class="room-controls" aria-label="Funciones de la pantalla principal">
+          <div class="room-actions room-actions-left">
+            <a href="mecanica-personaje.html" aria-label="Mascota nueva"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/mascota-nueva.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#mascota-nueva" alt=""></span></a>
+            <a href="mecanica-vestuario.html" aria-label="Editar accesorios"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/accesorios.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#accesorios" alt=""></span></a>
+            <a href="mecanica-petcare.html" aria-label="PetCare"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/petcare.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#petcare" alt=""></span></a>
+            <a href="mecanica-crear-cuarto.html" aria-label="Habitación nueva"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/habitacion-nueva.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#habitacion-nueva" alt=""></span></a>
+            <a href="mecanica-pesca.html" aria-label="Pesca"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/pesca.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#pesca" alt=""></span></a>
+          </div>
+          <div class="room-actions room-actions-right">
+            <a href="mecanica-habitacion.html" aria-label="Editar habitación"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/editar-cuarto.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#editar-cuarto" alt=""></span></a>
+            <a href="mecanica-tienda.html" aria-label="Tienda"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/tienda.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#tienda" alt=""></span></a>
+            <button type="button" popovertarget="info-exploracion" aria-label="Exploración AR"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/ubicacion-ar.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#ubicacion-ar" alt=""></span></button>
+            <button type="button" popovertarget="info-materiales" aria-label="Materiales"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/mochila.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#mochila" alt=""></span></button>
+            <a href="mecanica-tablero.html" aria-label="Tablero"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/tablero.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#tablero" alt=""></span></a>
+            <a href="mecanica-memorial.html" aria-label="Memorial"><span class="room-action-art" aria-hidden="true"><img src="recap-media/mandos-cuarto/memorial.svg" alt=""><img src="recap-media/mandos-cuarto/seleccion.svg#memorial" alt=""></span></a>
+          </div>
+        </nav>
+      </div>
+      <figcaption>El cuarto del Yunipet · Interfaz en desarrollo</figcaption>
+    </figure>
+    <aside class="room-info" popover id="info-menu" aria-labelledby="titulo-menu">
+      <h2 id="titulo-menu">Menú del cuarto</h2>
+      <nav class="room-menu-links" aria-label="Acciones del cuarto"><button type="button" popovertarget="info-asignar">Cambiar mascota</button><a href="mecanica-arcade.html">Arcade</a></nav>
+      <button type="button" popovertarget="info-menu" popovertargetaction="hide">Cerrar</button>
+    </aside>
+    <aside class="room-info" popover id="info-asignar" aria-labelledby="asignar-titulo">
+      <h2 id="asignar-titulo">Asignar mascota</h2><p>Toca un retrato para cambiar de mascota. Debajo puedes elegir la habitación de ese Yunipet.</p>
+      <div class="room-pet-picker">
+        <button type="button" aria-pressed="true" data-pet="Chai"><img src="recap-media/identidad/chai-estado.webp" alt="">Chai</button>
+        <button type="button" aria-pressed="false" data-pet="Atigrado"><img src="recap-media/cuarto-mascota-tabby.webp" alt="">Atigrado</button>
+        <button type="button" aria-pressed="false" data-pet="Perro negro"><img src="recap-media/cuarto-mascota-negro.webp" alt="">Perro negro</button>
+        <button type="button" aria-pressed="false" data-pet="Gato blanco"><img src="recap-media/cuarto-mascota-blanco.webp" alt="">Gato blanco</button>
+      </div>
+      <label for="habitacion-asignada" id="etiqueta-habitacion">Habitación de Chai</label>
+      <select id="habitacion-asignada"><option>Trofeos</option><option>Big room</option></select>
+      <button type="button" popovertarget="info-asignar" popovertargetaction="hide">Listo</button>
+    </aside>
+    <aside class="room-info" popover id="info-alimentacion" aria-labelledby="titulo-alimentacion">
+      <h2 id="titulo-alimentacion">Alimentación</h2><p>El plato muestra qué tan llena está la mascota. En PetCare puedes servirle su comida.</p><a href="mecanica-petcare.html#comida">Ver la rutina de comida →</a>
+      <button type="button" popovertarget="info-alimentacion" popovertargetaction="hide">Cerrar</button>
+    </aside>
+    <aside class="room-info" popover id="info-energia" aria-labelledby="titulo-energia">
+      <h2 id="titulo-energia">Energía</h2><p>El rayo muestra la energía disponible del Yunipet. En el tablero, cada tirada consume parte de esa energía.</p><a href="mecanica-tablero.html#recorrido">Ver una tirada →</a>
+      <button type="button" popovertarget="info-energia" popovertargetaction="hide">Cerrar</button>
+    </aside>
+    <aside class="room-info" popover id="info-felicidad" aria-labelledby="titulo-felicidad">
+      <h2 id="titulo-felicidad">Felicidad</h2><p>La cara y el color de la barra cambian con el ánimo de la mascota. Así se leen los tres niveles.</p>
+      <ul class="mood-examples" aria-label="Niveles de felicidad">
+        <li class="mood-low"><i aria-hidden="true"></i>Baja</li><li class="mood-mid"><i aria-hidden="true"></i>Media</li><li class="mood-high"><i aria-hidden="true"></i>Alta</li>
+      </ul>
+      <button type="button" popovertarget="info-felicidad" popovertargetaction="hide">Cerrar</button>
+    </aside>
+    <aside class="room-info" popover id="info-materiales" aria-labelledby="titulo-materiales">
+      <h2 id="titulo-materiales">Materiales</h2><p>Estas son las existencias de la partida de ejemplo.</p>
+      <dl class="room-stock">
+        <div><dt><i class="room-resource-icon" style="--slot:0%"></i>Madera</dt><dd>9,836</dd></div>
+        <div><dt><i class="room-resource-icon" style="--slot:16.667%"></i>Piedra</dt><dd>9,917</dd></div>
+        <div><dt><i class="room-resource-icon" style="--slot:33.333%"></i>Arena</dt><dd>9,999</dd></div>
+        <div><dt><i class="room-resource-icon" style="--slot:50%"></i>Tela</dt><dd>9,999</dd></div>
+        <div><dt><i class="room-resource-icon" style="--slot:66.667%"></i>Hilo</dt><dd>9,999</dd></div>
+      </dl><a href="mecanica-tablero.html#casillas">Ver cómo se consiguen los materiales →</a>
+      <button type="button" popovertarget="info-materiales" popovertargetaction="hide">Cerrar</button>
+    </aside>
+    <aside class="room-info" popover id="info-monedas" aria-labelledby="titulo-monedas">
+      <h2 id="titulo-monedas">Monedas del juego</h2><p>En la parte superior se muestran dos saldos. Los Yunicoins son las monedas doradas que aparecen en los precios de la tienda.</p><a href="mecanica-tienda.html#recorrido-tienda">Ver los precios en la tienda →</a>
+      <button type="button" popovertarget="info-monedas" popovertargetaction="hide">Cerrar</button>
+    </aside>
+    <aside class="room-info" popover id="info-exploracion" aria-labelledby="titulo-exploracion">
+      <h2 id="titulo-exploracion"><span class="room-ar-symbol" aria-hidden="true"></span>Exploración AR</h2><p>El marcador con el cubo abre la exploración en realidad aumentada. El recorrido de esta actividad está pendiente de documentar.</p>
+      <button type="button" popovertarget="info-exploracion" popovertargetaction="hide">Cerrar</button>
+    </aside>
+    <footer class="room-links"><a href="recap.html">← Volver a la portada</a><a href="arte.html">Explorar el archivo de arte →</a></footer>
+  </main>
+</body>
+</html>

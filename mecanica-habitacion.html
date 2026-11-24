@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Editar el cuarto · Desarrollo · Yunipets!</title>
+  <meta name="description" content="El jugador distribuye los muebles dentro de una habitación y personaliza sus superficies. Los puntos de apoyo conectan los objetos que se colocan unos sobre otros.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <link rel="stylesheet" href="desarrollo.css">
+  <link rel="stylesheet" href="crear-cuarto.css">
+  <script defer src="elegir-mes.js"></script>
+  <script defer src="gameplay-momentos.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main mechanic-detail" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <article class="mechanic-page" id="habitacion">
+      <header><p class="edition-label">Muebles y decoración</p><h1>Editar el cuarto</h1><p>Elige un mueble, muévelo por la cuadrícula y gíralo hasta encontrar su sitio. En la grabación puedes seguir cómo cambia la distribución de un cuarto amueblado y cómo queda al volver con el Yunipet.</p></header>
+      <figure class="build-film" id="gameplay">
+        <video controls playsinline preload="metadata" width="1438" height="716" poster="recap-media/editor-cuarto-portada.webp" aria-label="Gameplay del editor de cuarto" aria-describedby="film-nota">
+          <source src="recap-media/editor-cuarto-gameplay.mp4" type="video/mp4">
+          <a href="recap-media/editor-cuarto-gameplay.mp4">Abrir la grabación</a>
+        </video>
+        <figcaption id="film-nota"><strong>El editor de cuarto en juego</strong><span>1 min 04 s · La interfaz y las texturas de los muebles son provisionales.</span></figcaption>
+      </figure>
+      <nav class="build-chapters" data-gameplay-chapters aria-label="Momentos del editor de cuarto">
+        <a href="recap-media/editor-cuarto-gameplay.mp4#t=7" data-seconds="7"><time datetime="PT7S">0:07</time> Controles de giro</a>
+        <a href="recap-media/editor-cuarto-gameplay.mp4#t=15" data-seconds="15"><time datetime="PT15S">0:15</time> Mover el cuadro</a>
+        <a href="recap-media/editor-cuarto-gameplay.mp4#t=46" data-seconds="46"><time datetime="PT46S">0:46</time> Reorganizar el escritorio</a>
+        <a href="recap-media/editor-cuarto-gameplay.mp4#t=61" data-seconds="61"><time datetime="PT1M1S">1:01</time> Volver al cuarto</a>
+      </nav>
+      <div class="mechanic-story"><img src="recap-media/archivo/may-editor.webp" alt="Diseño del editor de habitación" loading="lazy"><div><h3>Colocar y dar estilo</h3><p>El jugador selecciona una pieza de suelo o pared, la coloca y puede girarla, quitarla o cambiar su acabado. Los puntos de apoyo permiten poner objetos sobre otros muebles.</p><a href="mobiliario.html">Explorar mobiliario en 3D →</a><a href="galeria.html?ficha=cuarto">Ver el sistema de habitaciones →</a></div></div>
+      <section class="mechanic-guide" aria-label="Funcionamiento"><h2>Cómo funciona</h2>
+        <ol><li><h3>Elegir una superficie</h3><p>Suelo y paredes se configuran como piezas del cuarto. El editor presenta sus acabados y la distribución del mobiliario.</p></li>
+          <li><h3>Situar los objetos</h3><p>Se puede girar una pieza y retirarla para cambiar la distribución. Los puntos de apoyo permiten colocar un objeto encima de un mueble.</p></li>
+          <li><h3>Activar un mueble</h3><p>En el diseño de junio, tocar ciertos muebles activa una animación. Sentarse, dormir o agarrar se reutilizan entre muebles compatibles.</p></li></ol>
+      </section>
+    </article>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a></footer>
+  </main>
+</body>
+</html>

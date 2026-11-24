@@ -1,0 +1,56 @@
+.memorial { --album-green:#344c40; --album-paper:#f0efdf; }
+.memorial .edition-label { margin:0 0 10px; color:#52634d; font:710 .77rem/1.35 var(--head); letter-spacing:.075em; text-transform:uppercase; }
+.mem-cover { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); align-items:center; gap:clamp(16px,3.5vw,42px); padding:clamp(19px,3.8vw,43px); border-radius:var(--yp-radius); background:linear-gradient(115deg,#f7eddb,#f8dfc8); }
+.mem-cover h1 { max-width:11ch; color:var(--album-green); font-size:clamp(40px,4.9vw,70px); }
+.mem-cover p:not(.edition-label),.mem-section p:not(.edition-label) { font:450 1rem/1.6 var(--body); }
+.mem-cover h1+p,.mem-section h2+p { margin:15px 0 0; max-width:72ch; }
+.mem-book { position:relative; justify-self:center; width:min(93%,375px); aspect-ratio:500/520; container-type:inline-size; transform:rotate(-4deg); filter:drop-shadow(5px 14px 9px #55371535); }
+.mem-binding { display:block; width:100%; height:100%; clip-path:polygon(5% 12%,6% 10%,9% 8.8%,15.5% 8.7%,17% 8%,81% 3.8%,84% 4.2%,87% 5.4%,90% 8.2%,91.5% 12%,92.8% 35%,94.8% 36%,95.6% 38%,96.1% 51.5%,95.4% 54%,94.2% 54.6%,95.7% 84%,95.1% 88.5%,93.2% 91.7%,90.3% 93.5%,86.6% 94.3%,11.5% 97.8%,7.5% 97%,5% 94.7%,4.5% 91%); }
+.mem-portrait { position:absolute; left:30.2%; top:21.4%; width:41.5%; height:42.9%; object-fit:cover; object-position:50% 40%; transform:skewY(-3.5deg) rotate(-1deg); clip-path:polygon(13% 0,85% 0,100% 14%,100% 100%,0 100%,0 13%); }
+.mem-name { position:absolute; left:39.5%; top:66.6%; width:23%; height:8%; display:grid; place-items:center; transform:rotate(-3deg); color:#404e31; background:#f8ead2; border-radius:30%; font:800 6.3cqw/1 var(--head); }
+.mem-cover .issue-button { margin-top:18px; }
+.mem-section { margin-top:clamp(40px,6vw,76px); scroll-margin-top:20px; }
+.mem-section h2,.mem-section h3 { margin:0; font-family:var(--head); letter-spacing:-.055em; line-height:1.1; text-wrap:balance; }
+.mem-section h2 { font-size:clamp(30px,3.7vw,48px); }
+.mem-section h3 { font-size:clamp(22px,2.2vw,30px); }
+.mem-film { background:var(--album-green); color:white; border-radius:22px; overflow:hidden; margin:20px 0 12px; }
+.mem-film video { display:block; width:100%; height:auto; aspect-ratio:1600/758; background:#28382c; }
+.mem-film figcaption { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px 16px; padding:12px clamp(16px,2.5vw,28px); font:480 .86rem/1.5 var(--body); }
+.mem-film strong { font:680 .94rem var(--head); }
+.mem-chapters:not([hidden]) { display:flex; flex-wrap:wrap; gap:5px 8px; }
+.mem-chapters button { display:flex; align-items:center; justify-content:center; gap:7px; min-height:44px; padding:7px 13px; border:1px solid #c0c9b8; border-radius:24px; background:#fffdf7; color:var(--album-green); cursor:var(--yp-cursor-action, pointer); font:650 .82rem/1.35 var(--head); }
+.mem-chapters small { font-variant-numeric:tabular-nums; }
+.mem-chapters button:hover,.mem-chapters button[aria-current=true] { background:var(--album-green); color:#fff; }
+.mem-instructions { max-width:78ch; margin:16px 0 0; }
+.mem-spreads { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:20px 0 16px; }
+.mem-spreads article,.mem-profile { background:var(--album-paper); border-radius:22px; }
+.mem-spreads article:nth-child(2) { background:#f6e7db; }
+.mem-spreads a { display:block; margin:10px 10px 0; border-radius:14px; overflow:hidden; cursor:zoom-in; }
+.mem-spreads img { display:block; width:100%; height:auto; }
+.mem-spreads article>div,.mem-profile { padding:clamp(18px,2.6vw,30px); }
+.mem-spreads p,.mem-profile p { margin:9px 0 0; }
+.mem-profile { display:grid; grid-template-columns:minmax(160px,.65fr) minmax(0,1.35fr); align-items:center; gap:10px 32px; background:var(--album-green); color:#fffdf5; }
+.mem-profile p { margin:0; }
+.mem-editor-link { display:inline-block; margin:12px 0 0; padding:8px 10px; color:var(--album-green); font:650 .9rem var(--head); text-underline-offset:3px; }
+.mem-tools:not([hidden]) { display:flex; flex-wrap:wrap; gap:6px; margin:18px 0 12px; }
+.mem-tools button,.mem-zoom button { min-height:44px; padding:8px 18px; border:1px solid #acb8a8; border-radius:24px; background:#fffcf6; color:var(--album-green); font:680 .94rem var(--head); cursor:var(--yp-cursor-action, pointer); }
+.mem-tools button[aria-pressed=true],.mem-tools button:hover { background:var(--album-green); color:white; }
+.mem-tool { margin:16px 0 0; overflow:hidden; border-radius:22px; background:var(--album-paper); }
+.mem-tool a { display:block; cursor:zoom-in; }
+.mem-tool img { display:block; width:100%; height:auto; }
+.mem-tool figcaption { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); align-items:center; gap:12px 28px; padding:clamp(18px,2.8vw,32px); }
+.mem-tool figcaption small { display:block; margin-bottom:5px; color:#485d50; font:640 .79rem/1.5 var(--body); }
+.mem-tool figcaption p { margin:0; }
+.mem-zoom { width:max-content; max-width:96vw; max-height:95vh; padding:0; border:0; border-radius:16px; color:#f9f7ef; background:#2e4338; }
+.mem-zoom::backdrop { background:#15231de6; }
+.mem-zoom header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:8px 16px; }
+.mem-zoom h2 { margin:0; font:650 1.04rem/1.3 var(--head); }
+.mem-zoom img { display:block; width:auto; height:auto; max-width:100%; max-height:calc(95vh - 65px); margin:auto; object-fit:contain; }
+@media(max-width:760px) {
+  .mem-cover,.mem-spreads,.mem-profile { grid-template-columns:1fr; }
+  .mem-cover h1 { max-width:15ch; }
+  .mem-book { width:min(76%,290px); margin:6px 0 10px; }
+  .mem-chapters button { flex:1 1 calc(50% - 8px); }
+  .mem-tool figcaption { grid-template-columns:1fr; }
+  .mem-tools button { flex:auto; padding-inline:12px; }
+}

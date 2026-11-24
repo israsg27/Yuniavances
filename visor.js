@@ -66,18 +66,19 @@ function renderViewer(){
   const p=pieceById.get(viewerIds[viewerIndex]);
   el('piece-image').src=p.src;
   el('piece-image').alt=p.title;
-  el('piece-type').textContent=p.theme+' / '+p.type;
+  const study = viewerOpener?.closest('.month-study');
+  el('piece-type').textContent=study ? study.querySelector('summary strong').textContent : p.theme+' / '+p.type;
   el('piece-origin').textContent=origin(p);
   el('piece-title').textContent=p.title;
-  el('piece-caption').textContent=p.caption;
+  el('piece-caption').textContent=study ? p.caption+' '+study.querySelector('.study-text p:last-of-type').textContent : p.caption;
   el('piece-counter').textContent=(viewerIndex+1)+' / '+viewerIds.length;
   el('prev-piece').disabled=el('next-piece').disabled=viewerIds.length<2;
   viewer.scrollTop=0;
 }
-function openViewer(id,trigger){
+function openViewer(id,trigger,ids){
   const p=pieceById.get(id);if(!p)return;
   viewerOpener=trigger;
-  viewerIds = availablePieces(trigger);
+  viewerIds = ids || availablePieces(trigger);
   viewerIndex=viewerIds.indexOf(id);
   if(viewerIndex<0){viewerIds=[id];viewerIndex=0;}
   document.dispatchEvent(new Event("visor:open"));renderViewer();viewer.showModal();

@@ -9,6 +9,7 @@ class YunipetViewer {
     this.destination = this.view.clone();
     this.motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
     this.cache = new Map();
+    this.eyeSurfaces = new Map();
     this.coatLayouts = new Map();
     this.scene = new THREE.Scene();
     this.subject = new THREE.Group();
@@ -39,7 +40,6 @@ class YunipetViewer {
     this.bones = new Map(YUNI_POSES.bones.map((name,index)=>[name,index]));
     this.idlePose = this.values(YUNI_POSES.idle,Float32Array);
     this.livePose = this.idlePose.slice();
-    this.waveFrames = YUNI_POSES.wave.map(frame=>this.values(frame,Float32Array));
     this.materialCache = new Map();
     this.eyes = [];
     this.coats = [];
@@ -59,8 +59,10 @@ class YunipetViewer {
   }
 
   values(text, Type) {
+    if (Uint8Array.fromBase64) return new Type(Uint8Array.fromBase64(text).buffer);
     const str = atob(text);
-    const bytes = Uint8Array.from(str, ch => ch.charCodeAt(0));
+    const bytes = new Uint8Array(str.length);
+    for (let i=0;i<bytes.length;i++) bytes[i]=str.charCodeAt(i);
     return new Type(bytes.buffer);
   }
 
@@ -70,25 +72,52 @@ class YunipetViewer {
     if (this.pendingTextures.has(key)) return this.pendingTextures.get(key);
     const load = async () => {
       const img = new Image();
-      img.src = this.model[kind][index];
+      img.src = this.model[kind][index] || 'recap-media/creador/'+kind+'/'+index+'.webp';
       await img.decode();
-      if (this.renderer && kind==='eyes') {
-        const texture = new THREE.Texture(img);
-        texture.colorSpace = THREE.SRGBColorSpace;
-        texture.needsUpdate = true;
-        this[kind][index] = {texture};
-      } else {
-        const sample = document.createElement('canvas');
-        sample.width = img.width;
-        sample.height = img.height;
-        const ctx = sample.getContext('2d');
-        ctx.drawImage(img, 0, 0);
-        this[kind][index] = {pixels:ctx.getImageData(0, 0, img.width, img.height)};
+      const sample = document.createElement('canvas');
+      sample.width = img.width;
+      sample.height = img.height;
+      const ctx = sample.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      const pixels = ctx.getImageData(0, 0, img.width, img.height);
+      const asset = {pixels};
+      if (kind === 'eyes') {
+        asset.context = ctx;
+        asset.original = pixels.data.slice();
+        asset.irisPixels = [];
+        asset.tint = '#f0bc5a';
+        for (let i = 0; i < asset.original.length; i += 4) {
+          const r=pixels.data[i], g=pixels.data[i+1], b=pixels.data[i+2], a=pixels.data[i+3];
+          // The amber ink is mixed with white or black along the antialiased edges.
+          const chroma = r-b;
+          if (a && chroma > 5 && Math.abs((g-b)/chroma - 98/150) < .14) asset.irisPixels.push(i);
+        }
+        if (this.renderer) {
+          asset.texture = new THREE.CanvasTexture(sample);
+          asset.texture.colorSpace = THREE.SRGBColorSpace;
+        }
       }
+      this[kind][index] = asset;
     };
     const result = load().finally(() => this.pendingTextures.delete(key));
     this.pendingTextures.set(key, result);
     return result;
+  }
+
+  paintIris(index,hex) {
+    const eye=this.eyes[index];
+    if (eye.tint===hex || !eye.irisPixels.length) return;
+    const color=[1,3,5].map(start=>parseInt(hex.slice(start,start+2),16));
+    const amber=[240,188,90], source=eye.original, target=eye.pixels.data;
+    for (const i of eye.irisPixels) {
+      const coverage=Math.min(1,(source[i]-source[i+2])/150);
+      for (let c=0;c<3;c++) target[i+c]=source[i+c]+(color[c]-amber[c])*coverage;
+    }
+    if (eye.texture) {
+      eye.context.putImageData(eye.pixels,0,0);
+      eye.texture.needsUpdate=true;
+    }
+    eye.tint=hex;
   }
 
   async loadFabric(asset) {
@@ -158,14 +187,15 @@ class YunipetViewer {
     for(const mesh of this.subject.children) {
       const info=mesh.material.userData;
       if(info.role==='eyes'||info.fabric) continue;
-      info.color=this.colors[info.role];
+      info.color=this.colors[info.colorGroup || info.role];
       mesh.material.color.set(info.color);
     }
     this.draw();
   }
 
   coatLayout(name) {
-    const textile = this.model.fabricGeometry[name];
+    const fabric = this.model.fabricGeometry[name];
+    const textile = fabric === true ? null : fabric;
     const data = textile || this.model.coatGeometry[name];
     if (!data) return null;
     if (!this.coatLayouts.has(name)) {
@@ -217,6 +247,8 @@ class YunipetViewer {
 
   // Subdivide the original eye surface and fit it to the selected head morph.
   eyeSurface(source, head, right) {
+    const key = source.uuid + '/' + head.geometry.uuid + '/' + right;
+    if (this.eyeSurfaces.has(key)) return this.eyeSurfaces.get(key);
     const position = source.getAttribute('position');
     source.computeBoundingBox();
     const {min,max} = source.boundingBox;
@@ -255,19 +287,19 @@ class YunipetViewer {
     geo.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));
     geo.setIndex(indices);
     geo.computeVertexNormals();
-    this.resources.push(geo);
+    this.eyeSurfaces.set(key,geo);
     return geo;
   }
 
-  material(role, eye, fabric) {
-    const color = fabric ? '#ffffff' : this.colors[role] || '#b1a8a2';
-    const coat = role==='fur' ? this.coat : undefined;
-    const id = fabric ? 'fabric/'+fabric : role === 'eyes' ? role+eye : role+(coat==null?'':'-pattern');
+  material(role, eye, fabric, colorGroup) {
+    const color = fabric ? '#ffffff' : this.colors[colorGroup || role] || '#b1a8a2';
+    const coat = !colorGroup && role==='fur' ? this.coat : undefined;
+    const id = colorGroup ? colorGroup+'/'+role : fabric ? 'fabric/'+fabric : role === 'eyes' ? role+eye : role+(coat==null?'':'-pattern');
     if (!this.materialCache.has(id)) {
       const mat = role === 'eyes' ? new THREE.MeshBasicMaterial({map:this.eyes[eye]?.texture ?? null,alphaTest:0.38,side:THREE.DoubleSide,toneMapped:false}) :
         new THREE.MeshStandardMaterial({color,map:fabric?this.fabricMaps.get(fabric)?.texture ?? null:coat==null?null:this.coatTexture ?? null,alphaTest:fabric?.startsWith('local/') ? .35 : 0,roughness:0.79,metalness:role==='metal'||role==='gold' ? 0.13 : 0,
           side:THREE.DoubleSide,transparent:role==='glass',opacity:role==='glass'?0.20:1,depthWrite:role!=='glass'});
-      mat.userData = {role, color, eye, coat, fabric};
+      mat.userData = {role, color, eye, coat, fabric, colorGroup};
       this.materialCache.set(id,mat);
     }
     const material=this.materialCache.get(id);
@@ -311,7 +343,8 @@ class YunipetViewer {
           }
         }
         if (role==='eyes') display = this.eyeSurface(geo,head,part.g.endsWith('L'));
-        const object = new THREE.Mesh(display,this.material(role,eye,fabrics[part.g]));
+        const colorGroup=Object.hasOwn(palette,group)?group:undefined;
+        const object = new THREE.Mesh(display,this.material(role,eye,fabrics[part.g],colorGroup));
         if(['cabeza','orejas','ensayo','frente','sombrero','hocico','nariz','ojos','gafas'].includes(group))object.userData.framing='face';
         if(group==='prenda')object.userData.framing='garment';
         const ear=group==='ensayo'||group==='orejas';
@@ -419,6 +452,7 @@ class YunipetViewer {
   }
 
   wave() {
+    this.waveFrames ??= YUNI_POSES.wave.map(frame=>this.values(frame,Float32Array));
     if(this.waving){
       if(this.motionPreference.matches){this.stopWave();return;}
       this.waveRelease={start:performance.now(),pose:this.livePose.slice()};
@@ -520,7 +554,7 @@ class YunipetViewer {
     this.view.x+=amount;
     this.destination.x=this.view.x;
     if(this.move)this.move.from.x=this.view.x;
-    this.draw();
+    if (!this.renderRequest) this.renderRequest=requestAnimationFrame(()=>{this.renderRequest=0;this.draw();});
   }
 
   face(angle) {this.setView(this.portrait,this.focusGarment,angle);}
@@ -604,7 +638,8 @@ class YunipetViewer {
     this.sampleBlink(now);
     const canvas=this.canvas;
     const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight);
-    const ratio=Math.min(window.devicePixelRatio||1,this.renderer?2:1.25);
+    const ratio=Math.min(window.devicePixelRatio||1,this.renderer?1.5:1,
+      Math.sqrt((this.renderer?1200000:260000)/(w*h)));
     const aspect=w/h;
     this.scene.updateMatrixWorld(true);
     this.frameCamera(aspect);
@@ -629,8 +664,13 @@ class YunipetViewer {
   // A depth buffer keeps the same meshes usable on devices without WebGL.
   drawSoftware() {
     const ctx=this.context,w=this.canvas.width,h=this.canvas.height;
-    const frame=ctx.createImageData(w,h);
-    const depth=new Float32Array(w*h).fill(Infinity);
+    if (!this.softwareFrame || this.softwareFrame.width!==w || this.softwareFrame.height!==h) {
+      this.softwareFrame=ctx.createImageData(w,h);
+      this.softwareDepth=new Float32Array(w*h);
+    }
+    const frame=this.softwareFrame, depth=this.softwareDepth;
+    frame.data.fill(0);
+    depth.fill(Infinity);
     const screen=new THREE.Matrix4().multiplyMatrices(this.camera.projectionMatrix,this.camera.matrixWorldInverse);
     const v=new THREE.Vector3();
     const sorted=[...this.subject.children].sort((a,b)=>Number(a.material.transparent)-Number(b.material.transparent));

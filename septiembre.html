@@ -5,45 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f8f6f1">
     <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
-    <link rel="preload" href="recap-media/sora.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="recap-media/sora.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="recap.css">
     <link rel="stylesheet" href="meses.css">
-    <script defer src="recap-nav.js"></script>
+    <link rel="stylesheet" href="areas.css">
+    <link rel="stylesheet" href="founders.css">
+    <script defer src="founders-motion.js"></script>
     <title>Septiembre · Ocho conjuntos para vestir al Yunipet · Yunipets!</title>
     <meta name="description" content="Se modelaron seis conjuntos de ropa y dos extra. Ya tenían geometría, coordenadas de textura y pesos para seguir al cuerpo. Faltaban las texturas y la prueba de vestuario en Unity.">
     <script defer src="recap-data.js"></script>
     <script defer src="recap-archivo.js"></script>
     <script defer src="visor.js"></script>
     <script defer src="colecciones-datos.js"></script>
+    <link rel="stylesheet" href="estudios-mes.css">
     <script defer src="colecciones.js"></script>
+    <script defer src="estudios-mes.js"></script>
     <script defer src="mes.js"></script>
-  </head>
+    <script defer src="elegir-mes.js"></script>
+</head>
   <body class="journal-month" data-month="septiembre" style="--month-wash:#ffead5;--month-ink:#c26b2f">
     <a class="skip" href="#contenido">Saltar al avance</a>
-    <header class="journal-header">
-      <div class="journal-bar">
-        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
-          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
-        </a>
-        <details class="journal-menu">
-          <summary aria-label="Menú del recap">
-            <i aria-hidden="true"></i>
-          </summary>
-          <nav aria-label="Navegación del recap">
-            <a href="recap.html">Todos los meses</a>
-            <a href="recap.html#sistemas">Avances por sistema</a>
-            <a href="creador.html">Creador de Yunipets</a>
-            <a href="archivo.html#galeria">Galería de arte</a>
-            <a href="archivo.html#historias">Evolución del juego</a>
-            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
-            <a href="archivo.html#proximos">Qué sigue</a>
-          </nav>
-        </details>
-      </div>
-    </header>
+    <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html">Desarrollo</a><a href="administracion.html" aria-current="location">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="administracion.html">Administración</a><span aria-hidden="true">/</span><a href="meses.html">Reportes mensuales</a><span aria-hidden="true">/</span><span aria-current="page">Septiembre</span></nav>
     <main class="journal-wrap" id="contenido">
       <div class="issue-line">
-        <a class="back-index" href="recap.html#septiembre">← Todos los meses</a>
+
         <nav class="issue-links" aria-label="Meses cercanos">
           <a rel="prev" href="agosto.html" aria-label="Mes anterior, Agosto">← Agosto</a>
           <a rel="next" href="octubre.html" aria-label="Mes siguiente, Octubre">Octubre →</a>
@@ -60,28 +49,79 @@
             </a>
           </div>
           <figure class="issue-plate">
-            <button class="cover-photo zoom-photo" type="button" data-piece="sep-ropa" aria-label="Ampliar el conjunto de kimono">
+            <a class="cover-photo zoom-photo" href="#conjuntos" aria-label="Ocho conjuntos preparados para pruebas">
               <img src="recap-media/sep-ropa.webp" alt="El conjunto de kimono" fetchpriority="high">
-              <span class="zoom-mark" aria-hidden="true">⤢</span>
-            </button>
+              <span class="zoom-mark" aria-hidden="true">↓</span>
+            </a>
             <figcaption>Prueba de vestuario · conjunto de kimono</figcaption>
           </figure>
         </header>
+        <nav class="chapter-index" aria-label="Secciones del reporte"><a href="#notas">Avances por sistema</a><a href="#componentes">Colección</a><a href="#prueba">Prueba</a></nav>
+        <section class="monthly-studies" id="notas" aria-labelledby="studies-title">
+          <span id="imagenes" aria-hidden="true"></span>
+          <header><div><p class="folio-label">Septiembre · 2026</p><h2 id="studies-title">Avances por sistema</h2></div>
+          </header>
+          <details class="month-study" id="conjuntos" open>
+            <summary><img src="recap-media/sep-ropa.webp" alt="" loading="lazy"><span><small>Vestuario</small><strong>Ocho conjuntos preparados para pruebas</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se prepararon seis conjuntos de ropa y dos adicionales con modelado, coordenadas de textura y pesos. Entre las pruebas se ven un kimono, un disfraz de dinosaurio y un vestido con boina.</p>
+                <h3>Cómo funciona</h3><p>Cada conjunto reúne piezas que deben encajar sobre el mismo personaje y seguir su movimiento. El archivo permite comparar tanto el conjunto como las prendas y los accesorios por zona del cuerpo. El siguiente paso era texturizar y probar en Unity.</p>
+                <div class="study-links"><a href="?coleccion=conjuntos#componentes">Conjuntos · 8</a><a href="?coleccion=prenda#componentes">Prendas · 9</a><a href="?coleccion=sombrero#componentes">Sombreros · 8</a><a href="?coleccion=gafas#componentes">Gafas · 6</a><a href="?coleccion=espalda#componentes">Espalda · 4</a><a href="?coleccion=manos#componentes">Muñecas · 6</a><a href="?coleccion=pies#componentes">Calzado · 7</a></div>
+              </div>
+              <figure class="study-figure" data-studies="sep-ropa sep-dino sep-boina">
+                <a href="recap-media/sep-ropa.webp" aria-label="Ampliar El conjunto de kimono"><img src="recap-media/sep-ropa.webp" loading="lazy" alt="El conjunto de kimono"></a>
+                <select aria-label="Elegir lámina de Ocho conjuntos preparados para pruebas"><option value="sep-ropa">El conjunto de kimono</option><option value="sep-dino">El disfraz de dinosaurio</option><option value="sep-boina">Vestido de flores y boina</option></select><figcaption data-study-caption>Una de las propuestas de vestuario se presenta sobre el cuerpo para revisar ajuste y silueta.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="habitaciones">
+            <summary><img src="recap-media/sep-cuartos.webp" alt="" loading="lazy"><span><small>Habitaciones y navegación</small><strong>Construir el cuarto y elegir una puerta</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se construyeron tres habitaciones, se produjeron los primeros módulos finales de pared y suelo, y se ajustaron animaciones de mobiliario. Se diseñó la navegación 2D entre espacios con iconos de formas redondas y gruesas.</p>
+                <h3>Cómo funciona</h3><p>Una habitación puede repetir módulos, cerrar el espacio con muros laterales o utilizar una imagen completa. En la propuesta de navegación se elige el color y el icono de la puerta, y se pueden comprar más pisos para sumar espacios.</p>
+                
+              </div>
+              <figure class="study-figure" data-studies="sep-cuartos sep-suelo sep-puertas sep-muebles">
+                <a href="recap-media/sep-cuartos.webp" aria-label="Ampliar Variantes de habitación"><img src="recap-media/sep-cuartos.webp" loading="lazy" alt="Variantes de habitación"></a>
+                <select aria-label="Elegir lámina de Construir el cuarto y elegir una puerta"><option value="sep-cuartos">Variantes de habitación</option><option value="sep-suelo">Piezas de piso y pared</option><option value="sep-puertas">La navegación por puertas</option><option value="sep-muebles">Ajustes a las colecciones</option></select><figcaption data-study-caption>El equipo documentó tres habitaciones modulares y las primeras piezas finales de pared y piso.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="luz">
+            <summary><img src="recap-media/sep-doc.webp" alt="" loading="lazy"><span><small>Iluminación y cielo</small><strong>Cambiar el ambiente por capas</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>En Unity se probaron ventanas transparentes, sombras de materiales y cuatro cielos, dos de día y dos de noche.</p>
+                <h3>Cómo funciona</h3><p>El fondo se compone con imágenes separadas. El material permite ajustar la dirección, velocidad, escala y desplazamiento de cada capa. Así se puede mover un plano de nubes a un ritmo distinto del horizonte.</p>
+                <div class="study-links"><a href="#prueba">Explorar el cielo ↗</a></div>
+              </div>
+              <figure class="study-figure" data-studies="sep-doc sep-cielo-dia sep-cielo-noche sep-capas">
+                <a href="recap-media/sep-doc.webp" aria-label="Ampliar La luz del interior"><img src="recap-media/sep-doc.webp" loading="lazy" alt="La luz del interior"></a>
+                <select aria-label="Elegir lámina de Cambiar el ambiente por capas"><option value="sep-doc">La luz del interior</option><option value="sep-cielo-dia">El cielo en contexto</option><option value="sep-cielo-noche">Panorama del cielo</option><option value="sep-capas">Una capa del fondo</option></select><figcaption data-study-caption>Prueba del ambiente del cuarto con mobiliario, sombras y materiales de la habitación.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+        </section>
         <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="conjuntos prenda sombrero gafas espalda manos pies">
           <header class="collection-heading"><p class="folio-label">Colección de septiembre</p><h2 id="collection-title">El vestuario, pieza por pieza</h2></header>
           <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="conjuntos" aria-pressed="true">Conjuntos <span>8</span></button><button type="button" data-family="prenda" aria-pressed="false">Prendas <span>9</span></button><button type="button" data-family="sombrero" aria-pressed="false">Sombreros <span>8</span></button><button type="button" data-family="gafas" aria-pressed="false">Gafas <span>6</span></button><button type="button" data-family="espalda" aria-pressed="false">Espalda <span>4</span></button><button type="button" data-family="manos" aria-pressed="false">Muñecas <span>6</span></button><button type="button" data-family="pies" aria-pressed="false">Calzado <span>7</span></button></div>
           <div class="collection-paper">
             <figure class="collection-plate">
               <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar pieza"><img data-portrait src="recap-media/colecciones/conjuntos/01.webp" width="540" height="540" loading="lazy" decoding="async" alt="Diario"><span aria-hidden="true">⤢</span></button>
-              <figcaption><strong data-name>Diario</strong><span data-credit>Blender · render para el recap</span></figcaption>
+              <figcaption><strong data-name>Diario</strong></figcaption>
             </figure>
             <div class="collection-editor">
               <h3 data-title>Ocho conjuntos sobre la misma mascota</h3><p data-copy>El registro de septiembre reúne seis conjuntos principales y dos extra. Estos renders muestran cómo se superponen las piezas sobre el cuerpo.</p>
               <div class="collection-grid" role="group" aria-label="Elegir pieza" data-thumbs></div>
               <div class="collection-controls" hidden><button type="button" data-cycle aria-pressed="false">▶ Reproducir</button><span data-count>01 / 08</span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
-              <button type="button" class="collection-proof" data-evidence data-piece="sep-ropa">El conjunto de kimono ↗</button>
             </div>
           </div>
+          <footer class="collection-source"><span data-credit>Blender · render para el recap</span><button type="button" class="collection-proof" data-evidence data-piece="sep-ropa">El conjunto de kimono ↗</button></footer>
           <dialog class="collection-zoom" aria-labelledby="zoom-name">
             <div class="collection-zoom-inner">
               <button type="button" data-close aria-label="Cerrar vista ampliada">×</button>
@@ -90,35 +130,8 @@
             </div>
           </dialog>
         </section>
-        <section class="notes-section" aria-label="Avances de septiembre">
-          <h2>Ropa y habitaciones</h2>
-          <div class="notes-grid">
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="sep-dino" aria-label="Ampliar el disfraz de dinosaurio">
-                <img src="recap-media/meses/sep-dinosaurio.webp" alt="El disfraz de dinosaurio" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>El ajuste de las prendas</h3>
-              <p>Seis conjuntos principales y dos adicionales quedaron con modelado, UV y pesos. Su siguiente validación consistía en texturizarlos y probar su comportamiento en Unity.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="sep-puertas" aria-label="Ampliar la navegación por puertas">
-                <img src="recap-media/archivo/sep-puertas.webp" alt="La navegación por puertas" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Tres habitaciones y sus puertas</h3>
-              <p>Se construyeron tres habitaciones con módulos de piso y pared. El flujo de puertas exploró cómo identificar espacios por color e icono en un edificio de varios pisos.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="sep-capas" aria-label="Ampliar una capa del fondo">
-                <img src="recap-media/archivo/sep-capas.webp" alt="Una capa del fondo" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Dos cielos de día y dos de noche</h3>
-              <p>Un shader de Unity permitió mover las capas del fondo de forma independiente. El equipo registró dos cielos diurnos y dos nocturnos y probó también luces y sombras interiores.</p>
-            </article>
-          </div>
-        </section>
+        <details class="report-trial">
+          <summary>Mover las capas del cielo</summary>
         <section class="month-demo" id="prueba" data-demo="cielo">
           <div class="demo-copy">
             <p class="folio-label">Prueba interactiva</p>
@@ -141,60 +154,7 @@
             </label>
           </div>
         </section>
-        <section class="contact-section">
-          <h2>Más imágenes de septiembre</h2>
-          <div class="contact-grid">
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="sep-cuartos" aria-label="Ampliar variantes de habitación">
-                <img src="recap-media/sep-cuartos.webp" alt="Variantes de habitación" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Variantes de habitación</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="sep-doc" aria-label="Ampliar la luz del interior">
-                <img src="recap-media/sep-doc.webp" alt="La luz del interior" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>La luz del interior</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="sep-cielo-dia" aria-label="Ampliar el cielo en contexto">
-                <img src="recap-media/archivo/sep-cielo-dia.webp" alt="El cielo en contexto" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>El cielo en contexto</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="sep-cielo-noche" aria-label="Ampliar panorama del cielo">
-                <img src="recap-media/archivo/sep-cielo-noche.webp" alt="Panorama del cielo" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Panorama del cielo</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="sep-suelo" aria-label="Ampliar piezas de piso y pared">
-                <img src="recap-media/archivo/sep-suelo.webp" alt="Piezas de piso y pared" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Piezas de piso y pared</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="sep-muebles" aria-label="Ampliar ajustes a las colecciones">
-                <img src="recap-media/archivo/sep-muebles.webp" alt="Ajustes a las colecciones" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Ajustes a las colecciones</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="sep-boina" aria-label="Ampliar vestido de flores y boina">
-                <img src="recap-media/meses/sep-boina.webp" alt="Vestido de flores y boina" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Vestido de flores y boina</figcaption>
-            </figure>
-          </div>
-        </section>
+        </details>
       </article>
       <nav class="neighbours" aria-label="Navegar por los meses">
         <a class="neighbour" rel="prev" href="agosto.html">
@@ -207,12 +167,7 @@
         </a>
       </nav>
     </main>
-    <footer class="journal-footer">
-      <img src="recap-media/simbolo.svg" alt="" width="19" height="21">
-      <span>Yunipets! · Recap de desarrollo 2026</span>
-      <a href="archivo.html#galeria">Galería de arte <span aria-hidden="true">↗</span>
-      </a>
-    </footer>
+    <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
     <dialog id="visor" aria-labelledby="piece-title">
       <div class="viewer-shell">
         <div class="viewer-bar">

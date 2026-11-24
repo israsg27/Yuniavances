@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Crear un cuarto · Desarrollo · Yunipets!</title>
+  <meta name="description" content="Antes de decorar, el jugador elige el tamaño de la habitación y el aspecto de su puerta. El flujo termina al asignar las mascotas que van a ocuparla.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <link rel="stylesheet" href="desarrollo.css">
+  <link rel="stylesheet" href="crear-cuarto.css">
+  <script defer src="elegir-mes.js"></script>
+  <script defer src="crear-cuarto.js"></script>
+  <script defer src="gameplay-momentos.js"></script>
+  <script defer src="recap-media/crear-cuarto/texturas/catalogo.js"></script>
+  <script defer src="acabados.js?v=3"></script>
+  <link rel="stylesheet" href="acabados.css">
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main mechanic-detail" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <article class="mechanic-page" id="crear-cuarto">
+      <header><p class="edition-label">Construcción</p><h1>Crear un cuarto</h1><p>Todo empieza con una puerta libre en el edificio. Elige cuánto espacio tendrán tus Yunipets, dale un nombre al cuarto y ponle un emblema para reconocerlo desde fuera.</p></header>
+      <figure class="build-film" id="gameplay">
+        <video controls playsinline preload="metadata" width="1600" height="708" poster="recap-media/crear-cuarto/portada.webp" aria-label="Crear y amueblar un cuarto en el juego" aria-describedby="film-nota">
+          <source src="recap-media/crear-cuarto-gameplay.mp4" type="video/mp4">
+          <a href="recap-media/crear-cuarto-gameplay.mp4">Abrir la grabación</a>
+        </video>
+        <figcaption id="film-nota"><strong>Crear y amueblar un cuarto</strong><span>1 min 46 s · Prototipo · Arte no final</span></figcaption>
+      </figure>
+      <nav class="build-chapters" data-gameplay-chapters aria-label="Ir a un momento del gameplay">
+        <a href="recap-media/crear-cuarto-gameplay.mp4#t=10" data-seconds="10"><time datetime="PT10S">0:10</time> Crear el cuarto</a>
+        <a href="recap-media/crear-cuarto-gameplay.mp4#t=22" data-seconds="22"><time datetime="PT22S">0:22</time> Personalizar la puerta</a>
+        <a href="recap-media/crear-cuarto-gameplay.mp4#t=33" data-seconds="33"><time datetime="PT33S">0:33</time> Elegir el tamaño</a>
+        <a href="recap-media/crear-cuarto-gameplay.mp4#t=54" data-seconds="54"><time datetime="PT54S">0:54</time> Colocar muebles</a>
+      </nav>
+      <section class="build-design" id="diseno" aria-labelledby="diseno-titulo">
+        <h2 id="diseno-titulo">Del edificio al interior</h2>
+        <nav class="build-choices" aria-label="Pantallas del diseño">
+          <a href="#fachada">Edificio</a><a href="#nombre">Nombre</a><a href="#puerta">Puerta</a><a href="#emblemas">Emblemas</a><a href="#acabados">Paredes y piso</a>
+        </nav>
+        <section class="build-screen" id="fachada">
+          <a href="recap-media/crear-cuarto/fachada.webp" aria-label="Ampliar la fachada del edificio"><img src="recap-media/crear-cuarto/fachada.webp" alt="Fachada de tres plantas con puertas de colores y espacios con candado" width="1300" height="632"></a>
+          <div><h3>Elegir una puerta</h3><p>La fachada reúne los cuartos en un mismo lugar. Las puertas con emblema identifican las habitaciones creadas. El signo «+» señala dónde puedes empezar la siguiente.</p></div>
+        </section>
+        <section class="build-screen" id="nombre">
+          <a href="recap-media/crear-cuarto/nombre.webp" aria-label="Ampliar la pantalla de nombre"><img src="recap-media/crear-cuarto/nombre.webp" alt="Teclado abierto para dar a la habitación el nombre Juegos" width="1300" height="632" loading="lazy"></a>
+          <div><h3>Un nombre para el cuarto</h3><p>Al tocar el nombre bajo la puerta se abre el teclado. En el diseño de Figma, el cuarto se llama «Juegos». En el gameplay puedes ver cómo «New Room» pasa a llamarse «Big room».</p></div>
+        </section>
+        <section class="build-screen" id="puerta">
+          <a href="recap-media/crear-cuarto/puerta.webp" aria-label="Ampliar la vista previa de la puerta"><img src="recap-media/crear-cuarto/puerta.webp" alt="La puerta de Juegos con un control blanco sobre fondo negro" width="1300" height="632" loading="lazy"></a>
+          <div><h3>Reconocerlo desde fuera</h3><p>El color y el emblema se combinan en la vista previa de la puerta. Un control identifica el cuarto de juegos en Figma. En la grabación, el jugador elige una nota musical sobre una puerta rosa.</p></div>
+        </section>
+        <section class="build-screen build-symbols" id="emblemas">
+          <a href="recap-media/crear-cuarto/emblemas.webp" aria-label="Ver la lámina completa de emblemas"><img src="recap-media/crear-cuarto/emblemas-detalle.webp" alt="Emblemas de la colección, entre ellos un dado, una cámara, un pez y una huella" width="426" height="422" loading="lazy"></a>
+          <div><h3>Un símbolo para cada uso</h3><p>Una cama puede señalar el dormitorio y una taza, la cocina. El catálogo también incluye letras y números para distinguir varios cuartos del mismo tipo.</p><a href="recap-media/crear-cuarto/emblemas.webp">Ver todos los emblemas ↗</a></div>
+        </section>
+        <section class="build-screen finish-studio" id="acabados" aria-labelledby="acabados-titulo">
+          <header><h3 id="acabados-titulo">Combinar paredes y piso</h3><p>Prueba un color liso o elige una textura. <strong>Los colores de paredes y pisos son provisionales.</strong> Las paredes se arman con módulos de 2 × 4 y el piso con losetas de 1 × 1.</p></header>
+          <div class="finish-layout">
+            <figure class="finish-stage"><canvas width="1080" height="690" id="cuarto-preview" role="img" aria-label="Vista de las paredes y el piso del cuarto"></canvas><figcaption id="combinacion" aria-live="polite"></figcaption></figure>
+            <div class="finish-picker">
+              <div class="finish-surfaces" aria-label="Superficie que quieres editar" role="group"><button type="button" data-face="wall" aria-pressed="true">Paredes</button><button type="button" data-face="floor" aria-pressed="false">Piso</button></div>
+              <div class="finish-options" role="group" aria-label="Texturas disponibles"></div>
+              <div class="finish-detail"><canvas id="muestra-modulo" width="96" height="192" role="img" aria-label="Módulo de dos por cuatro tiles"></canvas><div><h4 id="acabado-nombre"></h4><div class="finish-tones" role="group" aria-label="Variante de color"></div><label id="acabado-zocalo"><input type="checkbox"> Añadir zócalo</label></div></div>
+            </div>
+          </div>
+          <footer><a href="recap-media/crear-cuarto/acabados.webp">Ver la pantalla del juego ↗</a></footer>
+        </section>
+      </section>
+      <section class="mechanic-guide" aria-label="Construcción y uso"><h2>Del cuarto vacío al cuarto habitado</h2>
+        <ol><li><h3>Definir el espacio</h3><p>En la grabación, el jugador cambia de 12 × 8 a 14 × 8. El botón de creación muestra los recursos necesarios antes de confirmar.</p></li>
+          <li><h3>Distribuir los muebles</h3><p>Dentro del cuarto nuevo se abre el inventario. Se elige un mueble, se coloca sobre la cuadrícula y se ajustan su posición y orientación.</p><a href="mecanica-habitacion.html">Explorar el editor de muebles →</a></li>
+          <li id="asignar"><h3>Asignar los Yunipets</h3><p>Toca el retrato de la mascota en la esquina inferior izquierda. Junto a sus indicadores aparece una huella. Tócala para elegir en qué habitación vivirá ese Yunipet.</p><a href="recap-media/archivo/flujo-habitacion.webp">Ver el flujo completo ↗</a></li></ol>
+      </section>
+    </article>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a></footer>
+  </main>
+</body>
+</html>

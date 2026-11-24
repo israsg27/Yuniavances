@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Galería de arte · Yunipets!</title>
+    <meta name="description" content="Galería de arte">
+    <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="meses.css"><link rel="stylesheet" href="areas.css">
+    <link rel="stylesheet" href="founders.css">
+    <link rel="stylesheet" href="galeria.css">
+    <link rel="stylesheet" href="petcare-bano.css?v=faac85e0">
+    <script defer src="founders-motion.js"></script>
+    <script defer src="recap-data.js"></script>
+    <script defer src="recap-archivo.js?v=2a1ee77c"></script>
+    <script defer src="visor.js"></script>
+    <script defer src="petcare-bano.js?v=550c70f1"></script>
+    <script defer src="guia-petcare.js?v=f69db729"></script>
+    <script defer src="galeria.js?v=ed1e8914"></script>
+    <script defer src="elegir-mes.js"></script>
+  </head>
+  <body class="journal-archive">
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="desarrollo.html">Desarrollo</a><span aria-hidden="true">/</span><span aria-current="page">Galería de arte</span></nav>
+    <main id="contenido" class="area-main"><section class="section gallery-section" id="galeria" aria-labelledby="gallery-title">
+        <div class="section-intro">
+          <div>
+            <h1 id="gallery-title">Galería <em>de arte.</em></h1>
+          </div>
+          <p>Recorre el desarrollo de cada sistema, desde la decisión de diseño hasta las piezas que la muestran.</p>
+        </div>
+        <div class="gallery-controls">
+          <div id="gallery-filters" role="group" aria-label="Filtrar la galería por tema"></div>
+          <label class="search">
+            <span class="sr">Buscar una pieza del archivo</span>
+            <input id="buscar" type="search" placeholder="Buscar sistema o pieza…">
+          </label>
+        </div>
+        <p class="gallery-count" id="gallery-count" aria-live="polite"></p>
+        <div class="gallery-grid" id="galeria-piezas"></div>
+      </section>
+      <article id="galeria-ficha" class="art-dossier" hidden>
+        <a href="galeria.html" class="dossier-return">← Galería de arte</a>
+        <header class="dossier-heading"><div><p class="edition-label" id="dossier-category"></p><h1 id="dossier-title"></h1><p id="dossier-intro"></p></div><img id="dossier-cover" alt=""></header>
+        <div id="dossier-body"></div>
+      </article>
+      </main>
+    <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
+    <dialog id="visor" aria-labelledby="piece-title">
+      <div class="viewer-shell">
+        <div class="viewer-bar">
+          <span id="piece-type"></span>
+          <button class="close" type="button" aria-label="Cerrar imagen">×</button>
+        </div>
+        <img id="piece-image" alt="">
+        <div class="viewer-caption">
+          <div>
+            <p id="piece-origin"></p>
+            <h2 id="piece-title"></h2>
+            <p id="piece-caption"></p>
+          </div>
+          <div class="viewer-nav">
+            <button class="round" id="prev-piece" type="button" aria-label="Pieza anterior">←</button>
+            <span id="piece-counter"></span>
+            <button class="round" id="next-piece" type="button" aria-label="Pieza siguiente">→</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+.head-panels {display:none}
+.march-collection[data-active-family="cabeza"] {
+  --card-ink:#293449;
+  padding:clamp(12px,2.25vw,28px) 0;
+}
+.march-collection[data-active-family="cabeza"]::before,
+.march-collection[data-active-family="cabeza"]::after {display:none}
+.march-collection[data-active-family="cabeza"] .collection-tabs {margin-bottom:0}
+.march-collection[data-active-family="cabeza"] .collection-paper {
+  display:block;position:relative;container-type:inline-size;width:100%;aspect-ratio:1966/887;
+}
+.march-collection[data-active-family="cabeza"] .head-panels {
+  display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
+}
+.march-collection[data-active-family="cabeza"] :is(.collection-plate,.collection-editor) {display:contents}
+.march-collection[data-active-family="cabeza"] :is(.collection-plate,.collection-editor)::before,
+.march-collection[data-active-family="cabeza"] :is(.collection-plate,.collection-editor)::after,
+.march-collection[data-active-family="cabeza"] [data-copy] {display:none}
+.march-collection[data-active-family="cabeza"] .collection-plate figcaption {
+  position:absolute;left:3.72%;top:13.2%;max-width:47%;margin:0;z-index:1;pointer-events:none;
+}
+.march-collection[data-active-family="cabeza"] [data-name] {
+  color:white;font:800 5.3cqw/1.08 var(--head);letter-spacing:0;white-space:nowrap;
+}
+.march-collection[data-active-family="cabeza"] .collection-enlarge {
+  position:absolute;left:8.55%;top:19.8%;width:38.56%;height:79.48%;display:block;overflow:hidden;z-index:2;
+}
+.march-collection[data-active-family="cabeza"] .collection-enlarge img {
+  position:absolute;inset:auto auto 0 0;width:100%;height:100%;max-height:none;max-width:none;object-fit:contain;object-position:center bottom;
+}
+.march-collection[data-show-cover="true"] .march-zoom-photo img,
+.march-collection[data-active-family="cabeza"][data-show-cover="true"] .collection-enlarge img {
+  inset:-16.57% auto auto -6.29%;width:124.13%;height:193.12%;object-fit:fill;
+}
+.march-collection[data-active-family="cabeza"] .collection-enlarge span {display:none}
+.march-collection[data-active-family="cabeza"] .collection-editor h3 {
+  position:absolute;left:58.08%;top:33.25%;width:40%;margin:0;color:#fff;
+  font:800 3.25cqw/1.1 var(--head);letter-spacing:0;white-space:nowrap;
+}
+.march-collection[data-active-family="cabeza"] .collection-grid {
+  position:absolute;left:63.94%;top:46.9%;width:28.44%;margin:0;
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.61cqw 1.14cqw;
+}
+.march-collection[data-active-family="cabeza"] .collection-grid button {
+  border-radius:23.6%;box-shadow:0 .19cqw .24cqw #0004;
+}
+.march-collection[data-active-family="cabeza"] .collection-grid button[aria-pressed=true] {
+  outline:max(2px,.35cqw) solid white;outline-offset:0;
+}
+.march-collection[data-show-cover="true"] .collection-grid [data-index="1"] {
+  background-image:url("recap-media/colecciones/cabeza/ficha/muestra.webp");background-size:cover;background-position:center!important
+}
+.march-actions {
+  display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:14px 0 0;color:#293449;
+}
+.march-actions .collection-controls {display:flex;align-items:center;gap:6px;max-width:none;margin:0 0 0 auto}
+.march-actions .collection-controls [data-count] {margin:0 4px}
+.march-actions .head-toggle,.march-zoom,.march-actions [data-dir] {
+  padding:0 13px;min-height:44px;border-radius:99px;border:1px solid #c6cddb;background:white;color:#293449;box-shadow:none;font:650 13px var(--head);
+}
+.march-actions .head-toggle[aria-pressed=true] {background:#293449;color:white}
+.march-collection .collection-source {margin-top:6px}
+.march-collection[data-show-cover="true"] .march-zoom-photo {
+  position:relative;overflow:hidden;border-radius:14px;background:linear-gradient(120deg,#3dabe1,#4381f5);
+  width:min(570px,calc(100vw - 48px),calc((100dvh - 114px)*1.075));aspect-ratio:758/705;
+}
+.march-collection[data-show-cover="true"] .march-zoom-photo img {position:absolute;max-width:none;max-height:none;border-radius:0}
+.march-collection .collection-zoom :is([data-close],.head-toggle) {z-index:2}
+@media(max-width:520px) {
+  .march-collection .march-actions {row-gap:5px}
+  .march-actions .collection-controls {flex-basis:100%;margin:0}
+  .march-actions .collection-controls [data-count] {margin-left:auto}
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Memorial · Desarrollo · Yunipets!</title>
+  <meta name="description" content="Cada mascota tiene su propio álbum. Mira cómo se arman las páginas de Kelly y conoce el diseño del memorial de Yunipets.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css"><link rel="stylesheet" href="desarrollo.css"><link rel="stylesheet" href="memorial.css">
+  <script defer src="elegir-mes.js"></script><script defer src="gameplay-momentos.js"></script><script defer src="memorial.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main memorial" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <header class="mem-cover">
+      <div><p class="edition-label">Memorial</p>
+        <h1>Un álbum para cada mascota.</h1>
+        <p>Su primera noche en casa, la pelota que siempre buscaba o la tarde que pasó contigo en el juego. El memorial es un lugar para rendir homenaje a tu mascota y contar, a tu manera, lo que han vivido juntos.</p>
+        <a class="issue-button" href="#gameplay">Ver el álbum de Kelly en juego <span aria-hidden="true">↓</span></a>
+        <a class="mem-editor-link" href="#editor">Explorar las herramientas</a>
+      </div>
+      <div class="mem-book" role="img" aria-label="Álbum cerrado de Kelly con cubierta de tela verde, costuras coral y un broche de huella. Su retrato y su nombre están en la tapa.">
+        <img class="mem-binding" src="recap-media/memorial-cubierta.webp" width="500" height="520" fetchpriority="high" alt="">
+        <img class="mem-portrait" src="recap-media/memorial-retrato-kelly.webp" width="360" height="484" alt="">
+        <span class="mem-name" aria-hidden="true">Kelly</span>
+      </div>
+    </header>
+
+    <section id="gameplay" class="mem-section" aria-labelledby="titulo-gameplay">
+      <p class="edition-label">Modo libre · Gameplay en Unity</p>
+      <h2 id="titulo-gameplay">Así se arma el álbum de Kelly.</h2>
+      <p>En una hoja cabe una foto de tu mascota. En la de enfrente puedes poner su retrato de Yunipets, escribirle una dedicatoria y mover las piezas hasta que la página cuente el recuerdo como tú lo viviste.</p>
+      <figure class="mem-film">
+        <video id="kelly" controls playsinline preload="metadata" width="1600" height="758" poster="recap-media/memorial-gameplay-portada.webp" aria-label="Gameplay del modo libre del memorial de Kelly" aria-describedby="estado-arte">
+          <source src="recap-media/memorial-gameplay-kelly-40s.mp4" type="video/mp4">
+          <a href="recap-media/memorial-gameplay-kelly-40s.mp4">Abrir el video del memorial</a>
+        </video>
+        <figcaption id="estado-arte"><strong>Gameplay del prototipo</strong><span>40 segundos · Arte e interfaz en desarrollo</span></figcaption>
+      </figure>
+      <div class="mem-chapters" data-gameplay-chapters hidden aria-label="Ir a un momento del gameplay" role="group">
+        <button type="button" data-seconds="0"><small>0:00</small> Fotos y texto</button>
+        <button type="button" data-seconds="15.334"><small>0:15</small> Capas</button>
+        <button type="button" data-seconds="19.816"><small>0:20</small> Páginas y stickers</button>
+        <button type="button" data-seconds="33.492"><small>0:33</small> Añadir hojas</button>
+      </div>
+      <p class="mem-instructions">Al final del video, Kelly ya tiene una página de jardín y otra de pesca. El botón + abre una doble página en blanco para el siguiente recuerdo.</p>
+    </section>
+
+    <section id="editor" class="mem-section" aria-labelledby="titulo-editor">
+      <h2 id="titulo-editor">Cómo se arma una página</h2>
+      <p>Empieza con una foto, escribe lo que quieres recordar y elige qué detalles van alrededor. Puedes explorar cada herramienta por separado.</p>
+      <div class="mem-tools" role="group" aria-label="Herramientas del álbum" hidden>
+        <button type="button" aria-controls="mem-recorte" aria-pressed="true">Recorte</button>
+        <button type="button" aria-controls="mem-texto" aria-pressed="false">Texto</button>
+        <button type="button" aria-controls="mem-stickers" aria-pressed="false">Stickers</button>
+        <button type="button" aria-controls="mem-capas" aria-pressed="false">Capas</button>
+      </div>
+      <figure class="mem-tool" id="mem-recorte">
+        <a href="recap-media/memorial-editor-recorte.webp" aria-label="Ampliar el recorte en estrella"><img src="recap-media/memorial-editor-recorte.webp" width="1600" height="758" loading="lazy" alt="Una estrella de borde punteado encuadra al Yunipet. La parte del retrato que queda fuera aparece oscurecida."></a>
+        <figcaption><div><small>Diseño del editor · Interfaz en desarrollo</small><h3>Encuadrar el retrato</h3></div><p>La línea punteada marca el recorte. En este ejemplo, la estrella conserva el rostro y deja fuera las esquinas de la imagen. Así puedes ver qué parte del retrato quedará en la hoja antes de confirmar.</p></figcaption>
+      </figure>
+      <figure class="mem-tool" id="mem-texto">
+        <a href="recap-media/memorial-editor-texto.webp" aria-label="Ampliar el editor de texto"><img src="recap-media/memorial-editor-texto.webp" width="1600" height="758" loading="lazy" alt="La palabra Casa en el editor del álbum. A la izquierda están el color, el tamaño y la alineación, y a la derecha aparecen los estilos de letra."></a>
+        <figcaption><div><small>Diseño del editor · Interfaz en desarrollo</small><h3>Escribir una dedicatoria</h3></div><p>Una palabra como «Casa» puede darle título a una foto. El diseño permite elegir la letra, ajustar su tamaño y color, y alinear el texto. En el video de Kelly se ve cómo queda «Siempre contigo» junto a su retrato.</p></figcaption>
+      </figure>
+      <figure class="mem-tool" id="mem-stickers">
+        <a href="recap-media/memorial-editor-stickers.webp" aria-label="Ampliar el catálogo de stickers"><img src="recap-media/memorial-editor-stickers.webp" width="1600" height="758" loading="lazy" alt="El catálogo de Flores abierto sobre el álbum de Kelly muestra ramos, hojas, un marco y una canasta."></a>
+        <figcaption><div><small>Captura de Unity · Interfaz en desarrollo</small><h3>Elegir un sticker</h3></div><p>Abre la categoría Flores y elige un ramo para colocarlo junto a la foto del jardín. Para el recuerdo del lago, la categoría Peces permite decorar la hoja con los hallazgos de la salida.</p></figcaption>
+      </figure>
+      <figure class="mem-tool" id="mem-capas">
+        <a href="recap-media/memorial-editor-capas.webp" aria-label="Ampliar el panel de capas"><img src="recap-media/memorial-editor-capas.webp" width="1600" height="758" loading="lazy" alt="El panel de la hoja derecha enumera el ramo, la frase Siempre contigo, el retrato de Kelly y unas cerezas. Al lado se ven flechas, un candado y un ojo."></a>
+        <figcaption><div><small>Captura de Unity · Interfaz en desarrollo</small><h3>Ordenar las capas</h3></div><p>El retrato, la dedicatoria y cada sticker tienen su propia capa. Las flechas cambian cuál queda delante. El ojo permite ocultar una pieza para comparar la composición y el candado la fija mientras acomodas las demás.</p></figcaption>
+      </figure>
+    </section>
+
+    <section class="mem-section" aria-labelledby="titulo-diseno">
+      <p class="edition-label">Diseño previsto</p>
+      <h2 id="titulo-diseno">Dentro de cada memorial</h2>
+      <p>La propuesta parte de un estante de álbumes. Al elegir a un Yunipet, entrarás en su historia y podrás recorrer sus recuerdos por fecha o dedicarle páginas de composición libre.</p>
+      <div class="mem-spreads">
+        <article>
+          <a href="recap-media/memorial-historia.webp" aria-label="Ampliar el diseño de Nuestra historia"><img src="recap-media/memorial-historia.webp" loading="lazy" width="1800" height="853" alt="Dos hojas ilustradas reúnen la llegada a casa, el primer juego, el encuentro con Coco y un rincón favorito."></a>
+          <div><h3>Nuestra historia</h3><p>Cada entrada une una fecha, una foto y unas palabras tuyas. Así, «Llegué a casa» puede quedar junto al día en que conoció a Coco, y puedes volver a ambos momentos al hojear el álbum.</p></div>
+        </article>
+        <article>
+          <a href="recap-media/memorial-emociones.webp" aria-label="Ampliar el diseño de Días y emociones"><img src="recap-media/memorial-emociones.webp" loading="lazy" width="1800" height="853" alt="Un calendario de agosto con emociones por día y una foto de la mascota dormida junto a una nota."></a>
+          <div><h3>Días y emociones</h3><p>La idea es elegir un día del calendario, asociarle una emoción y acompañarla con una imagen o una nota. También hay lugar para un día tranquilo en el que lo único que pasó fue una siesta juntos.</p></div>
+        </article>
+      </div>
+      <aside class="mem-profile"><h3>Su ficha y sus favoritos</h3>
+        <p>También está previsto guardar las estadísticas de cada Yunipet junto a detalles que lo hacen reconocible, como su juguete preferido o su rincón de descanso. La ficha reunirá esos datos, y el modo libre permitirá decidir cuáles convertir en una página especial.</p>
+      </aside>
+    </section>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a></footer>
+  </main>
+  <dialog class="mem-zoom" aria-labelledby="mem-zoom-title">
+    <header><h2 id="mem-zoom-title">Vista ampliada</h2><form method="dialog"><button autofocus>Cerrar</button></form></header>
+    <img alt="">
+  </dialog>
+</body>
+</html>

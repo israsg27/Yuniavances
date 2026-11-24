@@ -5,45 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f8f6f1">
     <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
-    <link rel="preload" href="recap-media/sora.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="recap-media/sora.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="recap.css">
     <link rel="stylesheet" href="meses.css">
-    <script defer src="recap-nav.js"></script>
+    <link rel="stylesheet" href="areas.css">
+    <link rel="stylesheet" href="founders.css">
+    <script defer src="founders-motion.js"></script>
     <title>Junio · Dormir, sentarse y agarrar · Yunipets!</title>
     <meta name="description" content="Una silla y un sillón podían compartir la animación de sentarse. En junio se prepararon movimientos reutilizables para los personajes y se definió cómo responde cada mueble al tocarlo.">
     <script defer src="recap-data.js"></script>
     <script defer src="recap-archivo.js"></script>
     <script defer src="visor.js"></script>
     <script defer src="colecciones-datos.js"></script>
+    <link rel="stylesheet" href="estudios-mes.css">
     <script defer src="colecciones.js"></script>
+    <script defer src="estudios-mes.js"></script>
     <script defer src="movimiento.js"></script>
-  </head>
+    <script defer src="elegir-mes.js"></script>
+</head>
   <body class="journal-month" data-month="junio" style="--month-wash:#eae2ff;--month-ink:#7151d0">
     <a class="skip" href="#contenido">Saltar al avance</a>
-    <header class="journal-header">
-      <div class="journal-bar">
-        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
-          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
-        </a>
-        <details class="journal-menu">
-          <summary aria-label="Menú del recap">
-            <i aria-hidden="true"></i>
-          </summary>
-          <nav aria-label="Navegación del recap">
-            <a href="recap.html">Todos los meses</a>
-            <a href="recap.html#sistemas">Avances por sistema</a>
-            <a href="creador.html">Creador de Yunipets</a>
-            <a href="archivo.html#galeria">Galería de arte</a>
-            <a href="archivo.html#historias">Evolución del juego</a>
-            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
-            <a href="archivo.html#proximos">Qué sigue</a>
-          </nav>
-        </details>
-      </div>
-    </header>
+    <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html">Desarrollo</a><a href="administracion.html" aria-current="location">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="administracion.html">Administración</a><span aria-hidden="true">/</span><a href="meses.html">Reportes mensuales</a><span aria-hidden="true">/</span><span aria-current="page">Junio</span></nav>
     <main class="journal-wrap" id="contenido">
       <div class="issue-line">
-        <a class="back-index" href="recap.html#junio">← Todos los meses</a>
+
         <nav class="issue-links" aria-label="Meses cercanos">
           <a rel="prev" href="mayo.html" aria-label="Mes anterior, Mayo">← Mayo</a>
           <a rel="next" href="julio.html" aria-label="Mes siguiente, Julio">Julio →</a>
@@ -60,29 +49,80 @@
             </a>
           </div>
           <figure class="issue-plate">
-            <button class="cover-photo zoom-photo" type="button" data-piece="jun-mov" aria-label="Ampliar una pose en producción">
+            <a class="cover-photo zoom-photo" href="#movimiento" aria-label="Sentarse, dormir y agarrar en distintos muebles">
               <img src="recap-media/archivo/jun-mov.webp" alt="Una pose en producción" fetchpriority="high">
-              <span class="zoom-mark" aria-hidden="true">⤢</span>
-            </button>
+              <span class="zoom-mark" aria-hidden="true">↓</span>
+            </a>
             <figcaption>Pose de trabajo del personaje durante las pruebas de animación</figcaption>
           </figure>
         </header>
+        <nav class="chapter-index" aria-label="Secciones del reporte"><a href="#notas">Avances por sistema</a><a href="#componentes">Colección</a><a href="#prueba">Prueba</a></nav>
+        <section class="monthly-studies" id="notas" aria-labelledby="studies-title">
+          <span id="imagenes" aria-hidden="true"></span>
+          <header><div><p class="folio-label">Junio · 2026</p><h2 id="studies-title">Avances por sistema</h2></div>
+          </header>
+          <details class="month-study" id="movimiento" open>
+            <summary><img src="recap-media/jun-anim.webp" alt="" loading="lazy"><span><small>Habitación y animación</small><strong>Sentarse, dormir y agarrar en distintos muebles</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se crearon acciones reutilizables del Yunipet y animaciones propias de los muebles. Se prepararon otros 60 muebles con geometría corregida, texturas desplegadas y puntos de apoyo para colocar objetos encima.</p>
+                <h3>Cómo funciona</h3><p>La mascota puede reutilizar una postura en muebles compatibles. El objeto tiene su propio esqueleto de animación: algunos movimientos se activan al tocarlo y otros, como el de las plantas, se repiten en bucle.</p>
+                <div class="study-links"><a href="?coleccion=posturas#componentes">Posturas · 6</a><a href="#prueba">Probar las posturas ↗</a></div>
+              </div>
+              <figure class="study-figure" data-studies="jun-anim jun-mov jun-mueble-rig jun-muebles">
+                <a href="recap-media/jun-anim.webp" aria-label="Ampliar Movimiento y mobiliario"><img src="recap-media/jun-anim.webp" loading="lazy" alt="Movimiento y mobiliario"></a>
+                <select aria-label="Elegir lámina de Sentarse, dormir y agarrar en distintos muebles"><option value="jun-anim">Movimiento y mobiliario</option><option value="jun-mov">Una pose en producción</option><option value="jun-mueble-rig">La animación del mueble</option><option value="jun-muebles">Piezas de una colección</option></select><figcaption data-study-caption>Fotograma de las pruebas de interacción del personaje con un mueble.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="tienda-prototipo">
+            <summary><img src="recap-media/archivo/jun-tienda-prototipo.webp" alt="" loading="lazy"><span><small>Tienda</small><strong>Del espacio comercial a la ficha de un objeto</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se compararon al menos cuatro distribuciones y se llevaron dos tiendas a modelo con color base, coordenadas de textura y animaciones. Un prototipo en HTML permitió recorrer el catálogo de la demo.</p>
+                <h3>Cómo funciona</h3><p>La vista ortográfica muestra cómo se distribuyen los productos. Al elegir uno, el recorrido conduce a su previsualización. Las láminas permiten seguir esa decisión desde el plano del local hasta la interfaz.</p>
+                <div class="study-links"><a href="?coleccion=tienda#componentes">Tienda · 4</a></div>
+              </div>
+              <figure class="study-figure" data-studies="jun-tienda-prototipo jun-objetos jun-tienda jun-tienda-modelo">
+                <a href="recap-media/archivo/jun-tienda-prototipo.webp" aria-label="Ampliar Cómo se recorría la tienda"><img src="recap-media/archivo/jun-tienda-prototipo.webp" loading="lazy" alt="Cómo se recorría la tienda"></a>
+                <select aria-label="Elegir lámina de Del espacio comercial a la ficha de un objeto"><option value="jun-tienda-prototipo">Cómo se recorría la tienda</option><option value="jun-objetos">El recorrido de la tienda</option><option value="jun-tienda">Componer la tienda</option><option value="jun-tienda-modelo">Distribución interior</option></select><figcaption data-study-caption>Las pantallas del prototipo de tienda en HTML ensayan el paso del catálogo a la ficha de un objeto.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="inicio">
+            <summary><img src="recap-media/archivo/jun-creador.webp" alt="" loading="lazy"><span><small>Creador e interfaz</small><strong>Del inicio de la demo al Yunipet personalizado</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se diseñó el flujo desde la introducción hasta la creación del personaje. Se exploraron estilos para el cuarto y su editor, y una familia de iconos para representar la personalidad.</p>
+                <h3>Cómo funciona</h3><p>Al recorrer las pantallas, las elecciones dan forma al personaje. Símbolos pequeños representan rasgos como energía o curiosidad junto a sus datos.</p>
+                
+              </div>
+              <figure class="study-figure" data-studies="jun-creador jun-personalidad">
+                <a href="recap-media/archivo/jun-creador.webp" aria-label="Ampliar Editor para la demo"><img src="recap-media/archivo/jun-creador.webp" loading="lazy" alt="Editor para la demo"></a>
+                <select aria-label="Elegir lámina de Del inicio de la demo al Yunipet personalizado"><option value="jun-creador">Editor para la demo</option><option value="jun-personalidad">Un icono para cada rasgo</option></select><figcaption data-study-caption>Una propuesta de interfaz sitúa las opciones de personalización junto a la vista del personaje.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+        </section>
         <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="posturas tienda">
           <header class="collection-heading"><p class="folio-label">Colección de junio</p><h2 id="collection-title">El personaje en movimiento</h2></header>
-          
+
           <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="posturas" aria-pressed="true">Posturas <span>6</span></button><button type="button" data-family="tienda" aria-pressed="false">Tienda <span>4</span></button></div>
           <div class="collection-paper">
             <figure class="collection-plate">
               <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar pieza"><img data-portrait src="recap-media/colecciones/posturas/01.webp" width="540" height="540" loading="lazy" decoding="async" alt="De pie"><span aria-hidden="true">⤢</span></button>
-              <figcaption><strong data-name>De pie</strong><span data-credit>Blender · render para el recap</span></figcaption>
+              <figcaption><strong data-name>De pie</strong></figcaption>
             </figure>
             <div class="collection-editor">
               <h3 data-title>Del reposo al movimiento</h3><p data-copy>Cada vista congela un fotograma de una acción del esqueleto original. Compara dónde quedan las patas al tomar asiento, acostarse o alcanzar un objeto.</p>
               <div class="collection-grid" role="group" aria-label="Elegir pieza" data-thumbs></div>
               <div class="collection-controls" hidden><button type="button" data-cycle aria-pressed="false">▶ Reproducir</button><span data-count>01 / 06</span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
-              <button type="button" class="collection-proof" data-evidence data-piece="jun-anim">Movimiento y mobiliario ↗</button>
             </div>
           </div>
+          <footer class="collection-source"><span data-credit>Blender · render para el recap</span><button type="button" class="collection-proof" data-evidence data-piece="jun-anim">Movimiento y mobiliario ↗</button></footer>
           <dialog class="collection-zoom" aria-labelledby="zoom-name">
             <div class="collection-zoom-inner">
               <button type="button" data-close aria-label="Cerrar vista ampliada">×</button>
@@ -91,6 +131,8 @@
             </div>
           </dialog>
         </section>
+        <details class="report-trial">
+          <summary>Reproducir los movimientos</summary>
         <section class="month-demo action-demo" id="prueba" aria-labelledby="action-title">
           <div class="demo-copy">
             <p class="folio-label">Animación del personaje</p>
@@ -110,67 +152,7 @@
             <label class="demo-range"><span>Fotograma</span><input type="range" min="1" max="28" value="1" data-action-range disabled><output data-action-count>1 / 28</output></label>
           </div>
         </section>
-        <section class="notes-section" aria-label="Avances de junio">
-          <h2>Personajes, tiendas y muebles</h2>
-          <div class="notes-grid">
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="jun-anim" aria-label="Ampliar movimiento y mobiliario">
-                <img src="recap-media/jun-anim.webp" alt="Movimiento y mobiliario" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Una misma acción en varios muebles</h3>
-              <p>Dormir, sentarse y agarrar se produjeron como movimientos reutilizables. Para los muebles se definieron estructuras de animación y se trabajaron acciones al toque y en bucle.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="jun-tienda-modelo" aria-label="Ampliar distribución interior">
-                <img src="recap-media/archivo/jun-tienda-modelo.webp" alt="Distribución interior" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Cuatro distribuciones para la tienda</h3>
-              <p>El flujo UX resolvió cómo explorar y previsualizar objetos. En modelado se exploraron cuatro distribuciones y se desarrollaron dos tiendas con sus colores base.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="jun-muebles" aria-label="Ampliar piezas de una colección">
-                <img src="recap-media/archivo/jun-muebles.webp" alt="Piezas de una colección" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Objetos que se apoyan en otros</h3>
-              <p>El registro recoge otros 60 muebles con UV, geometría revisada y puntos de origen. Los puntos de apoyo permitían colocar objetos encima de otros.</p>
-            </article>
-          </div>
-        </section>
-        <section class="contact-section">
-          <h2>Más imágenes de junio</h2>
-          <div class="contact-grid"><figure><button class="contact-photo zoom-photo" type="button" data-piece="jun-mueble-rig" aria-label="Ampliar La animación del mueble"><img src="recap-media/meses/jun-mueble.webp" alt="La animación del mueble" loading="lazy"><span class="zoom-mark" aria-hidden="true">⤢</span></button><figcaption>La animación del mueble</figcaption></figure>
-            <figure>
-              <button id="tienda-prototipo" class="contact-photo zoom-photo" type="button" data-piece="jun-tienda-prototipo" aria-label="Ampliar Cómo se recorría la tienda"><img src="recap-media/archivo/jun-tienda-prototipo.webp" alt="Cómo se recorría la tienda" loading="lazy"><span class="zoom-mark" aria-hidden="true">⤢</span></button><figcaption>Cómo se recorría la tienda</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="jun-personalidad" aria-label="Ampliar Un icono para cada rasgo"><img src="recap-media/archivo/jun-personalidad.webp" alt="Un icono para cada rasgo" loading="lazy"><span class="zoom-mark" aria-hidden="true">⤢</span></button><figcaption>Un icono para cada rasgo</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="jun-objetos" aria-label="Ampliar el recorrido de la tienda">
-                <img src="recap-media/archivo/jun-objetos.webp" alt="El recorrido de la tienda" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>El recorrido de la tienda</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="jun-tienda" aria-label="Ampliar componer la tienda">
-                <img src="recap-media/archivo/jun-tienda.webp" alt="Componer la tienda" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Componer la tienda</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="jun-creador" aria-label="Ampliar editor para la demo">
-                <img src="recap-media/archivo/jun-creador.webp" alt="Editor para la demo" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Editor para la demo</figcaption>
-            </figure>
-          </div>
-        </section>
+        </details>
       </article>
       <nav class="neighbours" aria-label="Navegar por los meses">
         <a class="neighbour" rel="prev" href="mayo.html">
@@ -183,12 +165,7 @@
         </a>
       </nav>
     </main>
-    <footer class="journal-footer">
-      <img src="recap-media/simbolo.svg" alt="" width="19" height="21">
-      <span>Yunipets! · Recap de desarrollo 2026</span>
-      <a href="archivo.html#galeria">Galería de arte <span aria-hidden="true">↗</span>
-      </a>
-    </footer>
+    <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
     <dialog id="visor" aria-labelledby="piece-title">
       <div class="viewer-shell">
         <div class="viewer-bar">

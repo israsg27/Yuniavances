@@ -1,0 +1,28 @@
+.arcade-films {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+.arcade-film {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--yp-radius, 22px);
+  background: #f7e5cf;
+  color: #263447;
+}
+.arcade-film:nth-child(2) { background: #dceeea; }
+.arcade-film video { display: block; width: 100%; height: auto; aspect-ratio: 16/9; background: #263447; }
+.arcade-film figcaption { padding: clamp(14px, 2vw, 24px); }
+.arcade-film figcaption > div { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.arcade-film strong { font: 760 clamp(20px, 2.5vw, 30px)/1.1 var(--head); letter-spacing: -.035em; }
+.arcade-film span { font: 650 14px var(--head); white-space: nowrap; }
+.arcade-film figcaption p { margin: 9px 0 0; }
+#minijuegos { scroll-margin-top: 5rem; }
+.board-arcade { grid-column: 1 / -1; }
+.board-arcade summary { cursor: var(--yp-cursor-action, pointer); width: fit-content; padding: 9px 14px; border-radius: 20px; background: #e4ede8; color: #263447; font: 660 14px/1.4 var(--head); }
+.board-arcade summary:focus-visible { outline: 3px solid #246f86; outline-offset: 3px; }
+#minijuegos:has(.board-arcade[open]) { grid-column: 1 / -1; }
+.board-arcade[open] .arcade-films { margin-top: 16px; }
+@media (max-width: 700px) {
+  .arcade-films { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,94 @@
+.fishing-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.fishing-index a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid #c8d9d2;
+  border-radius: 30px;
+  background: #f5f9f4;
+  color: #244c50;
+  font: 700 .9rem var(--head);
+}
+.fishing-index a:first-child, .fishing-index a:hover { background: #204755; color: white; }
+.fishing-atlas, #gameplay { scroll-margin-top: 85px; }
+.fishing-atlas { margin-block: clamp(36px, 6vw, 72px); }
+.fishing-atlas h2 { font: 780 clamp(30px, 4.5vw, 56px)/1.05 var(--head); letter-spacing: -.055em; margin: 0; }
+.fishing-atlas > p { margin: 12px 0 22px; }
+.island-spread, .fish-spread {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  overflow: hidden;
+  border-radius: var(--yp-radius, 28px);
+}
+.island-art {
+  display: grid;
+  margin: 0;
+  place-items: center;
+  background: radial-gradient(ellipse at center, #fff9, transparent 68%), var(--agua, #c2e3d1);
+}
+.island-art img { width: min(94%, 420px); height: auto; }
+.island-art figcaption { justify-self: start; margin: 0 16px 12px; color: #203e49; font: 680 .85rem var(--body); }
+.island-file, .fish-picker { align-content: center; padding: clamp(22px, 3.5vw, 48px); }
+.island-file { background: #203e49; color: #fffaf0; }
+.island-file label { display: block; margin-bottom: 5px; font: 650 .88rem var(--body); color: #a9dfd7; }
+.island-file select {
+  max-width: 100%;
+  font: 740 clamp(25px, 3.8vw, 42px)/1.2 var(--head);
+  color: inherit;
+  background: #203e49;
+  border: none;
+  border-bottom: 1px solid #739c9e;
+  padding: 0 4px 5px 0;
+  cursor: var(--yp-cursor-action, pointer);
+}
+.island-file p { color: #e3eeeb; margin: 16px 0 24px; }
+.fishing-atlas h3 { margin: 0; font: 740 clamp(19px, 2.2vw, 26px)/1.15 var(--head); letter-spacing: -.035em; }
+.island-rarities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0 0; }
+.island-rarities div { display: flex; flex-direction: column-reverse; align-items: start; padding-top: 7px; border-top: 3px solid #a1d6bb; }
+.island-rarities div:nth-child(2) { border-color: #97cded; }
+.island-rarities div:nth-child(3) { border-color: #c6aff1; }
+.island-rarities div:nth-child(4) { border-color: #ffcc73; }
+.island-rarities dt { font: 550 .8rem var(--body); }
+.island-rarities dd { margin: 0; font: 750 1.65rem var(--head); }
+.fish-spread { background: #eaf1f5; }
+.fish-portrait { display: grid; grid-template-rows: 1fr auto; margin: 0; background: radial-gradient(ellipse at 45% 40%, #f0fbfa, #9ad9dc); }
+.fish-portrait img { width: min(85%, 380px); height: auto; align-self: center; justify-self: center; }
+.fish-portrait figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 12px 6% 18px; color: #1b424e; }
+.fish-portrait strong { font: 760 clamp(20px, 3vw, 34px)/1.1 var(--head); letter-spacing: -.04em; }
+.fish-portrait span { white-space: nowrap; font: 680 .85rem var(--body); }
+.fish-picker p { margin: 8px 0 15px; }
+.fish-options { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; }
+.fish-options button {
+  aspect-ratio: 1;
+  border: 1px solid #c5d7d8;
+  border-radius: 22%;
+  background: #fff url("recap-media/colecciones/peces/miniaturas-selector.webp") no-repeat;
+  background-size: 500% 600%;
+  padding: 0;
+  cursor: var(--yp-cursor-action, pointer);
+}
+.fish-options button[aria-pressed="true"] { outline: 3px solid #156568; outline-offset: -2px; }
+.fish-options button:focus-visible { outline: 3px solid #bd4d18; outline-offset: 1px; }
+.fish-picker a { display: inline-block; margin-top: 18px; font: 680 .9rem var(--head); text-decoration: underline; }
+.fish-eyes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .7fr); align-items: center; gap: clamp(16px, 4vw, 52px); margin-top: 16px; padding: clamp(18px, 3vw, 36px); border-radius: var(--yp-radius, 28px); background: #f5ebda; scroll-margin-top: 85px; }
+.fish-eyes p { margin: 8px 0 12px; }
+.fish-eyes a { font: 680 .9rem var(--head); text-decoration: underline; }
+.eye-samples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.eye-samples figure { margin: 0; padding: 9px; border-radius: 16px; background: #fff9ef; text-align: center; }
+.eye-samples img { display: block; width: min(100%, 118px); height: auto; margin: auto; }
+.eye-samples figcaption { font: 680 .88rem var(--head); }
+@media (max-width: 960px) { .fish-options { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+@media (max-width: 720px) {
+  .island-spread, .fish-spread, .fish-eyes { grid-template-columns: 1fr; }
+  .island-art img, .fish-portrait img { width: min(76%, 280px); }
+}
+@media (max-width: 440px) {
+  .fishing-index a { padding-inline: 12px; }
+  .island-rarities { grid-template-columns: repeat(2, 1fr); }
+}

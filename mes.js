@@ -1,7 +1,7 @@
 'use strict';
 
 const month = monthById.get(document.body.dataset.month);
-availablePieces = () => recapPieces.filter(piece => piece.month === month.slug).map(piece => piece.id);
+availablePieces = () => recapPieces.filter(piece => piece.month === month.slug && !piece.dossier).map(piece => piece.id);
 
 const demo = document.querySelector('[data-demo]');
 const mode = demo.dataset.demo;
@@ -29,15 +29,17 @@ function display(value) {
       frame.setAttribute('aria-hidden', String(index !== value));
       tabs[index].setAttribute('aria-pressed', String(index === value));
     });
-  } else if (mode === 'atlas' || mode === 'cabezas') {
-    const index = value - 1;
-    const horizontal = (index % 5) * 25;
-    const vertical = Math.floor(index / 5) * (mode === 'atlas' ? 25 : 100);
-    const windows = mode === 'atlas' ? atlasWindows : [demo.querySelector('[data-head]')];
-    for (const frame of windows) {
-      frame.style.backgroundPosition = horizontal + '% ' + vertical + '%';
-      frame.setAttribute('aria-label', mode === 'atlas' ? 'Atlas ' + frame.dataset.atlas + ', expresión ' + value : 'Vista ' + value + ' de diez');
+  } else if (mode === 'atlas') {
+    const photo = String(value).padStart(2, '0') + '.webp';
+    for (const frame of atlasWindows) {
+      frame.style.backgroundImage = 'url("recap-media/colecciones/ojos' + frame.dataset.atlas + '/' + photo + '")';
+      frame.setAttribute('aria-label', 'Atlas ' + frame.dataset.atlas + ', expresión ' + value);
     }
+  } else if (mode === 'cabezas') {
+    const frame = demo.querySelector('[data-head]');
+    const index = value - 1;
+    frame.style.backgroundPosition = (index % 5 * 25) + '% ' + (Math.floor(index / 5) * 100) + '%';
+    frame.setAttribute('aria-label', 'Vista ' + value + ' de diez');
   } else if (mode === 'colas') {
     demo.querySelector('[data-tails]').style.backgroundPosition = value + '% center';
   } else if (mode === 'comparacion') {
@@ -55,9 +57,7 @@ function setPlayback(active) {
   play.setAttribute('aria-pressed', String(active));
   playLabel.textContent = active ? 'Pausar' : startingLabel;
   glyph.textContent = active ? 'Ⅱ' : '▶';
-  for (const frame of atlasWindows) {
-    frame.style.backgroundImage = 'url("recap-media/meses/parpadeo' + frame.dataset.atlas + (active ? '.gif' : '.webp') + '")';
-  }
+  if (mode === 'atlas') demo.classList.toggle('is-blinking', active);
 }
 
 function stopPlayback() {

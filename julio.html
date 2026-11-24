@@ -5,45 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f8f6f1">
     <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
-    <link rel="preload" href="recap-media/sora.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="recap-media/sora.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="recap.css">
     <link rel="stylesheet" href="meses.css">
-    <script defer src="recap-nav.js"></script>
+    <link rel="stylesheet" href="areas.css">
+    <link rel="stylesheet" href="founders.css">
+    <script defer src="founders-motion.js"></script>
     <title>Julio · La tienda llega a Unity · Yunipets!</title>
     <meta name="description" content="La tienda ortográfica pasó al motor del juego. El cristal, las luces intermitentes y los materiales se probaron en escena mientras el equipo ajustaba las animaciones de la mascota para la demo.">
     <script defer src="recap-data.js"></script>
     <script defer src="recap-archivo.js"></script>
     <script defer src="visor.js"></script>
     <script defer src="colecciones-datos.js"></script>
+    <link rel="stylesheet" href="estudios-mes.css">
     <script defer src="colecciones.js"></script>
+    <script defer src="estudios-mes.js"></script>
     <script defer src="mes.js"></script>
-  </head>
+    <script defer src="elegir-mes.js"></script>
+</head>
   <body class="journal-month" data-month="julio" style="--month-wash:#d7f1f0;--month-ink:#168da3">
     <a class="skip" href="#contenido">Saltar al avance</a>
-    <header class="journal-header">
-      <div class="journal-bar">
-        <a class="journal-brand" href="recap.html" aria-label="Yunipets, índice de meses">
-          <img src="recap-media/yunipets.svg" alt="Yunipets!" width="646" height="125">
-        </a>
-        <details class="journal-menu">
-          <summary aria-label="Menú del recap">
-            <i aria-hidden="true"></i>
-          </summary>
-          <nav aria-label="Navegación del recap">
-            <a href="recap.html">Todos los meses</a>
-            <a href="recap.html#sistemas">Avances por sistema</a>
-            <a href="creador.html">Creador de Yunipets</a>
-            <a href="archivo.html#galeria">Galería de arte</a>
-            <a href="archivo.html#historias">Evolución del juego</a>
-            <a href="archivo.html#laboratorio">Pruebas interactivas</a>
-            <a href="archivo.html#proximos">Qué sigue</a>
-          </nav>
-        </details>
-      </div>
-    </header>
+    <header class="journal-header"><div class="area-bar">
+      <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+      <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html">Desarrollo</a><a href="administracion.html" aria-current="location">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+    </div></header>
+    <nav class="area-path" aria-label="Ruta de navegación"><a href="recap.html">Inicio</a><span aria-hidden="true">/</span><a href="administracion.html">Administración</a><span aria-hidden="true">/</span><a href="meses.html">Reportes mensuales</a><span aria-hidden="true">/</span><span aria-current="page">Julio</span></nav>
     <main class="journal-wrap" id="contenido">
       <div class="issue-line">
-        <a class="back-index" href="recap.html#julio">← Todos los meses</a>
+
         <nav class="issue-links" aria-label="Meses cercanos">
           <a rel="prev" href="junio.html" aria-label="Mes anterior, Junio">← Junio</a>
           <a rel="next" href="agosto.html" aria-label="Mes siguiente, Agosto">Agosto →</a>
@@ -60,28 +49,91 @@
             </a>
           </div>
           <figure class="issue-plate">
-            <button class="cover-photo zoom-photo" type="button" data-piece="jul-tienda-luz" aria-label="Ampliar luz y materiales del local">
+            <a class="cover-photo zoom-photo" href="#tienda-unity" aria-label="Del modelo de tienda a la escena en Unity">
               <img src="recap-media/archivo/jul-tienda-luz.webp" alt="Luz y materiales del local" fetchpriority="high">
-              <span class="zoom-mark" aria-hidden="true">⤢</span>
-            </button>
+              <span class="zoom-mark" aria-hidden="true">↓</span>
+            </a>
             <figcaption>Estudio de luz y cristal para el local</figcaption>
           </figure>
         </header>
+        <nav class="chapter-index" aria-label="Secciones del reporte"><a href="#notas">Avances por sistema</a><a href="#componentes">Colección</a><a href="#prueba">Prueba</a></nav>
+        <section class="monthly-studies" id="notas" aria-labelledby="studies-title">
+          <span id="imagenes" aria-hidden="true"></span>
+          <header><div><p class="folio-label">Julio · 2026</p><h2 id="studies-title">Avances por sistema</h2></div>
+          </header>
+          <details class="month-study" id="tienda-unity" open>
+            <summary><img src="recap-media/jul-doc.webp" alt="" loading="lazy"><span><small>Tienda e inventario</small><strong>Del modelo de tienda a la escena en Unity</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>El equipo integró la tienda ortográfica con sus animaciones, el cristal y el semáforo parpadeante. Preparó al menos diez sombreadores sin iluminación de escena, materiales de suelo y pared, y vistas de los objetos para el inventario.</p>
+                <h3>Cómo funciona</h3><p>Los materiales distinguen superficies dentro del local y el semáforo cambia con su animación. Al pasar al inventario, el jugador reconoce el mismo objeto por su render. La escena documentada todavía usaba personajes provisionales.</p>
+                
+              </div>
+              <figure class="study-figure" data-studies="jul-doc jul-tienda-luz jul-materiales">
+                <a href="recap-media/jul-doc.webp" aria-label="Ampliar La tienda ortográfica"><img src="recap-media/jul-doc.webp" loading="lazy" alt="La tienda ortográfica"></a>
+                <select aria-label="Elegir lámina de Del modelo de tienda a la escena en Unity"><option value="jul-doc">La tienda ortográfica</option><option value="jul-tienda-luz">Luz y materiales del local</option><option value="jul-materiales">Muestras de materiales</option></select><figcaption data-study-caption>Vista del modelo que el registro de julio documenta como integrado en una escena de Unity.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="arcade">
+            <summary><img src="recap-media/archivo/jul-arcade.webp" alt="" loading="lazy"><span><small>Arcade y minijuegos</small><strong>De la máquina a una partida</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se modeló la máquina de arcade para alojar el menú dentro del propio mundo. Los estudios de globos y escalada reúnen instrucciones, elementos de juego, marcadores y pantallas de resultado.</p>
+                <h3>Cómo funciona</h3><p>La máquina presenta la selección. En globos, el tablero y el marcador acompañan la partida. En escalada, los agarres guían el ascenso y la pantalla final comunica el resultado.</p>
+                <div class="study-links"><a href="?coleccion=arcade#componentes">Demo · 6</a></div>
+              </div>
+              <figure class="study-figure" data-studies="jul-arcade jul-globos jul-globos-piezas jul-escalada">
+                <a href="recap-media/archivo/jul-arcade.webp" aria-label="Ampliar El menú del arcade"><img src="recap-media/archivo/jul-arcade.webp" loading="lazy" alt="El menú del arcade"></a>
+                <select aria-label="Elegir lámina de De la máquina a una partida"><option value="jul-arcade">El menú del arcade</option><option value="jul-globos">El minijuego de globos</option><option value="jul-globos-piezas">Las pantallas del juego de globos</option><option value="jul-escalada">Una partida de escalada</option></select><figcaption data-study-caption>La máquina recreativa se exploró como un objeto del mundo desde el que elegir una actividad.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="preparacion">
+            <summary><img src="recap-media/archivo/jul-iconos.webp" alt="" loading="lazy"><span><small>Personaje e inventario</small><strong>Del objeto en 3D al icono de selección</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Además de ajustar pesos y animaciones para la demo, el equipo hizo renders de los objetos para representarlos dentro del juego. Continuaron las pruebas de ropa y la preparación de colecciones con geometría y coordenadas de textura aprobadas.</p>
+                <h3>Cómo funciona</h3><p>El render conserva la silueta del objeto al reducirlo al tamaño de un icono. Las cejas y los mechones de la biblioteca permiten comparar esa lectura a escala pequeña.</p>
+                <div class="study-links"><a href="?coleccion=frente#componentes">Cejas y mechones · 11</a></div>
+              </div>
+              <figure class="study-figure" data-studies="jul-iconos">
+                <a href="recap-media/archivo/jul-iconos.webp" aria-label="Ampliar Objetos en formato icono"><img src="recap-media/archivo/jul-iconos.webp" loading="lazy" alt="Objetos en formato icono"></a>
+                <figcaption data-study-caption>La hoja muestra cómo se convierte el contenido del juego en piezas pequeñas que se distinguen en un menú.</figcaption>
+              </figure>
+            </div>
+            
+          </details>
+          <details class="month-study" id="colecciones-pesca">
+            <summary><span><small>Pesca</small><strong>Imaginar las primeras colecciones de peces</strong></span></summary>
+            <div class="study-body">
+              <div class="study-text">
+                <h3>Qué se hizo</h3><p>Se reunieron conceptos de peces asistidos por IA para explorar qué especies podían formar una colección. El trabajo de julio se centró en la variedad.</p>
+                <h3>Cómo funciona</h3><p>Estas propuestas sirvieron de referencia para el siguiente paso. En agosto el equipo unificó el aspecto de los ojos y diseñó el álbum donde el jugador consultaría sus capturas.</p>
+                <div class="study-links"><a href="agosto.html#pesca">Seguir hasta el álbum de agosto ↗</a></div>
+              </div>
+              
+            </div>
+            
+          </details>
+        </section>
         <section id="componentes" class="collection" aria-labelledby="collection-title" data-families="arcade frente">
           <header class="collection-heading"><p class="folio-label">Colección de julio</p><h2 id="collection-title">Las piezas de la demo</h2></header>
           <div class="collection-tabs" role="group" aria-label="Elegir colección"><button type="button" data-family="arcade" aria-pressed="true">Demo <span>6</span></button><button type="button" data-family="frente" aria-pressed="false">Cejas y mechones <span>11</span></button></div>
           <div class="collection-paper">
             <figure class="collection-plate">
               <button type="button" class="collection-enlarge" data-enlarge disabled aria-label="Ampliar pieza"><img data-portrait src="recap-media/colecciones/arcade/01.webp" width="540" height="540" loading="lazy" decoding="async" alt="Luz y materiales del local"><span aria-hidden="true">⤢</span></button>
-              <figcaption><strong data-name>Luz y materiales del local</strong><span data-credit>Capturas y diseños · julio</span></figcaption>
+              <figcaption><strong data-name>Luz y materiales del local</strong></figcaption>
             </figure>
             <div class="collection-editor">
               <h3 data-title>De la tienda a la recreativa</h3><p data-copy>Recorre la escena que llegó a Unity y los diseños de las dos actividades de la demo.</p>
               <div class="collection-grid" role="group" aria-label="Elegir pieza" data-thumbs></div>
               <div class="collection-controls" hidden><button type="button" data-cycle aria-pressed="false">▶ Reproducir</button><span data-count>01 / 06</span><button type="button" data-dir="-1" aria-label="Pieza anterior">←</button><button type="button" data-dir="1" aria-label="Pieza siguiente">→</button></div>
-              <button type="button" class="collection-proof" data-evidence data-piece="jul-doc">La tienda ortográfica ↗</button>
             </div>
           </div>
+          <footer class="collection-source"><span data-credit>Capturas y diseños · julio</span><button type="button" class="collection-proof" data-evidence data-piece="jul-doc">La tienda ortográfica ↗</button></footer>
           <dialog class="collection-zoom" aria-labelledby="zoom-name">
             <div class="collection-zoom-inner">
               <button type="button" data-close aria-label="Cerrar vista ampliada">×</button>
@@ -90,35 +142,8 @@
             </div>
           </dialog>
         </section>
-        <section class="notes-section" aria-label="Avances de julio">
-          <h2>Dentro de la demo</h2>
-          <div class="notes-grid">
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="jul-doc" aria-label="Ampliar la tienda ortográfica">
-                <img src="recap-media/jul-doc.webp" alt="La tienda ortográfica" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>La tienda dentro del motor</h3>
-              <p>Se terminó el modelado de la tienda ortográfica con sus animaciones y se integró en una escena de Unity. El montaje de ese mes aún esperaba los Yunipets finales.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="jul-materiales" aria-label="Ampliar muestras de materiales">
-                <img src="recap-media/archivo/jul-materiales.webp" alt="Muestras de materiales" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Materiales para el local</h3>
-              <p>La producción incluyó al menos diez shaders sin iluminación calculada y distintos materiales para paredes, pisos y objetos. En la tienda se probaron cristal y luces intermitentes.</p>
-            </article>
-            <article class="field-note">
-              <button class="note-photo zoom-photo" type="button" data-piece="jul-arcade" aria-label="Ampliar el menú del arcade">
-                <img src="recap-media/archivo/jul-arcade.webp" alt="El menú del arcade" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <h3>Una recreativa para elegir juego</h3>
-              <p>Se exploraron interfaces y recursos para los minijuegos de globos y escalada. Una máquina recreativa llevó la selección de juegos al mundo del personaje.</p>
-            </article>
-          </div>
-        </section>
+        <details class="report-trial">
+          <summary>Comparar la luz de la tienda</summary>
         <section class="month-demo" id="prueba" data-demo="secuencia">
           <div class="demo-copy">
             <p class="folio-label">Secuencia de imágenes</p>
@@ -144,31 +169,7 @@
             </div>
           </div>
         </section>
-        <section class="contact-section">
-          <h2>Más imágenes de julio</h2>
-          <div class="contact-grid">
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="jul-globos-piezas" aria-label="Ampliar Las pantallas del juego de globos"><img src="recap-media/archivo/jul-globos-piezas.webp" alt="Las pantallas del juego de globos" loading="lazy"><span class="zoom-mark" aria-hidden="true">⤢</span></button><figcaption>Las pantallas del juego de globos</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="jul-escalada" aria-label="Ampliar Una partida de escalada"><img src="recap-media/archivo/jul-escalada.webp" alt="Una partida de escalada" loading="lazy"><span class="zoom-mark" aria-hidden="true">⤢</span></button><figcaption>Una partida de escalada</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="jul-globos" aria-label="Ampliar el minijuego de globos">
-                <img src="recap-media/archivo/jul-globos.webp" alt="El minijuego de globos" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>El minijuego de globos</figcaption>
-            </figure>
-            <figure>
-              <button class="contact-photo zoom-photo" type="button" data-piece="jul-iconos" aria-label="Ampliar objetos en formato icono">
-                <img src="recap-media/archivo/jul-iconos.webp" alt="Objetos en formato icono" loading="lazy">
-                <span class="zoom-mark" aria-hidden="true">⤢</span>
-              </button>
-              <figcaption>Objetos en formato icono</figcaption>
-            </figure>
-          </div>
-        </section>
+        </details>
       </article>
       <nav class="neighbours" aria-label="Navegar por los meses">
         <a class="neighbour" rel="prev" href="junio.html">
@@ -181,12 +182,7 @@
         </a>
       </nav>
     </main>
-    <footer class="journal-footer">
-      <img src="recap-media/simbolo.svg" alt="" width="19" height="21">
-      <span>Yunipets! · Recap de desarrollo 2026</span>
-      <a href="archivo.html#galeria">Galería de arte <span aria-hidden="true">↗</span>
-      </a>
-    </footer>
+    <footer class="area-foot">Yunipets! · Avances del proyecto 2026</footer>
     <dialog id="visor" aria-labelledby="piece-title">
       <div class="viewer-shell">
         <div class="viewer-bar">

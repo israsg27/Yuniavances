@@ -579,21 +579,13 @@ const recapPieces = [
   },
   {
     "id": "oct-petcare",
+    "dossier": "petcare",
     "month": "octubre",
     "theme": "Juego",
     "type": "Interfaz",
     "title": "La pantalla de PetCare",
-    "caption": "El diseño organiza baño, alimentación y juego alrededor de la mascota, con los objetos de cuidado al alcance.",
-    "src": "recap-media/oct-petcare.webp"
-  },
-  {
-    "id": "oct-cuidado",
-    "month": "octubre",
-    "theme": "Juego",
-    "type": "Arte 2D",
-    "title": "El icono de la toalla",
-    "caption": "El objeto se reconoce por su silueta enrollada y por la banda con huella del universo Yunipets.",
-    "src": "recap-media/archivo/oct-cuidado.webp"
+    "caption": "Arte no final · Captura del prototipo de alimentación. Los dos platos aparecen frente al Yunipet y la bandeja reúne la bolsa de croquetas, el agua y el premio.",
+    "src": "recap-media/petcare/platos.webp"
   },
   {
     "id": "atlas",
@@ -610,8 +602,8 @@ const recapPieces = [
     "theme": "Juego",
     "type": "Interfaz",
     "title": "Una acción de baño",
-    "caption": "El diseño de PetCare muestra cómo se presenta una herramienta de cuidado junto a la mascota.",
-    "src": "recap-media/archivo/cuidado-accion.webp"
+    "caption": "Arte no final · En el prototipo, la manguera retira la espuma del pelaje.",
+    "src": "recap-media/petcare/enjuague.webp"
   },
   {
     "id": "flujo-habitacion",

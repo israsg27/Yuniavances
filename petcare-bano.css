@@ -1,0 +1,39 @@
+.care-kit { display:block; background:#f1f5eb; border-radius:18px; color:#213849; padding:0 clamp(15px,2.5vw,30px); }
+.care-kit section { display:grid; grid-template-columns:minmax(14em,.8fr) minmax(0,1.2fr); gap:clamp(15px,3vw,44px); align-items:center; padding:22px 0; }
+.care-kit section + section { border-top:1px solid #ccd7c9; }
+.care-kit h3 { margin:0 0 6px; font:750 clamp(18px,2vw,24px)/1.14 var(--head); letter-spacing:-.035em; }
+.care-kit p { margin:0; font:450 14px/1.55 var(--body); }
+.care-kit ul { list-style:none; display:flex; flex-wrap:wrap; align-items:flex-end; gap:9px; margin:0; padding:0; }
+.care-kit li { position:relative; display:grid; justify-items:center; align-content:start; width:clamp(64px,6vw,82px); text-align:center; }
+.care-kit img { display:block; width:100%; height:64px; object-fit:contain; }
+.care-kit span { padding-top:4px; font:600 11px/1.2 var(--head); }
+.care-kit li b { position:absolute; top:24px; background:#34404b; border-radius:8px; padding:2px 5px; color:white; font:700 11px/1.1 var(--head); }
+@media(max-width:700px) { .care-kit section { grid-template-columns:1fr; } }
+
+.care-bath-steps {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));
+  gap:0 24px; list-style:none; padding:0; margin:14px 0 24px;
+}
+.care-bath-steps li { display:grid; grid-template-columns:60px 1fr; gap:12px; align-items:center; padding:15px 0; border-top:1px solid #d2dad1; }
+.care-bath-steps img { display:block; width:60px; height:64px; object-fit:contain; }
+.care-bath-steps strong { font:720 18px/1.2 var(--head); }
+.care-bath-steps li p { margin:5px 0 0; font:460 15px/1.5 var(--body); }
+.care-inventory-heading, petcare-inventario { grid-column:1/-1; min-width:0; }
+.care-inventory-heading h2 { margin:4px 0 0; }
+.care-kit[actividad="comida"] { background:#f8efdf; }
+.care-kit[actividad="juego"] { background:#eaf1f7; }
+.care-kit[actividad] section + section { border-color:rgba(36,54,68,.15); }
+.care-kit[actividad] ul { align-items:flex-start; }
+.care-kit[actividad] li img { width:100%; height:64px; border-radius:0; object-fit:contain; }
+petcare-juguetes { display:block; grid-column:1/-1; }
+petcare-juguetes figure { display:grid; grid-template-columns:1.25fr 1fr; align-items:center; gap:clamp(18px,3vw,36px); margin:0; border-radius:20px; background:#e5eee9; padding:clamp(14px,2.2vw,26px); }
+petcare-juguetes img { width:100%; height:auto; display:block; border-radius:14px; }
+petcare-juguetes label { display:grid; gap:6px; margin:12px 0; font:650 15px var(--head); }
+petcare-juguetes select { width:100%; min-height:46px; border:1px solid #83998e; border-radius:12px; padding:8px; background:#fffcf6; color:#243c38; font:700 17px var(--head); }
+@media(max-width:700px) {
+  petcare-juguetes figure { grid-template-columns:1fr; }
+}
+
+.care-shot { margin:0; }
+.care-shot img { display:block; width:100%; height:auto; }
+.care-art-note { display:block; margin-top:6px; color:#49555c; font:650 .8rem/1.35 var(--head); }

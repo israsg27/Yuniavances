@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tablero de huesitos · Desarrollo · Yunipets!</title>
+  <meta name="description" content="Acompaña a tu Yunipet por el tablero de exploración. Mira la partida del prototipo y descubre cómo se conectan la energía, los caminos y las recompensas.">
+  <link rel="icon" href="recap-media/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="recap.css"><link rel="stylesheet" href="areas.css"><link rel="stylesheet" href="founders.css">
+  <link rel="stylesheet" href="desarrollo.css">
+  <link rel="stylesheet" href="tablero.css">
+  <link rel="stylesheet" href="arcade.css"><script defer src="arcade.js"></script>
+  <script defer src="elegir-mes.js"></script>
+  <script defer src="gameplay-momentos.js"></script>
+</head>
+<body class="room-page">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="journal-header"><div class="area-bar">
+    <a class="area-logo" href="recap.html" aria-label="Yunipets, inicio"><img width="1425" height="524" src="recap-media/identidad/marca.svg" alt="Yunipets!"></a>
+    <nav class="area-nav" aria-label="Áreas del proyecto"><a href="desarrollo.html" aria-current="location">Desarrollo</a><a href="administracion.html">Administración</a><a href="meses.html" data-choose-month>Meses</a></nav>
+  </div></header>
+  <main class="area-main mechanic-detail" id="contenido">
+    <a class="back-to-room" href="desarrollo.html#cuarto">← Volver al cuarto</a>
+    <article class="mechanic-page" id="tablero">
+      <header><p class="edition-label">Desarrollo · Exploración</p><h1>Tablero de huesitos</h1><p>Sal a pasear con tu Yunipet. En cada cruce puedes seguir el circuito que ya conoces o gastar lo que has reunido para descubrir adónde lleva otro camino.</p></header>
+      <nav class="board-index" aria-label="Explorar el tablero"><a href="#gameplay">Ver gameplay</a><a href="#recorrido">Cómo se juega</a><a href="#casillas">Tipos de casilla</a><a href="#referencias">Inspiración</a></nav>
+      <figure class="fishing-film" id="gameplay">
+        <video controls playsinline preload="metadata" width="1440" height="708" poster="recap-media/tablero/partida.webp" aria-label="Partida del prototipo de Tablero" aria-describedby="nota-gameplay">
+          <source src="recap-media/tablero/recorrido.mp4" type="video/mp4">
+          <a href="recap-media/tablero/recorrido.mp4">Abrir el video de la partida</a>
+        </video>
+        <figcaption id="nota-gameplay"><strong>El tablero en juego</strong><span>3 min · Prototipo funcional · Arte no final</span></figcaption>
+      </figure>
+      <nav class="gameplay-moments" data-gameplay-chapters aria-label="Ir a un momento del gameplay">
+        <a href="recap-media/tablero/recorrido.mp4#t=0" data-seconds="0"><time datetime="PT0S">0:00</time> Primera tirada</a>
+        <a href="recap-media/tablero/recorrido.mp4#t=6" data-seconds="6"><time datetime="PT6S">0:06</time> Camino bloqueado</a>
+        <a href="recap-media/tablero/recorrido.mp4#t=24" data-seconds="24"><time datetime="PT24S">0:24</time> Ganar Yunicoins</a>
+        <a href="recap-media/tablero/recorrido.mp4#t=54" data-seconds="54"><time datetime="PT54S">0:54</time> Completar una vuelta</a>
+        <a href="recap-media/tablero/recorrido.mp4#t=117" data-seconds="117"><time datetime="PT1M57S">1:57</time> Desbloquear el camino</a>
+        <a href="recap-media/tablero/recorrido.mp4#t=165" data-seconds="165"><time datetime="PT2M45S">2:45</time> Cambiar de mascota</a>
+      </nav>
+      <section class="mechanic-guide" id="recorrido"><h2>Una tirada, paso a paso</h2>
+        <ol class="board-turn">
+          <li><img src="recap-media/tablero/tirada.webp" alt="Dado en 3D sobre el recorrido de la mascota" loading="lazy"><h3>Tira con tu mascota</h3><p>Cada tirada consume energía del Yunipet activo. El dado marca cuántas casillas recorrerá y el contador baja con cada salto.</p></li>
+          <li><img src="recap-media/tablero/cruce.webp" alt="El cruce muestra seis pasos pendientes y pide monedas, madera y arena para abrir el camino" loading="lazy"><h3>Decide en el cruce</h3><p>Si aparece un candado, puedes pagar el costo o seguir por el camino abierto. En la grabación quedan seis pasos cuando aparece esa decisión.</p></li>
+          <li><img src="recap-media/tablero/recurso.webp" alt="La casilla entrega seis unidades de arena" loading="lazy"><h3>Recoge lo que encuentres</h3><p>La casilla de llegada decide el resultado. Aquí el Yunipet encuentra seis unidades de arena que se suman a sus materiales para futuros desbloqueos.</p></li>
+        </ol>
+      </section>
+      <section class="board-world" aria-labelledby="mapa-titulo">
+        <a href="recap-media/tablero/mapa-prototipo.webp" aria-label="Ampliar la vista completa del mapa del prototipo"><img src="recap-media/tablero/mapa-prototipo.webp" alt="Vista del circuito de prueba con una ruta interior, candados y accesos a islas" loading="lazy"><span>Ampliar mapa ↗</span></a>
+        <div><p class="edition-label">Diseño de la mecánica</p><h2 id="mapa-titulo">Un mapa para todas tus mascotas</h2><p>Si un Yunipet abre un camino, los demás también podrán recorrerlo. Cada mascota conserva su energía, su posición y la vuelta que llevaba. Puedes cambiar de compañero al terminar la tirada.</p>
+        <p>Las ramas vuelven a conectar con Inicio. Un tramo corto permite completar la vuelta antes. Uno largo ofrece más ocasiones de encontrar materiales o entrar a un minijuego.</p></div>
+      </section>
+      <section class="mechanic-guide board-stops" id="casillas"><h2>Qué puede pasar en una casilla</h2>
+        <p>Estas ilustraciones muestran cómo podrían reconocerse las casillas durante el paseo. El arte sigue en desarrollo. En el gameplay ya puedes ver cómo la mascota recibe monedas y materiales.</p>
+        <ul class="board-stop-list">
+          <li><img src="recap-media/tablero/casilla-inicio.png" alt="Bandera con huella" loading="lazy"><div><h3>Inicio y vueltas</h3><p>Tu Yunipet sale de aquí la primera vez que explora. Los caminos vuelven a este punto, incluso si eliges un desvío más largo.</p></div></li>
+          <li><img src="recap-media/tablero/casilla-yunicoins.png" alt="Moneda dorada de Yunipets" loading="lazy"><div><h3>Yunicoins y materiales</h3><p>Las monedas entran al saldo. En las casillas de recursos recoges madera o arena para abrir rutas y construir habitaciones.</p></div></li>
+          <li id="minijuegos"><img src="recap-media/tablero/casilla-arcade.png" alt="Máquina de arcade" loading="lazy"><div><h3>Minijuegos</h3><p>Al caer aquí, tu Yunipet entra a un reto de Arcade. Al terminar, recibe una recompensa según su desempeño y vuelve al tablero.</p></div>
+            <details class="board-arcade"><summary>Ver las partidas de Escalada y Globos</summary>
+              <div class="arcade-films">
+          <figure class="arcade-film" id="casilla-escalada">
+            <video controls playsinline preload="none" poster="recap-media/arcade-escalada.webp" width="1920" height="1080" aria-label="Partida de Escalada"><source src="recap-media/arcade-escalada.mp4?v=sonido" type="video/mp4"><a href="recap-media/arcade-escalada.mp4">Abrir la partida de Escalada</a></video>
+            <figcaption><div><strong>Escalada</strong><span>32 s</span></div></figcaption>
+          </figure>
+          <figure class="arcade-film" id="casilla-globos">
+            <video controls playsinline preload="none" poster="recap-media/arcade-globos.webp" width="1920" height="1080" aria-label="Partida de Globos"><source src="recap-media/arcade-globos.mp4?v=sonido" type="video/mp4"><a href="recap-media/arcade-globos.mp4">Abrir la partida de Globos</a></video>
+            <figcaption><div><strong>Globos</strong><span>48 s</span></div></figcaption>
+          </figure>
+        </div>
+            </details>
+          </li>
+          <li><img src="recap-media/tablero/casilla-premios.png" alt="Dos boletos, uno con un sillón y otro con una camiseta" loading="lazy"><div><h3>Muebles y ropa</h3><p>Si encuentras un mueble, puedes colocarlo en tu cuarto. Si consigues una prenda, aparece en el vestuario de tu Yunipet.</p></div></li>
+          <li><img class="board-crossroads" src="recap-media/tablero/casilla-cruce.png" alt="Señal de madera con dos direcciones" loading="lazy"><div><h3>Cruces e islas</h3><p>En el cruce eliges por dónde gastar los pasos restantes. Algunos desvíos abren más tablero y otros dan acceso a una <a href="mecanica-pesca.html#islas">isla de pesca</a>.</p></div></li>
+          <li><img src="recap-media/tablero/casilla-dado.png" alt="Dado con huellas en sus caras" loading="lazy"><div><h3>Otra tirada y casillas vacías</h3><p>La casilla de repetición te deja volver a tirar. En una casilla vacía, tu mascota termina su movimiento y espera la siguiente tirada.</p></div></li>
+        </ul>
+      </section>
+      <section class="mechanic-guide" id="referencias"><h2>Cómo podría verse el tablero</h2>
+        <div class="board-refs">
+          <figure><div class="board-ref-art"><img src="recap-media/tablero/mario-party.webp" alt="Caminos de casillas que se bifurcan alrededor de Floruga en un bosque de Super Mario Party Jamboree" loading="lazy"></div><figcaption><h3>Super Mario Party Jamboree · El bosque</h3><p>En el bosque de Floruga se ven varios caminos desde arriba. En Yunipets, los pasos que te quedan al llegar a un cruce cuentan para elegir qué tramo explorar.</p><a href="https://play.nintendo.com/explore/super-mario-party-jamboree/" target="_blank" rel="noopener">Imagen de Nintendo ↗</a></figcaption></figure>
+          <figure><div class="board-ref-art board-ref-roll"><img src="recap-media/tablero/monopoly-go.webp" alt="Imagen promocional de MONOPOLY GO! con los dados sobre el tablero y el botón GO" loading="lazy"></div><figcaption><h3>MONOPOLY GO! · La tirada</h3><p>La tirada, el movimiento de la ficha y el premio se leen de un vistazo. En Yunipets ves qué encontró tu mascota en cuanto acaba el movimiento. Tú decides cuándo volver a tirar.</p><a href="https://www.scopely.com/en/games/monopoly-go" target="_blank" rel="noopener">Imagen de Scopely y Hasbro ↗</a></figcaption></figure>
+          <figure><div class="board-ref-art"><img src="recap-media/tablero/mario-party-laguna.webp" alt="Casillas de colores que recorren la playa, los muelles y las laderas de un volcán en Goomba Lagoon" loading="lazy"></div><figcaption><h3>Super Mario Party Jamboree · La isla</h3><p>En Goomba Lagoon, las casillas se distinguen sobre arena, madera y roca. Para un desvío de pesca de Yunipets, un muelle podría señalar el destino desde el cruce.</p><a href="https://play.nintendo.com/explore/super-mario-party-jamboree/" target="_blank" rel="noopener">Imagen de Nintendo ↗</a></figcaption></figure>
+          <figure><div class="board-ref-art board-ref-roll"><img src="recap-media/tablero/monopoly-go-construccion.webp" alt="Ciudad en miniatura de MONOPOLY GO! con un rascacielos dorado y la Estatua de la Libertad" loading="lazy"></div><figcaption><h3>MONOPOLY GO! · La ciudad en miniatura</h3><p>La estatua y el rascacielos ayudan a orientarse de un vistazo. En Yunipets, un molino o una máquina de arcade podrían cumplir esa función y anticipar qué encontrarás al final del camino.</p><a href="https://www.scopely.com/en/games/monopoly-go" target="_blank" rel="noopener">Imagen de Scopely y Hasbro ↗</a></figcaption></figure>
+        </div>
+      </section>
+    </article>
+    <footer class="room-links"><a href="desarrollo.html#cuarto">← Elegir otra mecánica</a><a href="recap-media/tablero-casa.webp">Ver el primer esquema de Casa ↗</a><a href="https://docs.google.com/document/d/1Q4z7olLF5k_yupaPKQRgA2swU9V27pNTZgqVZIZnII8/edit?tab=t.0" target="_blank" rel="noopener">Documento de diseño del mapa ↗</a></footer>
+  </main>
+</body>
+</html>
